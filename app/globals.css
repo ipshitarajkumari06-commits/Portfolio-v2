@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* space-separated rgb triplets so Tailwind's text-fg/NN opacity modifiers work */
+  --bg: 0 0 0;
+  --fg: 245 244 240;
+  --fg-muted: 140 140 134;
+  --line: 31 31 30;
+  --accent: 179 74 34;
+}
+
+* {
+  border-color: rgb(var(--line));
+}
+
+html {
+  background: rgb(var(--bg));
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgb(var(--accent));
+  color: rgb(var(--bg));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
