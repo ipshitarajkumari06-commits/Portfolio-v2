@@ -23,31 +23,16 @@ export const metadata: Metadata = {
 // details elements, so it works without JavaScript). Nothing moves except the
 // reveal of copy.
 
-// A 16:9 still with its label beneath.
-function Still({ src, label, track }: { src: string; label: string; track?: string }) {
-  return (
-    <figure className="w-full">
-      <div className="relative aspect-video w-full overflow-hidden">
-        <Image src={src} alt={label} fill sizes="(min-width: 1024px) 960px, 100vw" className="object-cover" />
-      </div>
-      <figcaption className="mt-3 flex flex-col gap-1">
-        {track ? <span className={LABEL}>{track}</span> : null}
-        <span className="font-sans text-[13px] leading-snug text-fg/80">{label}</span>
-      </figcaption>
-    </figure>
-  );
-}
-
 // A smaller image with its label, for a row of related images.
-function Card({ src, label, track, ratio = "aspect-video" }: { src: string; label: string; track?: string; ratio?: string }) {
+function Card({ src, label, track, ratio = "aspect-video", fit = "cover" }: { src: string; label: string; track?: string; ratio?: string; fit?: "cover" | "contain" }) {
   return (
     <figure className="w-full">
-      <div className={`relative ${ratio} w-full overflow-hidden`}>
-        <Image src={src} alt={label} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+      <div className={`relative ${ratio} w-full overflow-hidden ${fit === "contain" ? "bg-[#ECE7DC]" : ""}`}>
+        <Image src={src} alt={label} fill sizes="(min-width: 768px) 50vw, 100vw" className={fit === "contain" ? "object-contain" : "object-cover"} />
       </div>
       <figcaption className="mt-3 flex flex-col gap-1">
         {track ? <span className={LABEL}>{track}</span> : null}
-        <span className="font-sans text-[13px] leading-snug text-fg/80">{label}</span>
+        <span className={LABEL}>{label}</span>
       </figcaption>
     </figure>
   );
@@ -165,16 +150,9 @@ export default function PritamPedroPage() {
         <h2 className="mb-2 inline-block border-b-2 border-fg pb-2 font-sans text-lg font-medium text-fg">Episodes</h2>
 
         <div id="episode-01" className="scroll-mt-24">
-          <Episode number="1" title={c.challenge.label} summary={c.challenge.summary} thumb={{ src: `${IMG}/stage-environment.jpg`, alt: c.challenge.imageLabel }}>
+          <Episode number="1" title={c.challenge.label} summary={c.challenge.summary} thumb={{ src: `${IMG}/ep1-title.jpg`, alt: c.challenge.seriesPosterImageLabel }}>
             <div className="flex flex-col gap-12">
-              <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-                <div className="md:col-span-5">
-                  <Card src={`${IMG}/series-poster.jpg`} label={c.challenge.seriesPosterImageLabel} track={c.tracks.official} ratio="aspect-square" />
-                </div>
-                <div className="md:col-span-7">
-                  <Beat lines={c.challenge.paragraphs.filter((line) => line !== c.challenge.summary)} />
-                </div>
-              </div>
+              <Beat lines={c.challenge.paragraphs.filter((line) => line !== c.challenge.summary)} />
             </div>
           </Episode>
         </div>
@@ -192,28 +170,27 @@ export default function PritamPedroPage() {
             <div className="flex flex-col gap-12">
               <Beat lines={c.experience.paragraphs} />
               <div>
-                <p className={`mb-6 ${LABEL}`}>Scenes</p>
+                <h3 className="mb-6 font-serif text-3xl font-light text-fg">Scenes</h3>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                  <div className="flex flex-col gap-8">
-                    <Scene label={c.experience.stepLabels[1]} src={`${IMG}/crack-the-code.jpg`} alt={c.experience.crackImageLabel} />
-                    <Scene label="Official key art" src={`${IMG}/series-atm-keyart.jpg`} alt={c.experience.seriesAtmImageLabel} />
-                  </div>
+                  <Scene label={c.experience.stepLabels[1]} src={`${IMG}/crack-the-code.jpg`} alt={c.experience.crackImageLabel} />
+                  <Scene label="Official key art" src={`${IMG}/series-atm-keyart.jpg`} alt={c.experience.seriesAtmImageLabel} />
                   <Scene label={c.experience.stepLabels[2]} src={`${IMG}/reward-cassette-wall.jpg`} alt={c.experience.rewardText} />
+                  <Card src={`${IMG}/series-poster.jpg`} label="Official key art, JioHotstar" ratio="aspect-video" fit="contain" />
                 </div>
               </div>
               <div>
-                <p className={`mb-6 ${LABEL}`}>More from this episode</p>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <h3 className="mb-6 font-serif text-3xl font-light text-fg">More from this episode</h3>
+                <div className="mx-auto grid w-full max-w-xl grid-cols-2 gap-6">
                   <Card src={`${IMG}/live-caricature.jpg`} label={c.experience.liveCaricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
                   <Card src={`${IMG}/caricature-portrait.jpg`} label={c.experience.caricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
                 </div>
                 <p className="mt-6 font-sans text-[13px] leading-snug text-fg/70">{c.experience.referenceNote}</p>
               </div>
-              <PullQuote text={c.experience.close} />
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <Card src={`${IMG}/launch-cast.jpg`} label={c.experience.launchCastImageLabel} track={c.tracks.launch} ratio="aspect-[3/2]" />
-                <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} ratio="aspect-[3/2]" />
+                <Card src={`${IMG}/launch-cast.jpg`} label={c.experience.launchCastImageLabel} track={c.tracks.launch} />
+                <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} />
               </div>
+              <PullQuote text={c.experience.close} />
             </div>
           </Episode>
         </div>

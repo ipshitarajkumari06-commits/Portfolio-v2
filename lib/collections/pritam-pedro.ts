@@ -16,7 +16,6 @@ export const pritamPedro = {
       "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
       "The show is set in Goa, and the launch drew on that world through its details rather than the familiar postcard view: its own Goa, with its lighthouse, its cassettes and its ATM. The answer was to let guests into that world first.",
     ],
-    imageLabel: "Main stage concept",
     summary: "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
@@ -55,18 +54,8 @@ export const pritamPedro = {
     rewardText: "The cassette, one of the rewards",
   },
 
-  keyArt: {
-    full: "Official key art, JioHotstar",
-    characters: "Official key art, JioHotstar: the two leads",
-    lighthouse: "Official key art, JioHotstar: the lighthouse and its cassettes",
-    laptop: "Official key art, JioHotstar: the hooded figure at the laptop",
-  },
-
   tracks: {
     concept: "Concept",
-    official: "Official key art",
     launch: "From the trailer launch",
   },
-
-
 };
