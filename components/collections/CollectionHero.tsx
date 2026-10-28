@@ -30,11 +30,11 @@ export default function CollectionHero({ kicker, discipline, title, heroImageLab
     <header className="pt-32 sm:pt-40">
       <Container>
         <Reveal>
-          <Kicker>{kicker}</Kicker>
-          {discipline ? <span className="mt-1 block font-sans text-kicker uppercase text-muted/60">{discipline}</span> : null}
+          <Kicker className="text-fg/75">{kicker}</Kicker>
+          {discipline ? <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{discipline}</span> : null}
         </Reveal>
         <Reveal delay={0.08}>
-          <Display as="h1" className="mt-6 max-w-4xl">
+          <Display as="h1" className="mt-6 max-w-4xl max-sm:!text-[2.5rem] max-sm:leading-[1.05]">
             {title}
           </Display>
         </Reveal>
