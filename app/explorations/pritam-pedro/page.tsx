@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 // reveal of copy.
 
 // A smaller image with its label, for a row of related images.
-function Card({ src, label, track, ratio = "aspect-video", fit = "cover" }: { src: string; label: string; track?: string; ratio?: string; fit?: "cover" | "contain" }) {
+function Card({ src, label, track, ratio = "aspect-video", fit = "cover", sizes = "(min-width: 768px) 50vw, 100vw" }: { src: string; label: string; track?: string; ratio?: string; fit?: "cover" | "contain"; sizes?: string }) {
   return (
     <figure className="w-full">
       <div className={`relative ${ratio} w-full overflow-hidden ${fit === "contain" ? "bg-[#ECE7DC]" : ""}`}>
-        <Image src={src} alt={label} fill sizes="(min-width: 768px) 50vw, 100vw" className={fit === "contain" ? "object-contain" : "object-cover"} />
+        <Image src={src} alt={label} fill sizes={sizes} className={fit === "contain" ? "object-contain" : "object-cover"} />
       </div>
       <figcaption className="mt-3 flex flex-col gap-1">
         {track ? <span className={LABEL}>{track}</span> : null}
@@ -193,11 +193,12 @@ export default function PritamPedroPage() {
               <div>
                 <h3 className="mb-6 font-serif text-3xl font-light text-fg">Guests</h3>
                 <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" fit="contain" />
-                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" fit="contain" />
-                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" fit="contain" />
-                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" fit="contain" />
-                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                  <Card src={`${IMG}/guest-press.jpg`} label={c.experience.guestPressImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
                 </div>
               </div>
               <PullQuote text={c.experience.close} />

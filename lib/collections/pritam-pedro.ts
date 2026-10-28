@@ -52,6 +52,7 @@ export const pritamPedro = {
     close: "The journey culminated with the guests, not the screen: they had already lived part of the story before the teaser played on the main stage.",
     guestBackdropImageLabel: "Guests at the series backdrop",
     guestLobbyImageLabel: "Guests arriving at the launch",
+    guestPressImageLabel: "Guests at the series backdrop, at the launch",
     launchNote: "The trailer launch took place on June 15, 2026, at Taj Lands End in Mumbai, ahead of the series' premiere on JioHotstar. It was the grand OTT debut of filmmaker Rajkumar Hirani, who created, wrote and produced the series, and the acting debut of his son, Vir Hirani.",
     launchNoteSources: [
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/the-trailer-launch-of-pritam-and-pedro-was-peppered-with-stars--laughs-and-the-promise-of-a-fun-watch-/2005674" },
