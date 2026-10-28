@@ -23,7 +23,7 @@ export const pritamPedro = {
   idea: {
     label: "The idea",
     pullQuote: "Find Your Bro.",
-    display: "The aim was for guests to live segments of the story before they saw it, building a connection to the world of Pritam & Pedro.",
+    display: "The aim was for guests to live segments of the story before they saw it, so that anticipation grew out of their connection to the world of Pritam & Pedro.",
     paragraphs: [
       "The insight behind the idea is that adult friendships rarely form by accident, so most people stop looking for the people they might click with.",
       "Rather than treating the launch as a showcase for the trailer alone, the central relationship in the series became the organising idea, and gave guests a reason to approach strangers in the room. Building on that relationship keeps the idea honest: guests are asked to act on what the series is actually about, not a theme laid over it.",
