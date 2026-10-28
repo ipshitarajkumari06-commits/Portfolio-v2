@@ -180,7 +180,7 @@ export default function PritamPedroPage() {
               </div>
               <div>
                 <h3 className="mb-6 font-serif text-3xl font-light text-fg">More from this episode</h3>
-                <div className="mx-auto grid w-full max-w-xl grid-cols-2 gap-6">
+                <div className="grid w-full max-w-xl grid-cols-2 gap-6">
                   <Card src={`${IMG}/live-caricature.jpg`} label={c.experience.liveCaricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
                   <Card src={`${IMG}/caricature-portrait.jpg`} label={c.experience.caricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
                 </div>
