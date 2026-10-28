@@ -17,6 +17,7 @@ export const pritamPedro = {
       "The show is set in Goa, and the launch drew on that world through its details rather than the familiar postcard view: its own Goa, with its lighthouse, its cassettes and its ATM. The answer was to let guests into that world first.",
     ],
     imageLabel: "Main stage concept",
+    summary: "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
@@ -30,12 +31,13 @@ export const pritamPedro = {
       "Old-school instinct. New-age ingenuity. Two different worlds, connected by the idea of finding your person.",
     ],
     imageLabel: "Find Your Bro badge pair",
+    summary: "The aim was for guests to live segments of the story before they saw it, so that anticipation grew out of their connection to the world of Pritam & Pedro.",
   },
 
   experience: {
     label: "The experience",
     paragraphs: [
-      "The idea was carried into the guest journey, which opened at registration and turned into a game. Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. The pair took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
+      "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. The pair took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
       "Along the way, portraits were offered at two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
       "Each touchpoint was designed for one of three jobs: to offer a glimpse, to invite participation, and to make the story feel personal. Together they were meant to carry the audience toward the trailer.",
     ],
@@ -47,6 +49,7 @@ export const pritamPedro = {
     seriesAtmImageLabel: "Official key art: the ATM",
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Teaser on the main-stage LED",
+    summary: "The idea was carried into the guest journey, which opened at registration and turned into a game.",
     close: "The journey culminated on the main-stage screen, where the teaser played beside the lighthouse: the first full view of the story, after guests had already lived part of it.",
     stepLabels: ["Register", "Crack the Code", "Reward", "Stage"],
     rewardText: "The cassette, one of the rewards",
