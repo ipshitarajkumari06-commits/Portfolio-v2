@@ -37,10 +37,10 @@ function Opener({ src, label, numeral, title }: { src: string; label: string; nu
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
         <div className={`absolute inset-x-0 bottom-0 pb-8 md:pb-12 ${LARGE}`}>
           <span className="font-sans text-[12px] tracking-[0.14em] text-fg/75">{numeral}</span>
+          <p className="mt-3 font-sans text-[12px] uppercase tracking-[0.14em] text-fg/80">{label}</p>
           <p className={`mt-3 ${DISPLAY}`}>{title}</p>
         </div>
       </div>
-      <figcaption className={`mt-3 font-sans text-[12px] leading-snug text-fg/70 ${LARGE}`}>{label}</figcaption>
     </figure>
   );
 }
@@ -143,7 +143,6 @@ export default function PritamPedroPage() {
               {c.title}
             </Display>
           </div>
-          <p className="mt-8 font-sans text-[13px] leading-snug text-fg/80">{c.heroImageLabel}</p>
         </Container>
       </section>
 
@@ -154,7 +153,6 @@ export default function PritamPedroPage() {
             { id: "chapter-01", numeral: "01", label: c.challenge.label },
             { id: "chapter-02", numeral: "02", label: c.idea.label },
             { id: "chapter-03", numeral: "03", label: c.experience.label },
-            { id: "chapter-04", numeral: "04", label: c.role.label },
           ].map((item) => (
             <li key={item.id} className="w-[72%] shrink-0 snap-start sm:w-[45%] md:w-auto">
               <a href={`#${item.id}`} className="group block rounded-full border border-fg/30 px-5 py-3 transition-colors hover:border-fg/70">
@@ -238,16 +236,6 @@ export default function PritamPedroPage() {
             </div>
           </div>
           <PullQuote text={c.experience.close} />
-        </section>
-
-        {/* 04 — My role: the hero still bookends the page, with the role set over it. */}
-        <section id="chapter-04" className="scroll-mt-24">
-          <Opener src={`${IMG}/hero-scooter-entry.jpg`} label={c.heroImageLabel} numeral="04" title={c.role.label} />
-          <div className={`mt-14 ${LARGE}`}>
-            <div className={PANEL}>
-              <Beat lines={c.role.paragraphs} />
-            </div>
-          </div>
         </section>
       </div>
 

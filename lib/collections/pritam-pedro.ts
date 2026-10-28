@@ -5,7 +5,7 @@
 
 export const pritamPedro = {
   kicker: "JioHotstar · Trailer Launch",
-  discipline: "Experience Strategy",
+  discipline: "Experience Strategy · Creative Director",
   heroImageLabel: "Stage concept",
   title: "Pritam & Pedro",
 
@@ -14,19 +14,20 @@ export const pritamPedro = {
     question: "How do you build anticipation for a story without giving the story away?",
     paragraphs: [
       "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
-      "The show is set in Goa, so the launch had to feel like Goa without showing the story.",
+      "The show is set in Goa, and the launch drew on that world through its details rather than the familiar postcard view: its own Goa, with its lighthouse, its cassettes and its ATM. The answer was to let guests into that world first.",
     ],
     imageLabel: "Main stage concept",
-    seriesPosterImageLabel: "Series key art, JioHotstar",
+    seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
   idea: {
     label: "The idea",
     pullQuote: "Find Your Bro.",
-    display: "The launch didn't need to tell the story. It needed to make people curious enough to enter it.",
+    display: "The aim was for guests to live segments of the story before they saw it, building a connection to the world of Pritam & Pedro.",
     paragraphs: [
+      "The insight behind the idea is that adult friendships rarely form by accident, so most people stop looking for the people they might click with.",
+      "Rather than treating the launch as a showcase for the trailer alone, the central relationship in the series became the organising idea, and gave guests a reason to approach strangers in the room. Building on that relationship keeps the idea honest: guests are asked to act on what the series is actually about, not a theme laid over it.",
       "Old-school instinct. New-age ingenuity. Two different worlds, connected by the idea of finding your person.",
-      "Rather than treating the launch as a showcase for the trailer alone, I made the show's central relationship the organising idea: Find Your Bro.",
     ],
     imageLabel: "Find Your Bro badge pair",
   },
@@ -34,20 +35,20 @@ export const pritamPedro = {
   experience: {
     label: "The experience",
     paragraphs: [
-      "The proposed journey was designed from the show's Goa world, not placed around it. Guests would be welcomed with branded coconut water and receive a puzzle-shaped badge with a hidden code, then find the person holding the matching piece. The pair would combine their codes at an ATM station modelled on the key art, and the cassette would be one of the rewards.",
-      "At a separate station, guests could have a live caricature drawn in about five minutes, or an AI sketch bot would make a portrait in about one.",
-      "The touchpoints served distinct purposes: offer a glimpse, invite participation, or build anticipation. They turned the wait for the reveal into part of the experience itself. The lighthouse from the key art was designed to stand on the main stage behind the trailer.",
+      "The idea was carried into the guest journey, which opened at registration and turned into a game. Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. The pair took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
+      "Along the way, portraits were offered at two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
+      "Each touchpoint was designed for one of three jobs: to offer a glimpse, to invite participation, and to make the story feel personal. Together they were meant to carry the audience toward the trailer.",
     ],
     liveCaricatureImageLabel: "Live caricature",
-    caricatureImageLabel: "AI Caricature portrait",
-    referenceNote: "Reference images from the project deck. Not verified as this event.",
+    caricatureImageLabel: "AI caricature portrait",
+    referenceNote: "These reference images come from the project deck and are not verified as this event.",
     launchCastImageLabel: "The cast at the launch",
     launchScooterImageLabel: "The scooter entry at the launch",
-    seriesAtmImageLabel: "The ATM from the key art",
+    seriesAtmImageLabel: "Official key art: the ATM",
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Teaser on the main-stage LED",
-    close: "The trailer was the reveal. Finding your bro was the story before it.",
-    stepLabels: ["Register", "Crack the code", "Reward", "Stage"],
+    close: "The journey culminated on the main-stage screen, where the teaser played beside the lighthouse: the first full view of the story, after guests had already lived part of it.",
+    stepLabels: ["Register", "Crack the Code", "Reward", "Stage"],
     rewardText: "The cassette, one of the rewards",
   },
 
@@ -64,11 +65,5 @@ export const pritamPedro = {
     launch: "From the trailer launch",
   },
 
-  role: {
-    label: "My role",
-    paragraphs: [
-      "As Creative Director, I made the relationship the organising principle, connecting the central idea to the guest interactions, visual touchpoints and show flow.",
-    ],
-  },
 
 };
