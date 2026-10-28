@@ -1,13 +1,11 @@
-import Hero from "@/components/sections/Hero";
-import Intro from "@/components/sections/Intro";
-import FeaturedWork from "@/components/sections/FeaturedWork";
+import HomeStory from "@/components/sections/HomeStory";
+import HomeTheme from "@/components/layout/HomeTheme";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Intro />
-      <FeaturedWork />
+      <HomeTheme />
+      <HomeStory />
     </>
   );
 }

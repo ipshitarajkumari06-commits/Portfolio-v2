@@ -38,3 +38,43 @@ body {
     scroll-behavior: auto;
   }
 }
+
+html.home-theme {
+  --bg: 237 230 214;
+  --fg: 31 31 28;
+  --fg-muted: 107 104 96;
+  --line: 200 191 172;
+  --accent: 36 70 184;
+  color-scheme: light;
+}
+
+html.home-theme,
+html.home-theme body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+html.home-theme ::selection {
+  background: rgb(var(--accent));
+  color: rgb(var(--bg));
+}
+
+html.home-theme {
+  --bg: 107 30 46;
+  --fg: 243 237 224;
+  --fg-muted: 230 210 200;
+  --line: 150 80 90;
+  --accent: 243 237 224;
+  color-scheme: light;
+}
+
+html.home-theme,
+html.home-theme body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+html.home-theme ::selection {
+  background: rgb(var(--fg));
+  color: rgb(var(--bg));
+}
