@@ -10,60 +10,70 @@ export const pritamPedro = {
   title: "Pritam & Pedro",
 
   challenge: {
-    label: "The challenge",
+    label: "Two Worlds, One Goa",
     question: "How do you build anticipation for a story without giving the story away?",
     paragraphs: [
-      "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
-      "The show is set in Goa, and the launch drew on that world through its details rather than the familiar postcard view: its own Goa, with its lighthouse, its cassettes and its ATM. The answer was to let guests into that world first.",
+      "The objective was to celebrate the show and hold back its reveal until the trailer launch. The guests were mainly media, creators and Bollywood, for whom a series launch matters as much as a film's: it drives press and marketing momentum.",
+      "The show is set in Goa, but the launch drew on it through detail rather than the postcard view: the lighthouse, the cassettes and the ATM. The answer was to let guests into that setting first.",
     ],
-    imageLabel: "Main stage concept",
+    summary: "A launch that let guests in before the trailer.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
   idea: {
     label: "The idea",
     pullQuote: "Find Your Bro.",
-    display: "The aim was for guests to live segments of the story before they saw it, so that anticipation grew out of their connection to the world of Pritam & Pedro.",
+    display: "Guests experienced segments of the story before they saw it, so anticipation grew from their connection to Pritam & Pedro.",
     paragraphs: [
-      "The insight behind the idea is that adult friendships rarely form by accident, so most people stop looking for the people they might click with.",
-      "Rather than treating the launch as a showcase for the trailer alone, the central relationship in the series became the organising idea, and gave guests a reason to approach strangers in the room. Building on that relationship keeps the idea honest: guests are asked to act on what the series is actually about, not a theme laid over it.",
-      "Old-school instinct. New-age ingenuity. Two different worlds, connected by the idea of finding your person.",
+      "The series pairs an old-school cop with a young hacker, two people who would not normally find each other.",
+      "Rather than treating the launch as a showcase for the trailer, the series' central relationship became the organising idea. It gave guests a way to approach strangers, and asked them to act on what the series is actually about.",
     ],
     imageLabel: "Find Your Bro badge pair",
   },
 
   experience: {
-    label: "The experience",
+    label: "Lights, Camera, Case.",
     paragraphs: [
-      "The idea was carried into the guest journey, which opened at registration and turned into a game. Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. The pair took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
-      "Along the way, portraits were offered at two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
-      "Each touchpoint was designed for one of three jobs: to offer a glimpse, to invite participation, and to make the story feel personal. Together they were meant to carry the audience toward the trailer.",
+      "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. Two guests took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
+      "Along the way, portraits came in two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
+      "The badges sent guests hunting for clues, and finishing a code meant finding a stranger to pair with.",
+      "The media, creators and Bollywood guests took part at every stage: registering, cracking the code, claiming the reward and reaching the main stage.",
+    ],
+    demoText: "Cybersecurity expert Amit Dubey hacked a journalist's phone live to show how easily scammers can cause harm, and the room watched. The series grew from the cybercrime stories he shared with its makers. It gave guests the show's premise ahead of its story.",
+    demoSources: [
+      { label: "Bollywood Hungama", url: "https://www.bollywoodhungama.com/news/features/pritam-and-pedro-trailer-launch-arshad-warsi-recalls-shooting-with-rajkumar-hiranis-son-vir-for-lage-raho-munna-bhai-jab-tak-usko-paise-nahin-diye-usne-shot-nahin-diya/" },
+      { label: "T2 Online", url: "https://t2online.in/screen/streaming/rajkumar-hirani-and-arshad-warsi-lay-bare-the-world-of-pritam-and-pedro/2006066" },
+    ],
+    afterDemo: [
+      "Towards the end of the evening, Shreya Ghoshal made a special appearance and sang. The series led the night rather than serving as its backdrop, and the marketing was built around the show.",
     ],
     liveCaricatureImageLabel: "Live caricature",
     caricatureImageLabel: "AI caricature portrait",
-    referenceNote: "These reference images come from the project deck and are not verified as this event.",
+    referenceNote: "The caricature pair comes from the project deck and is not verified as this event.",
     launchCastImageLabel: "The cast at the launch",
     launchScooterImageLabel: "The scooter entry at the launch",
     seriesAtmImageLabel: "Official key art: the ATM",
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Teaser on the main-stage LED",
-    close: "The journey culminated on the main-stage screen, where the teaser played beside the lighthouse: the first full view of the story, after guests had already lived part of it.",
+    summary: "The idea was carried into the guest journey, which opened at registration and became a game.",
+    close: "The journey culminated with the guests, who had already lived part of the story before the teaser played on the main stage.",
+    guestBackdropImageLabel: "Guests at the series backdrop",
+    guestLobbyImageLabel: "Guests arriving at the launch",
+    guestMediaImageLabel: "Media bytes",
+    launchNote: "The trailer launch took place on June 15, 2026, at Taj Lands End in Mumbai, ahead of the series' premiere on JioHotstar. It was the grand OTT debut of filmmaker Rajkumar Hirani, who created, wrote and produced the series, and the acting debut of his son, Vir Hirani.",
+    launchNoteSources: [
+      { label: "T2 Online", url: "https://t2online.in/screen/streaming/the-trailer-launch-of-pritam-and-pedro-was-peppered-with-stars--laughs-and-the-promise-of-a-fun-watch-/2005674" },
+      { label: "IANS", url: "https://ianslive.in/aamir-khan-calls-vir-hiranis-debut-with-pritam-and-pedro-an-emotional-day-he-is-like-my-son--20260704142715" },
+    ],
+    guestWallImageLabel: "At the launch, in front of the series wall",
+    guestStageImageLabel: "On stage at the launch",
+    guestConversationImageLabel: "A guest in conversation at the launch",
     stepLabels: ["Register", "Crack the Code", "Reward", "Stage"],
-    rewardText: "The cassette, one of the rewards",
-  },
-
-  keyArt: {
-    full: "Official key art, JioHotstar",
-    characters: "Official key art, JioHotstar: the two leads",
-    lighthouse: "Official key art, JioHotstar: the lighthouse and its cassettes",
-    laptop: "Official key art, JioHotstar: the hooded figure at the laptop",
+    rewardText: "A cassette, one of the rewards",
   },
 
   tracks: {
     concept: "Concept",
-    official: "Official key art",
     launch: "From the trailer launch",
   },
-
-
 };
