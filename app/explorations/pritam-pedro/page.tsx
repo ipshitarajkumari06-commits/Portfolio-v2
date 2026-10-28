@@ -169,6 +169,21 @@ export default function PritamPedroPage() {
           <Episode number="3" title={c.experience.label} summary={c.experience.summary} thumb={{ src: `${IMG}/trailer-reveal.jpg`, alt: c.experience.trailerImageLabel }}>
             <div className="flex flex-col gap-12">
               <Beat lines={c.experience.paragraphs} />
+              <div className={STANDARD}>
+                <Reveal>
+                  <p className={BODY}>{c.experience.demoText}</p>
+                </Reveal>
+                <p className={LABEL}>
+                  Sources:{" "}
+                  {c.experience.demoSources.map((src, i) => (
+                    <span key={src.url}>
+                      {i > 0 ? ", " : null}
+                      <a href={src.url} className="underline underline-offset-4 hover:text-fg">{src.label}</a>
+                    </span>
+                  ))}
+                </p>
+              </div>
+              <Beat lines={c.experience.afterDemo} />
               <div>
                 <h3 className="mb-6 font-serif text-3xl font-light text-fg">Scenes</h3>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -191,14 +206,14 @@ export default function PritamPedroPage() {
                 <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} />
               </div>
               <div>
-                <h3 className="mb-6 font-serif text-3xl font-light text-fg">Guests</h3>
-                <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
-                  <Card src={`${IMG}/guest-press.jpg`} label={c.experience.guestPressImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
-                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
-                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
-                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
-                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" fit="contain" sizes="(min-width: 768px) 25vw, 50vw" />
+                <h3 className="mb-6 font-serif text-3xl font-light text-fg">At the launch</h3>
+                <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  <Card src={`${IMG}/guest-media.jpg`} label={c.experience.guestMediaImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
                 </div>
               </div>
               <PullQuote text={c.experience.close} />
