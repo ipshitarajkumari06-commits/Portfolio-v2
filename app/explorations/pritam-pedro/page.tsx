@@ -140,7 +140,7 @@ export default function PritamPedroPage() {
           </div>
           <div>
             <Display as="h1" className="max-w-3xl">
-              {c.title}
+              {c.challenge.question}
             </Display>
           </div>
         </Container>
@@ -178,7 +178,7 @@ export default function PritamPedroPage() {
                   <p className="mt-3 font-sans text-[12px] leading-snug text-fg/80">{c.challenge.seriesPosterImageLabel}</p>
                 </div>
                 <div className="md:col-span-7 md:pt-4">
-                  <Beat lines={[{ text: c.challenge.question, emphasis: true }, ...c.challenge.paragraphs]} />
+                  <Beat lines={c.challenge.paragraphs} />
                 </div>
               </div>
             </div>

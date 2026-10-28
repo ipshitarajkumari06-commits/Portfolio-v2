@@ -4,8 +4,8 @@
 // execution evidence exists.
 
 export const pritamPedro = {
-  kicker: "JioHotstar · Trailer Launch",
-  discipline: "Experience Strategy · Creative Director",
+  kicker: "JioHotstar",
+  discipline: "Experience Strategy",
   heroImageLabel: "Stage concept",
   title: "Pritam & Pedro",
 
