@@ -152,7 +152,7 @@ export default function PritamPedroPage() {
         <div id="episode-01" className="scroll-mt-24">
           <Episode number="1" title={c.challenge.label} summary={c.challenge.summary} thumb={{ src: `${IMG}/ep1-title.jpg`, alt: c.challenge.seriesPosterImageLabel }}>
             <div className="flex flex-col gap-12">
-              <Beat lines={c.challenge.paragraphs.filter((line) => line !== c.challenge.summary)} />
+              <Beat lines={c.challenge.paragraphs} />
             </div>
           </Episode>
         </div>
@@ -190,11 +190,35 @@ export default function PritamPedroPage() {
                 <Card src={`${IMG}/launch-cast.jpg`} label={c.experience.launchCastImageLabel} track={c.tracks.launch} />
                 <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} />
               </div>
+              <div>
+                <h3 className="mb-6 font-serif text-3xl font-light text-fg">Guests</h3>
+                <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" fit="contain" />
+                </div>
+              </div>
               <PullQuote text={c.experience.close} />
             </div>
           </Episode>
         </div>
       </section>
+
+      {/* The launch in one paragraph, with the reports it rests on. */}
+      <div className={`mt-[clamp(3rem,8vh,4rem)] ${LARGE}`}>
+        <p className="max-w-3xl font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl">{c.experience.launchNote}</p>
+        <p className={`mt-4 ${LABEL}`}>
+          Sources:{" "}
+          {c.experience.launchNoteSources.map((s, i) => (
+            <span key={s.url}>
+              {i > 0 ? ", " : null}
+              <a href={s.url} className="underline underline-offset-4 hover:text-fg">{s.label}</a>
+            </span>
+          ))}
+        </p>
+      </div>
 
       {/* The way back to the selected work, as in the other case studies. */}
       <div className={`mt-[clamp(4rem,10vh,6rem)] pb-[clamp(4rem,10vh,6rem)] ${LARGE}`}>
