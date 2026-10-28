@@ -4,21 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { humAiN } from "@/lib/collections/hum-ai-n";
 
-// Chosen by position, not by meaning, so "crossed out" stays a formal
-// device rather than a hidden ranking of the words themselves.
-const AI_STRIKE = new Set(["Scale", "Pattern Recognition"]);
-const HUMAN_STRIKE = new Set(["Judgement", "Experience"]);
+// The rule is printed under the notebook: strike every capability, on
+// either side. Each word struck is a capability; the survivor is direction.
+const HUMAN_STRIKE = new Set(["Judgement", "Empathy", "Experience", "Creativity"]);
 const SURVIVOR = "Intent";
 
 type Phase = "idle" | "building" | "reconsidering" | "narrowing" | "final";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const WORD_STAGGER = 0.4;
-const BUILD_DURATION = 2200;
-const HOLD_BUILT = 3300;
-const STRIKE_DURATION = 1600;
-const REMOVE_DURATION = 1400;
+const WORD_STAGGER = 0.3;
+const BUILD_DURATION = 1600;
+const HOLD_BUILT = 2200;
+const STRIKE_DURATION = 1200;
+const REMOVE_DURATION = 1000;
 
 // The only spread in the Collection with real motion. Everything here is
 // filtered through one question: would a strategist's notebook actually
@@ -58,7 +57,6 @@ export default function Notebook() {
   const started = phase !== "idle";
   const showStrike = phase === "reconsidering" || phase === "narrowing" || phase === "final";
   const narrowed = phase === "narrowing" || phase === "final";
-  const final = phase === "final";
 
   const aiWords = started ? (narrowed ? [] : humAiN.test.ai) : [];
   const humanWords = started
@@ -68,42 +66,34 @@ export default function Notebook() {
     : [];
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`mx-auto flex w-full max-w-2xl px-gutter py-16 ${
-        final ? "flex-col items-center gap-3 text-center" : "items-start gap-12"
-      }`}
+      layout
+      transition={{ layout: { duration: 0.8, ease } }}
+      className="mx-auto flex w-full max-w-2xl flex-col items-center gap-3 py-16 text-center"
     >
-      <motion.div layout className={final ? "" : "flex-1"}>
+      <motion.div layout transition={{ type: "spring", stiffness: 100, damping: 25, duration: 0.6 }}>
         <motion.p layout className="font-serif text-lg text-fg md:text-xl">
           AI
         </motion.p>
-        <ul className="mt-4 flex flex-col gap-2">
+        <ul className="mt-4 flex flex-col items-center gap-2">
           <AnimatePresence>
             {aiWords.map((word, i) => (
-              <Word key={word} word={word} index={i} struck={showStrike && AI_STRIKE.has(word)} />
+              <Word key={word} word={word} index={i} struck={showStrike} />
             ))}
           </AnimatePresence>
         </ul>
       </motion.div>
 
-      {final && (
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-muted"
-          aria-hidden
-        >
-          ↓
-        </motion.span>
-      )}
+      <span className="text-fg/70" aria-hidden>
+        ↓
+      </span>
 
-      <motion.div layout className={final ? "" : "flex-1"}>
+      <motion.div layout transition={{ type: "spring", stiffness: 100, damping: 25, duration: 0.6 }}>
         <motion.p layout className="font-serif text-lg text-fg md:text-xl">
           Human
         </motion.p>
-        <ul className="mt-4 flex flex-col gap-2">
+        <ul className="mt-4 flex flex-col items-center gap-2">
           <AnimatePresence>
             {humanWords.map((word, i) => (
               <Word key={word} word={word} index={i} struck={showStrike && HUMAN_STRIKE.has(word)} />
@@ -111,7 +101,7 @@ export default function Notebook() {
           </AnimatePresence>
         </ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -120,8 +110,8 @@ function Word({ word, index, struck }: { word: string; index: number; struck: bo
     <motion.li
       layout
       initial={{ opacity: 0, y: 6 }}
-      animate={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: index * WORD_STAGGER, ease } }}
-      exit={{ opacity: 0, transition: { duration: 0.6, delay: index * 0.15, ease } }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: index * WORD_STAGGER, ease } }}
+      exit={{ opacity: 0, transition: { duration: 0.8, delay: index * 0.15, ease } }}
       className="relative font-sans text-base text-fg/70"
     >
       {word}

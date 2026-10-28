@@ -10,7 +10,7 @@ export const humAiN = {
     statement: "Create a YouTube series.",
     continuation: "Nothing else followed.",
     enumeration:
-      "Not a subject. Not a tone. Not a single idea about what Tata Motors should say, or to whom it should say it.",
+      "Not a subject, a tone or an idea.",
     question: "What would you do when the brief told you what to make, but not what to say?",
   },
 
@@ -20,7 +20,7 @@ export const humAiN = {
   firstInstinct: {
     lines: [
       "My first instinct was AI.",
-      "AI was the defining conversation of the moment.",
+      "Everyone was already talking about AI.",
       "But that would have been another AI campaign.",
     ],
     displayLead: "The real question was:",
@@ -28,17 +28,10 @@ export const humAiN = {
   },
 
   research: {
-    opening: "I mapped everything AI was already contributing across Tata Motors.",
-    list: [
-      "From manufacturing.",
-      "To engineering.",
-      "To quality.",
-      "To logistics.",
-      "To mobility.",
-      "To customer experience.",
-    ],
+    opening: "AI was already at work across Tata Motors, on several fronts.",
+    summary: "From manufacturing to engineering, quality, logistics, mobility and customer experience.",
     reflection: ["The deeper I went,", "the clearer one thing became."],
-    closing: "It was never a one-sided relationship.",
+    closing: "The exchange was never one-directional.",
   },
 
   // The two notebook lists. Word order is fixed and meaningful: index 0
@@ -46,7 +39,8 @@ export const humAiN = {
   // final state. Do not reorder without updating Notebook.tsx.
   test: {
     ai: ["Scale", "Precision", "Memory", "Pattern Recognition", "Prediction"],
-    human: ["Intent", "Judgement", "Empathy", "Experience", "Purpose"],
+    human: ["Intent", "Judgement", "Empathy", "Experience", "Creativity"],
+    rule: "Strike every capability, on either side. What survives is direction.",
   },
 
   // Restated after the notebook, in the strategist's own words rather than
@@ -56,7 +50,6 @@ export const humAiN = {
   realisation: {
     lines: [
       "AI was becoming more capable.",
-      "Human intent decided what that capability was for.",
     ],
   },
 
@@ -72,9 +65,13 @@ export const humAiN = {
   },
 
   ending: {
-    line: "Coming soon.",
     principle: "One principle.",
-    stories: "Ten stories.",
+    stories: "Ten stories."
+  },
+
+  campaign: {
+    cta: "Watch HUM.AI.N",
+    href: "https://www.youtube.com/results?search_query=tata+motors+hum.ai.n",
   },
 
   // NOT USED in the current architecture (superseded by The First
