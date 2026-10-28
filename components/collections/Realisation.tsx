@@ -47,8 +47,8 @@ export default function Realisation() {
           <motion.p
             key={index}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.7, ease } }}
-            exit={{ opacity: 0, transition: { duration: 0.6, ease } }}
+            animate={{ opacity: 1, transition: { duration: 0.8, ease } }}
+            exit={{ opacity: 0, transition: { duration: 0.8, ease } }}
             className="font-serif text-xl leading-snug text-fg/80 md:text-2xl"
           >
             {humAiN.realisation.lines[index]}

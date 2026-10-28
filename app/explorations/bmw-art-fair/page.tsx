@@ -1,6 +1,7 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import BackPrompt from "@/components/collections/BackPrompt";
 import Reveal from "@/components/motion/Reveal";
-import FadeOutAfter from "@/components/motion/FadeOutAfter";
 import CollectionHero from "@/components/collections/CollectionHero";
 import ImagePlaceholder from "@/components/collections/ImagePlaceholder";
 import RevealImage from "@/components/collections/RevealImage";
@@ -25,21 +26,39 @@ const SUPPORTING = "mx-auto w-full sm:w-[65%] md:w-[50%]";
 // there's still proper space before the footer.
 const SECTION = "pt-section pb-0";
 const CONTAINER = "mx-auto w-full max-w-container px-gutter";
-
 // Three text sizes, site-wide: the hero title (largest, in Display), this
 // "reflection statement" emphasis, and body copy. Nothing else.
 const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
 const EMPHASIS = "font-serif text-2xl font-light text-fg md:text-3xl";
+// The brief sits in a raised wine box: 3D edge highlights, no flat rectangle.
+const BRIEF_BOX =
+  "relative mb-6 p-6 md:p-8";
 
-function Paragraphs({ lines, delayStep = 0.06 }: { lines: (string | { text: string; emphasis?: boolean })[]; delayStep?: number }) {
+// The border is a 1px ring: a black fill inside, and a conic light that
+// travels around the edge. The light is the only moving part.
+const BRIEF_STYLE = {
+  border: "1px solid transparent",
+  background:
+    "linear-gradient(#000, #000) padding-box, conic-gradient(from var(--brief-angle), transparent 0deg, transparent 240deg, #F3EDE0 300deg, #8E2B40 320deg, transparent 350deg) border-box",
+} as CSSProperties;
+type ParagraphLine = string | { text: string; emphasis?: boolean; box?: boolean };
+
+function Paragraphs({ lines, delayStep = 0.06 }: { lines: ParagraphLine[]; delayStep?: number }) {
   return (
     <>
       {lines.map((line, i) => {
         const text = typeof line === "string" ? line : line.text;
         const emphasis = typeof line === "string" ? false : line.emphasis;
+        const boxed = typeof line === "string" ? false : line.box;
         return (
           <Reveal key={i} delay={i * delayStep}>
-            <p className={`mb-3 ${emphasis ? EMPHASIS : BODY}`}>{text}</p>
+            {boxed ? (
+              <div className={`${BRIEF_BOX} motion-safe:animate-[brief-spin_8s_linear_infinite]`} style={BRIEF_STYLE}>
+                <p className={BODY}>{text}</p>
+              </div>
+            ) : (
+              <p className={`mb-3 ${emphasis ? EMPHASIS : BODY}`}>{text}</p>
+            )}
           </Reveal>
         );
       })}
@@ -55,6 +74,7 @@ export const metadata: Metadata = {
 export default function BMWArtFairPage() {
   return (
     <>
+      <style dangerouslySetInnerHTML={{ __html: `@property --brief-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; } @keyframes brief-spin { to { --brief-angle: 360deg; } }` }} />
       {/* Section 1 — Hero, untouched. */}
       <CollectionHero
         kicker={c.kicker}
@@ -65,14 +85,12 @@ export default function BMWArtFairPage() {
       />
 
       {/* Section 2 */}
-      <div className={SECTION}>
+      <div className="pt-16 pb-0 md:pt-section">
         <div className={CONTAINER}>
           <div className="mx-auto flex max-w-2xl flex-col gap-6">
-            <FadeOutAfter delayMs={3500}>
-              <Reveal>
-                <p className={`mb-3 ${c.opening[0].emphasis ? EMPHASIS : BODY}`}>{c.opening[0].text}</p>
-              </Reveal>
-            </FadeOutAfter>
+            <Reveal>
+              <p className={`mb-3 ${c.opening[0].emphasis ? EMPHASIS : BODY}`}>{c.opening[0].text}</p>
+            </Reveal>
             <Paragraphs lines={c.opening.slice(1)} />
             <Reveal delay={0.3}>
               <p className={BODY}>{c.openingClose}</p>
@@ -262,10 +280,10 @@ export default function BMWArtFairPage() {
           follows but the footer. */}
       <div className="pt-section pb-section">
         <div className={CONTAINER}>
-          <div className="mx-auto max-w-2xl">
+          <div className={`mx-auto max-w-2xl ${BRIEF_BOX} motion-safe:animate-[brief-spin_8s_linear_infinite]`} style={BRIEF_STYLE}>
             {c.reflection.map((line, i) => (
               <Reveal key={i} delay={i * 0.12}>
-                <p className={`mb-2 ${EMPHASIS}`}>{line}</p>
+                <p className={`mb-3 ${BODY}`}>{line}</p>
               </Reveal>
             ))}
             <div className="mt-6">
@@ -276,6 +294,15 @@ export default function BMWArtFairPage() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Back to the selected work on the homepage, directly above the footer. */}
+      <div className="pt-section pb-section">
+        <div className={CONTAINER}>
+          <Reveal>
+            <BackPrompt />
+          </Reveal>
         </div>
       </div>
     </>

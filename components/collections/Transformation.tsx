@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
 import { humAiN } from "@/lib/collections/hum-ai-n";
 
-const HOLD = 1200;
+const HOLD = 1600;
 const TRANSITION = 700;
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -38,8 +38,8 @@ export default function Transformation() {
           <motion.p
             key={stage}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 0.9, ease } }}
-            exit={{ opacity: 0, transition: { duration: 0.7, ease } }}
+            animate={{ opacity: 1, transition: { duration: 0.8, ease } }}
+            exit={{ opacity: 0, transition: { duration: 0.8, ease } }}
             className="font-serif text-[clamp(2.5rem,9vw,5.5rem)] font-light tracking-tight text-fg"
           >
             {stages[stage]}

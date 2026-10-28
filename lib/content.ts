@@ -33,6 +33,11 @@ export const featuredWork = {
       href: "/explorations/airports",
     },
     {
+      client: "JioHotstar",
+      title: "How do you build anticipation for a story without giving the story away?",
+      href: "/explorations/pritam-pedro",
+    },
+    {
       client: "Tata Motors",
       title: "What makes this Tata Motors?",
       href: "/explorations/hum-ai-n",

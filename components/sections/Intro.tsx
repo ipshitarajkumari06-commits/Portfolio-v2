@@ -13,8 +13,8 @@ const DELETE_SPEED = 35;
 const HOLD_AFTER_TYPE = 1100;
 const PAUSE_BETWEEN_SEARCHES = 650;
 const PAUSE_BEFORE_WAIT = 2100;
-const WAIT_HOLD = 1000;
-const PAUSE_AFTER_WAIT = 700;
+const WAIT_HOLD = 3000;
+const PAUSE_AFTER_WAIT = 1800;
 const INITIAL_CURSOR_HOLD = 400;
 const PHILOSOPHY_PAUSE = 500;
 const PAUSE_BEFORE_METHOD = 900;
@@ -152,15 +152,17 @@ export default function Intro() {
               )}
 
               {stage === "turn" && (
-                <motion.p
+                <motion.div
                   key="turn"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { duration: 0.25, ease } }}
                   exit={{ opacity: 0, transition: { duration: 0.6, ease } }}
-                  className="font-serif text-display-sm font-bold text-fg"
+                  className="flex min-h-10 items-center justify-center"
                 >
-                  {intro.turningPoint}
-                </motion.p>
+                  <span className="font-serif text-xl text-fg md:text-2xl">
+                    {intro.turningPoint}
+                  </span>
+                </motion.div>
               )}
             </AnimatePresence>
           </div>
