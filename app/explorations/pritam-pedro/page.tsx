@@ -104,13 +104,13 @@ function PullQuote({ text }: { text: string }) {
 function Episode({ number, title, summary, thumb, open = false, children }: { number: string; title: string; summary: string; thumb: { src: string; alt: string }; open?: boolean; children: React.ReactNode }) {
   return (
     <details open={open} className="group">
-      <summary className="flex cursor-pointer list-none items-center gap-5 py-5 [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none flex-col gap-5 py-5 md:flex-row md:items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fg [&::-webkit-details-marker]:hidden">
         <Enlargeable src={thumb.src} alt={thumb.alt} />
         <span className="flex min-w-0 flex-1 flex-col gap-1">
           <span className={LABEL}>Episode {number}</span>
-          <span className="font-sans text-lg font-medium leading-snug text-fg md:text-xl">{title}</span>
+          <span role="heading" aria-level={2} className="font-sans text-lg font-medium leading-snug text-fg md:text-xl">{title}</span>
           <span className="font-sans text-[14px] leading-snug text-fg/75 md:text-base">{summary}</span>
-          <span className="mt-1 font-sans text-[12px] uppercase tracking-[0.16em] text-fg/60 group-open:hidden">Read more</span>
+          <span className="mt-1 font-sans text-[12px] uppercase tracking-[0.16em] text-fg/75 underline underline-offset-4 group-open:hidden">Read more</span>
           <span className="mt-1 hidden font-sans text-[12px] uppercase tracking-[0.16em] text-fg/60 group-open:block">Close</span>
         </span>
       </summary>
@@ -135,7 +135,7 @@ export default function PritamPedroPage() {
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl">
-          <a href="#episode-01" className="block rounded-md bg-fg px-6 py-4 text-center font-sans text-lg font-medium text-bg transition-opacity hover:opacity-85">
+          <a href="#episode-01" className="block rounded-md bg-fg px-6 py-4 text-center font-sans text-lg font-medium text-bg transition-opacity motion-reduce:transition-none hover:opacity-85">
             Start with Episode 1
           </a>
         </div>
@@ -155,14 +155,14 @@ export default function PritamPedroPage() {
           ))}
         </div>
 
-        <p className="mx-auto mt-6 max-w-2xl text-center font-sans text-[14px] uppercase tracking-[0.12em] text-fg/70">
+        <p style={{ textWrap: "balance" }} className="mx-auto mt-6 max-w-2xl text-center font-sans text-[14px] uppercase tracking-[0.12em] text-fg/70">
           Experiential · OTT · Entertainment · Launch
         </p>
       </section>
 
       {/* The episodes, in order, each with its thumbnail. */}
       <section aria-label="Episodes" className={`mt-[clamp(4rem,10vh,6rem)] ${LARGE}`}>
-        <div className="mb-2 inline-block border-b-2 border-fg pb-2 font-sans text-lg font-medium text-fg">Episodes</div>
+        <h2 className="mb-2 inline-block border-b-2 border-fg pb-2 font-sans text-lg font-medium text-fg">Episodes</h2>
 
         <div id="episode-01" className="scroll-mt-24">
           <Episode number="1" title={c.challenge.label} summary={c.challenge.summary} thumb={{ src: `${IMG}/stage-environment.jpg`, alt: c.challenge.imageLabel }}>

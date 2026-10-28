@@ -19,15 +19,16 @@ export default function Enlargeable({ src, alt }: { src: string; alt: string }) 
           e.stopPropagation();
           dialog.current?.showModal();
         }}
-        className="group relative block aspect-video w-40 shrink-0 cursor-zoom-in overflow-hidden rounded-md md:w-56"
+        className="group relative block aspect-video w-full shrink-0 cursor-zoom-in md:w-56 overflow-hidden rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fg"
       >
         <Image
           src={src}
           alt=""
           fill
-          sizes="(min-width: 768px) 224px, 160px"
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          sizes="(min-width: 768px) 224px, 100vw"
+          className="object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-110 motion-reduce:group-hover:scale-100"
         />
+        <span className="absolute bottom-2 right-2 rounded-full bg-black/70 px-3 py-1 font-sans text-[12px] text-fg">Enlarge</span>
       </button>
       <dialog
         ref={dialog}

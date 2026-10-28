@@ -10,7 +10,7 @@ export const pritamPedro = {
   title: "Pritam & Pedro",
 
   challenge: {
-    label: "The challenge",
+    label: "Two Worlds, One Goa",
     question: "How do you build anticipation for a story without giving the story away?",
     paragraphs: [
       "The challenge was to bring Pritam and Pedro into the trailer launch, giving audiences a feel for the show without revealing too much of it.",
@@ -35,7 +35,7 @@ export const pritamPedro = {
   },
 
   experience: {
-    label: "The experience",
+    label: "Lights, Camera, Case.",
     paragraphs: [
       "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. The pair took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
       "Along the way, portraits were offered at two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
