@@ -11,7 +11,7 @@ export const humAiN = {
     continuation: "Nothing else followed.",
     enumeration:
       "Not a subject, a tone or an idea.",
-    question: "What would you do when the brief told you what to make, but not what to say?",
+    question: "What do you do when the brief tells you what to make, but not what to say?",
   },
 
   // Past tense, deliberately: this spread narrates the strategist's own

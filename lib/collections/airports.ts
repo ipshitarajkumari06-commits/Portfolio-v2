@@ -21,7 +21,7 @@ export const airports = {
       "The brief was a first international airport launch. The position taken was that it needed to be more than another cultural experience with regional performances. Modern technology would work with the culture and region it celebrated, showing the place and celebrating it in the same moment.",
       "A building can only make one kind of impression.",
       { text: "Assam is not one story.", emphasis: true },
-      "It is two hundred languages and more than two hundred tribes, and no single gesture was ever going to introduce all of it.",
+      "It is two hundred languages and more than two hundred tribes, and no single gesture could ever introduce all of it.",
     ],
     ceremonyImageLabel: "Prime Minister Narendra Modi and officials at the ceremonial welcome, Guwahati",
     ceremony: [
@@ -32,16 +32,16 @@ export const airports = {
     facetsIntro: ["What followed was more than a line-up of acts. It was a system in which technology and tradition worked together."],
     showcaseImageLabel: "The seven tableaus of the Northeast Showcase, framed like aircraft windows along the arrival route, Guwahati",
     facets: [
-      "Kaziranga's rhinos and elephants answered a visitor's own movement on a living wall, because in Assam nature takes part. Lachit Barphukan stood in bronze as the reason the region measures its courage against its own history. Tea arrived by the hands that grow it.",
+      "Kaziranga's rhinos and elephants answered a visitor's own movement on a living wall, because in Assam nature takes part. Lachit Barphukan stands in bronze as the reason the region measures its courage against its own history. Tea arrived by the hands that grow it.",
       "Seven tableaus, framed like aircraft windows, revealed themselves along a travelling route.",
       "Leadership, sport, wellness, nature, tourism, culture and ambition. Each one true on its own.",
     ],
     modelImageLabel: "Prime Minister Narendra Modi reviewing the airport masterplan model, Guwahati",
     discipline: [
-      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song: unity was never sameness, but many voices agreeing to sing toward the same point.",
+      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song: unity is never sameness, but many voices agree to sing toward the same point.",
       "Nothing repeated. That was the discipline. A performance did not explain the wildlife wall, and the wildlife wall did not explain the tea. Each intervention carried one idea.",
       "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: specificity, a place introducing itself through its own details.",
-      "The terminal that followed was designed to handle 13.1 million passengers a year, up from about six million.",
+      "The terminal that followed is designed to handle 13.1 million passengers a year, up from about six million.",
     ],
     close: [
       "The building gave Assam its first impression.",

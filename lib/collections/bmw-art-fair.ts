@@ -21,11 +21,11 @@ export const bmwArtFair = {
     { text: "A showroom is built for comparison. An art fair is built for interpretation.", emphasis: true },
   ],
   openingClose:
-    "A car in a showroom asks to be bought. In a fair, people judge what they are asked to look at, so the question became how BMW should behave where every object was judged through art, craft and form.",
+    "A car in a showroom asks to be bought. In a fair, people judge what they are asked to look at, so the question became how BMW should behave where every object is judged through art, craft and form.",
   openingImageLabel: "Collectors' Lounge, entrance",
 
   speedtop: [
-    { text: "No single feature defined the Speedtop. Its lines and silhouette worked as one gesture.", emphasis: true },
+    { text: "No single feature defines the Speedtop. Its lines and silhouette work as one gesture.", emphasis: true },
     {
       text: "The challenge was to understand the thinking behind that form, then rebuild it in an entirely different medium.",
     },
