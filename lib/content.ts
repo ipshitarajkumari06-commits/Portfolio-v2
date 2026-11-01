@@ -47,6 +47,11 @@ export const featuredWork = {
       title: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?",
       href: "/explorations/mcaps-start",
     },
+    {
+      client: "Tata Motors",
+      title: "When the theme changes, what stays?",
+      href: "/explorations/tata-one-world",
+    },
   ],
 };
 
