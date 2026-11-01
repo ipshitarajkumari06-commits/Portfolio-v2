@@ -10,12 +10,12 @@ export const hero = {
 
 export const intro = {
   kicker: "Method",
-  searches: ["How do you creatively strategise?", "Research", "More research", "Creative block"],
+  searches: ["How do I strategise creatively?", "Research", "More research", "Creative block"],
   turningPoint: "WAIT!",
   body: [
     "Every brief arrives with different questions.",
     "My work begins by finding the right one.",
-    "Everything else is execution.",
+    "Everything else follows.",
   ],
 };
 
