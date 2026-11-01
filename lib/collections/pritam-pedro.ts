@@ -35,7 +35,7 @@ export const pritamPedro = {
     label: "Lights, Camera, Case.",
     paragraphs: [
       "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. Two guests took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
-      "Along the way, portraits came in two paces: a live caricature in about five minutes, or an AI sketch bot in about one.",
+      "Along the way, portraits came in two paces: a live caricature in about five minutes, or an AI sketch bot in about a minute.",
       "The badges sent guests hunting for clues, and finishing a code meant finding a stranger to pair with.",
       "The media, creators and Bollywood guests took part at every stage: registering, cracking the code, claiming the reward and reaching the main stage.",
     ],
@@ -56,11 +56,11 @@ export const pritamPedro = {
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Teaser on the main-stage LED",
     summary: "The idea was carried into the guest journey, which opened at registration and became a game.",
-    close: "The journey culminated with the guests, who had already lived part of the story before the teaser played on the main stage.",
+    close: "The journey ended with guests who had already lived part of the story before the teaser played on the main stage.",
     guestBackdropImageLabel: "Guests at the series backdrop",
     guestLobbyImageLabel: "Guests arriving at the launch",
     guestMediaImageLabel: "Media bytes",
-    launchNote: "The trailer launch took place on June 15, 2026, at Taj Lands End in Mumbai, ahead of the series' premiere on JioHotstar. It was the grand OTT debut of filmmaker Rajkumar Hirani, who created, wrote and produced the series, and the acting debut of his son, Vir Hirani.",
+    launchNote: "The trailer launch took place on June 15, 2026, at Taj Lands End in Mumbai, ahead of the series' premiere on JioHotstar. The series marked the grand OTT debut of filmmaker Rajkumar Hirani, who created, wrote and produced it, and the acting debut of his son, Vir Hirani.",
     launchNoteSources: [
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/the-trailer-launch-of-pritam-and-pedro-was-peppered-with-stars--laughs-and-the-promise-of-a-fun-watch-/2005674" },
       { label: "IANS", url: "https://ianslive.in/aamir-khan-calls-vir-hiranis-debut-with-pritam-and-pedro-an-emotional-day-he-is-like-my-son--20260704142715" },

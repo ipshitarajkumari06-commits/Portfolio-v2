@@ -26,7 +26,7 @@ export const airports = {
     ceremonyImageLabel: "Prime Minister Narendra Modi and officials at the ceremonial welcome, Guwahati",
     ceremony: [
       "So the opening did not begin with a ribbon. It began with a Xorai, the vessel Assam uses to honour, and a Gamusa, the cloth it uses to welcome. When the button was pressed, tradition moved first. Technology answered only after.",
-      "The same day, an 80-foot statue of Gopinath Bardoloi was unveiled outside the terminal.",
+      "The same day, an 80-foot statue of Gopinath Bordoloi was unveiled outside the terminal.",
     ],
     systemsImageLabel: "Guwahati inauguration, documentary record: ceremony, systems and scale in sequence",
     facetsIntro: ["What followed was more than a line-up of acts. It was a system in which technology and tradition worked together."],
@@ -41,7 +41,8 @@ export const airports = {
       "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song: unity was never sameness, but many voices agreeing to sing toward the same point.",
       "Nothing repeated. That was the discipline. A performance did not explain the wildlife wall, and the wildlife wall did not explain the tea. Each intervention carried one idea.",
       "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: specificity, a place introducing itself through its own details.",
-      "The terminal that followed was designed to handle 13.1 million passengers a year, up from about six million.",    ],
+      "The terminal that followed was designed to handle 13.1 million passengers a year, up from about six million.",
+    ],
     close: [
       "The building gave Assam its first impression.",
       "The experience gave it an introduction.",
@@ -64,7 +65,7 @@ export const airports = {
     ],
     techImageLabel: "Prime Minister Narendra Modi walking past the terminal's digital art installation, Navi Mumbai",
     tech: [
-      "Then the building's own language took over. A Digital Toran, the doorway ornament every Indian household recognises, was triggered by the palm of the Prime Minister rather than hung by hand: an old gesture re-staged as a new one.",
+      "Then the building's own language took over. A Digital Toran, the doorway ornament every Indian household recognises, was triggered by the palm of the Prime Minister rather than being hung by hand: an old gesture re-staged as a new one.",
       "A construction wall built from shifting light told the story of the terminal's own becoming, not as a promotional reel but as a private history made public.",
     ],
     systemsImageLabel: "Navi Mumbai inauguration, documentary record: ceremony, systems and scale in sequence",

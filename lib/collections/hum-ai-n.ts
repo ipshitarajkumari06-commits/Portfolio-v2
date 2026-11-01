@@ -24,7 +24,7 @@ export const humAiN = {
       "But that would have been another AI campaign.",
     ],
     displayLead: "The real question was:",
-    display: "What made this Tata Motors?",
+    display: "What makes this Tata Motors?",
   },
 
   research: {
@@ -66,7 +66,7 @@ export const humAiN = {
 
   ending: {
     principle: "One principle.",
-    stories: "Ten stories."
+    stories: "Ten stories.",
   },
 
   campaign: {
