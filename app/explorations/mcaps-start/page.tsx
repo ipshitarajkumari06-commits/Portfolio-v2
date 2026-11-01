@@ -99,13 +99,6 @@ export default function McapsStartPage() {
 
         <section className="mx-auto mt-24 max-w-2xl">
           <Reveal>
-            <p className={LABEL}>{c.idea.label}</p>
-          </Reveal>
-          <Paragraphs items={c.idea.paragraphs} />
-        </section>
-
-        <section className="mx-auto mt-24 max-w-2xl">
-          <Reveal>
             <p className={LABEL}>{c.choice.label}</p>
           </Reveal>
           <Paragraphs items={c.choice.paragraphs} />

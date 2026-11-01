@@ -18,18 +18,11 @@ export const mcapsStart = {
     ],
   },
 
-  idea: {
-    label: "The idea",
-    paragraphs: [
-      "The idea was a daily practice, celebrated at the event and organised by three pillars: Mental Agility, Physical Energy and Consistency.",
-    ],
-  },
-
   choice: {
     label: "The choice",
     paragraphs: [
-      "Three alternatives were considered. “Co-Start”, “The Sync” and “The Vibe” built the theme around one moment: three cities, one energy, one celebration, at once. “Code the Next” put the audience inside Microsoft's own language. “Start with Purpose, Passion and People” split the theme by session.",
-      "The choice was between a moment and an accumulation. A moment theme would have started the sequence at the event. MCAPS Start is annual, and the work it celebrates builds on ordinary days, so the theme had to begin before the event. The idea was that extension: its daily action gave Start something to begin.",
+      "The idea was a daily practice, celebrated at the event and organised by three pillars: Mental Agility, Physical Energy and Consistency. Three alternatives were considered. “Co-Start”, “The Sync” and “The Vibe” built the theme around one moment: three cities, one energy, one celebration, at once. “Code the Next” put the audience inside Microsoft's own language. “Start with Purpose, Passion and People” split the theme by session.",
+      "The choice was between a moment and an accumulation. A moment theme would have started the sequence at the event. MCAPS Start is annual, and the work it celebrates builds on ordinary days, so the theme had to begin before the event. The idea was that extension: its daily action gave Start something to begin. The choice has a cost: a count that keeps the habit visible also invites a ranking, which the tension takes up.",
     ],
   },
 
@@ -38,7 +31,7 @@ export const mcapsStart = {
   decisionOne: {
     label: "Decision one: the daily work before the event",
     paragraphs: [
-      "A seven-day programme ran before the event, with a new task unlocked each day on the event microsite. The tasks split between mind and body, and consistency was the goal they served.",
+      "A seven-day programme ran before the event, with a new task unlocked each day on the event microsite. The tasks split between mind and body, and consistency was the goal they served. One task was a Gangnam Style hook-step, and every task was built so that anyone could take part, whatever their fitness level.",
       "A live leaderboard ranked participation by person and by city, which made progress visible before the event began.",
       "Team building ran for 45 minutes, in three 15-minute rounds, one per pillar. The Greatness Machine then linked the teams into one chain.",
     ],
