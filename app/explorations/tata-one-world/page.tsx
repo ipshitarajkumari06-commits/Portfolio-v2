@@ -119,9 +119,6 @@ export default function TataOneWorldPage() {
             <p className={LABEL}>{c.brief.label}</p>
           </Reveal>
           <Paragraphs items={c.brief.paragraphs} />
-          <Reveal delay={0.2}>
-            <p className="mt-6 font-sans text-sm font-light leading-relaxed text-fg/75">{c.brief.credit}</p>
-          </Reveal>
         </section>
 
         <section className={SECTION}>

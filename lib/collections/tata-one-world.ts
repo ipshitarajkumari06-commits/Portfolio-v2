@@ -15,7 +15,6 @@ export const tataOneWorld = {
     paragraphs: [
       "One World is the annual distributor meet of Tata Motors Commercial Vehicles International Business. This seventh edition brought 350 guests from 45 countries to Fairmont Udaipur.",
     ],
-    credit: "Creative Director: Ipshita Rajkumari. Design: the XP&D design team.",
   },
 
   choice: {
