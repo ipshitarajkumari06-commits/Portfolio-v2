@@ -268,7 +268,6 @@ export default function TataOneWorldPage() {
           <div className="relative">
             <Reveal delay={0.1}>
               <p className={`${BODY} mt-10 max-w-2xl`}>{c.answer}</p>
-              <p className="mt-8 font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.principle}</p>
             </Reveal>
           </div>
         </CursorGlow>
@@ -320,15 +319,22 @@ export default function TataOneWorldPage() {
           ))}
         </section>
 
+        <section className="mx-auto mt-32 max-w-3xl md:mt-48">
+          <Reveal>
+            <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
+              <p className={`${LABEL} mb-6`}>The trade-off</p>
+              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
+            </div>
+          </Reveal>
+        </section>
+
         <Decision
           id="programme"
           label={c.decisionThree.label}
           visual={
           <>
-            <PuzzleFigure v={c.decisionThree.image} />
-            <div className="mt-16">
-              <PuzzleFigure v={c.decisionThree.detail} />
-            </div>
+            <PuzzleFigure v={c.decisionThree.formations} />
             <div className="mt-16">
               <PuzzleFigure v={c.decisionThree.closeUp} />
             </div>
@@ -373,16 +379,6 @@ export default function TataOneWorldPage() {
               ))}
             </div>
           </CursorGlow>
-        </section>
-
-        <section className="mx-auto mt-32 max-w-3xl md:mt-48">
-          <Reveal>
-            <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
-              <p className={`${LABEL} mb-6`}>The trade-off</p>
-              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
-            </div>
-          </Reveal>
         </section>
 
       </Container>
