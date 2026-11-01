@@ -296,6 +296,10 @@ export function TimelineDiagram() {
           </text>
         </svg>
 
+        <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-fg/60">
+          Hover a day or event for its detail
+        </p>
+
         {activeTile && activeSummary && (
           <div
             role="tooltip"
