@@ -151,13 +151,6 @@ export default function McapsStartPage() {
           </div>
         </section>
 
-        <section className="mx-auto mt-24 max-w-2xl">
-          <Reveal>
-            <p className={LABEL}>{c.tension.label}</p>
-          </Reveal>
-          <Paragraphs items={c.tension.paragraphs} />
-        </section>
-
         <section className="mx-auto mt-32 max-w-3xl pb-24">
           <Reveal>
             <Display as="h2" className="font-serif font-light">
