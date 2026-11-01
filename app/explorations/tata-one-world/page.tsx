@@ -135,6 +135,24 @@ export default function TataOneWorldPage() {
           </div>
         </Decision>
 
+        <section className="mx-auto mt-16 max-w-5xl md:mt-24">
+          <Reveal>
+            <figure>
+              <Image
+                src={c.decisionOne.rationale.src}
+                alt={c.decisionOne.rationale.alt}
+                width={c.decisionOne.rationale.width}
+                height={c.decisionOne.rationale.height}
+                sizes="(min-width: 1024px) 64rem, 100vw"
+                className="h-auto w-full"
+              />
+              <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/75">
+                {c.decisionOne.rationale.caption}
+              </figcaption>
+            </figure>
+          </Reveal>
+        </section>
+
         <Decision n="02" label={c.decisionTwo.label}>
           <Paragraphs items={c.decisionTwo.paragraphs} />
           <div className="mt-16">

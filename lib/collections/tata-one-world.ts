@@ -38,6 +38,13 @@ export const tataOneWorld = {
       width: 994,
       height: 1053,
     },
+    rationale: {
+      src: "/images/tata-one-world/logo-rationale.webp",
+      alt: "The logo rationale slide: the BELIEVE key visual with each element labelled and explained",
+      caption: "The logo rationale, as set out in the proposal.",
+      width: 2000,
+      height: 1179,
+    },
   },
 
   decisionTwo: {
