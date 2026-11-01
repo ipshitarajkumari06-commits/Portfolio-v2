@@ -10,13 +10,14 @@ import { tataOneWorld as c } from "@/lib/collections/tata-one-world";
 const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
 const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
 const HEADING = "font-serif text-2xl font-light leading-tight text-fg md:text-3xl";
+const CAPTION = "mt-6 font-sans text-sm font-light leading-relaxed text-fg/75";
 
 // Standard section: a hairline rule above, then a text column.
 const SECTION = "mx-auto mt-28 max-w-xl border-t border-white/10 pt-10 md:mt-32";
 
 type Visual = { src: string; alt: string; caption: string; width: number; height: number };
 
-// A hairline frame sits offset behind each render, as on the other case pages.
+// Each render sits on a hairline frame offset behind it, as on the other case pages.
 function Figure({ v }: { v: Visual }) {
   return (
     <figure className="max-w-[22rem]">
@@ -31,16 +32,74 @@ function Figure({ v }: { v: Visual }) {
           className="relative h-auto w-full"
         />
       </div>
-      <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/75">{v.caption}</figcaption>
+      <figcaption className={CAPTION}>{v.caption}</figcaption>
     </figure>
   );
 }
 
-function Paragraphs({ items }: { items: string[] }) {
+// A full-width figure, for the logo rationale slide, which needs its text to stay legible.
+function WideFigure({ v }: { v: Visual }) {
+  return (
+    <figure>
+      <Image
+        src={v.src}
+        alt={v.alt}
+        width={v.width}
+        height={v.height}
+        sizes="(min-width: 1024px) 64rem, 100vw"
+        className="h-auto w-full"
+      />
+      <figcaption className={CAPTION}>{v.caption}</figcaption>
+    </figure>
+  );
+}
+
+// The retained elements, shown before and after. The BELIEVE image sits left and
+// the F.I.R.E. image right, joined by a hairline, so the thread reads across the change.
+function Continuity({ label, before, after }: { label: string; before: Visual; after: Visual }) {
+  return (
+    <Reveal>
+      <div className="mt-16 md:mt-24">
+        <p className={LABEL}>{label}</p>
+        <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-8">
+          <figure>
+            <div className="relative bg-white/[0.03] p-4">
+              <Image
+                src={before.src}
+                alt={before.alt}
+                width={before.width}
+                height={before.height}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <figcaption className={CAPTION}>{before.caption}</figcaption>
+          </figure>
+          <span aria-hidden="true" className="hidden h-px w-16 bg-white/20 md:block" />
+          <figure>
+            <div className="relative bg-white/[0.03] p-4">
+              <Image
+                src={after.src}
+                alt={after.alt}
+                width={after.width}
+                height={after.height}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <figcaption className={CAPTION}>{after.caption}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
+function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }) {
   return (
     <>
       {items.map((p, i) => (
-        <Reveal key={p} delay={0.08 + i * 0.08}>
+        <Reveal key={p} delay={delay + i * 0.08}>
           <p className={`${BODY} mt-6`}>{p}</p>
         </Reveal>
       ))}
@@ -137,19 +196,7 @@ export default function TataOneWorldPage() {
 
         <section className="mx-auto mt-16 max-w-5xl md:mt-24">
           <Reveal>
-            <figure>
-              <Image
-                src={c.decisionOne.rationale.src}
-                alt={c.decisionOne.rationale.alt}
-                width={c.decisionOne.rationale.width}
-                height={c.decisionOne.rationale.height}
-                sizes="(min-width: 1024px) 64rem, 100vw"
-                className="h-auto w-full"
-              />
-              <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/75">
-                {c.decisionOne.rationale.caption}
-              </figcaption>
-            </figure>
+            <WideFigure v={c.decisionOne.rationale} />
           </Reveal>
         </section>
 
@@ -159,6 +206,12 @@ export default function TataOneWorldPage() {
             <Figure v={c.decisionTwo.image} />
           </div>
         </Decision>
+
+        <section className="mx-auto mt-16 max-w-5xl md:mt-24">
+          {c.decisionTwo.continuity.map((item) => (
+            <Continuity key={item.label} label={item.label} before={item.before} after={item.after} />
+          ))}
+        </section>
 
         <Decision n="03" label={c.decisionThree.label}>
           <Paragraphs items={c.decisionThree.paragraphs} />

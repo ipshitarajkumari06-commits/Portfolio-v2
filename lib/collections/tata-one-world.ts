@@ -1,6 +1,6 @@
 // Case copy — Tata Motors One World (Commercial Vehicles International Business, distributor meet).
-// Draft for approval. Documented facts only, from the project deck and the author's confirmations.
-// No dates or months, per the portfolio rule. Renders are from the proposal deck unless noted.
+// Approved narrative. Documented facts only, from the project deck and the author's confirmations.
+// No dates or months, per the portfolio rule. Renders are from the proposal deck unless captioned as the final direction.
 
 export const tataOneWorld = {
   kicker: "Tata Motors",
@@ -8,7 +8,7 @@ export const tataOneWorld = {
   title: "Tata Motors One World",
 
   question: "When the theme changes, what stays?",
-  answer: "One belief became the logo. When the client asked for a new theme, the arch and the lotus stayed, and the programme was adapted around F.I.R.E.",
+  answer: "A new theme. A new identity. Two visual elements carried the story forward.",
 
   brief: {
     label: "The brief",
@@ -21,7 +21,7 @@ export const tataOneWorld = {
     label: "The first direction",
     paragraphs: [
       "The first direction was BELIEVE, Become Excellence. The identity drew on Udaipur's own vocabulary: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city's craft, and a shikara for forward movement.",
-      "The belief line became the mark. The BELIEVE identity was shown, built and proposed, and it won the project.",
+      "The belief line became the mark. The BELIEVE identity was developed and proposed, and it won the project.",
     ],
   },
 
@@ -29,7 +29,7 @@ export const tataOneWorld = {
     label: "The logo as an argument",
     paragraphs: [
       "The wordmark sets BE in red and LIEVE in navy. The tagline, BECOME EXCELLENCE, highlights a red B and E. The two red letters are intentional, linking the wordmark's BE to the tagline.",
-      "Every element in the key visual is a piece of Udaipur, so the mark belongs to this gathering and could not be moved to another event.",
+      "The key visual draws on Udaipur's architectural and cultural vocabulary, giving the identity a strong connection to the place and to this particular gathering.",
     ],
     image: {
       src: "/images/tata-one-world/believe-key-visual.jpg",
@@ -51,7 +51,7 @@ export const tataOneWorld = {
     label: "The theme changed, and the identity was rebuilt",
     paragraphs: [
       "The client asked for a different theme. We developed F.I.R.E.: Fearless Innovation, Resilient Execution. Its identity was built from scratch, and the final direction is the one shown here.",
-      "The arch and the lotus carried over from BELIEVE on purpose. They are the link between the two directions. Everything else in the F.I.R.E. world is new: the dunes, the elephants, the palms and the light waves.",
+      "The arch and lotus were deliberately retained from BELIEVE, creating a visual thread between the two directions. Around them, we built an entirely new world for F.I.R.E.",
     ],
     image: {
       src: "/images/tata-one-world/fire-key-visual.webp",
@@ -60,6 +60,42 @@ export const tataOneWorld = {
       width: 2000,
       height: 1124,
     },
+    continuity: [
+      {
+        label: "The arch",
+        before: {
+          src: "/images/tata-one-world/believe-arch.jpg",
+          alt: "The BELIEVE jharokha arch, in green, set against the teal panel",
+          caption: "BELIEVE: the arch, as shown in the proposal.",
+          width: 280,
+          height: 340,
+        },
+        after: {
+          src: "/images/tata-one-world/fire-arch.jpg",
+          alt: "The F.I.R.E. arch outline, glowing around the One World lockup",
+          caption: "F.I.R.E.: the arch, in the final direction.",
+          width: 800,
+          height: 580,
+        },
+      },
+      {
+        label: "The lotus",
+        before: {
+          src: "/images/tata-one-world/believe-lotus.png",
+          alt: "A pink lotus flower with its stem, from the BELIEVE key visual",
+          caption: "BELIEVE: the lotus, as shown in the proposal.",
+          width: 360,
+          height: 360,
+        },
+        after: {
+          src: "/images/tata-one-world/fire-lotus.jpg",
+          alt: "A pink lotus flower on the F.I.R.E. backdrop, beside the arch",
+          caption: "F.I.R.E.: the lotus, in the final direction.",
+          width: 160,
+          height: 210,
+        },
+      },
+    ],
   },
 
   decisionThree: {
@@ -79,7 +115,7 @@ export const tataOneWorld = {
   language: {
     label: "The vows and the anthem",
     paragraphs: [
-      "The vows and the anthem were written by my team and me. They carry the belief into words that guests could repeat. They are shown once, in the BELIEVE language, and are not repeated for F.I.R.E.",
+      "The vows and anthem were written by my team and me. They were developed for the original BELIEVE direction and carried its central belief into language that guests could repeat.",
     ],
   },
 
