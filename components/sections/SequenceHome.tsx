@@ -76,8 +76,7 @@ export default function SequenceHome() {
         <Name />
         <div className="absolute inset-x-0 top-[42vh] sm:top-[48vh] z-10 px-6 sm:px-12" style={{ background: CREAM, color: "#1A1A1A" }}>
           <div className="mx-auto max-w-[1100px] py-6 text-center sm:py-12">
-            <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-[#6B6860]">Question</p>
-            <h2 className="mt-4 font-serif text-[clamp(2rem,4.5vw,4rem)] font-light leading-[1.05]">{QUESTION}</h2>
+            <h2 className="font-serif text-[clamp(2rem,4.5vw,4rem)] font-light leading-[1.05]">{QUESTION}</h2>
             <div className="mt-10 font-serif text-[clamp(1.25rem,2.2vw,2rem)] font-light leading-snug">
               {LINES.map((line) => (
                 <p key={line} className="mt-4 first:mt-0">
@@ -102,8 +101,7 @@ export default function SequenceHome() {
           style={{ background: CREAM, color: "#1A1A1A", opacity: clearOpacity }}
         >
           <div className="mx-auto max-w-[1100px] py-6 text-center sm:py-12" aria-hidden="true">
-            <p className="font-sans text-[11px] uppercase tracking-[0.14em] text-[#6B6860]">Question</p>
-            <h2 className="mt-4 font-serif text-[clamp(2rem,4.5vw,4rem)] font-light leading-[1.05]">{QUESTION}</h2>
+            <h2 className="font-serif text-[clamp(2rem,4.5vw,4rem)] font-light leading-[1.05]">{QUESTION}</h2>
             <div className="mt-10 font-serif text-[clamp(1.25rem,2.2vw,2rem)] font-light leading-snug">
               {shown.map((t, i) => (
                 <p key={i} className="mt-4 first:mt-0">
