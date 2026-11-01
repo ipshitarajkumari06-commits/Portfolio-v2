@@ -1,6 +1,8 @@
 // Case copy — Tata Motors One World (Commercial Vehicles International Business, distributor meet).
 // Approved narrative. Documented facts only, from the project deck and the author's confirmations.
 // No dates or months, per the portfolio rule. Renders are from the proposal deck unless captioned as the final direction.
+// Deck note: the proposal deck gives 350 PAX for the guest count (p2), but 400 participants in the Last Sword challenge (p49).
+// The page keeps 350 and says all guests took part, per the author's confirmation. Public searches did not confirm either figure.
 
 export const tataOneWorld = {
   kicker: "Commercial Vehicles International Business",
