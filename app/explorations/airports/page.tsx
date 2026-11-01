@@ -173,7 +173,7 @@ export default function InternationalAirportsPage() {
         <Container>
           <div>
             <Kicker className="mb-2 text-fg/85">{c.kicker}</Kicker>
-            <span className="mb-8 block font-sans text-kicker uppercase text-fg/70">{c.discipline} · {c.role}</span>
+            <span className="mb-8 block font-sans text-kicker uppercase text-fg/70">{c.discipline}</span>
           </div>
           <div>
             <Display as="h1" className="max-w-3xl">

@@ -50,7 +50,7 @@ export const pritamPedro = {
     ],
     liveCaricatureImageLabel: "Live caricature",
     caricatureImageLabel: "AI caricature portrait",
-    referenceNote: "The caricature pair comes from the project deck and is not verified as this event.",
+    referenceNote: "Concept caricatures from the project deck.",
     launchCastImageLabel: "The cast at the launch",
     launchScooterImageLabel: "The scooter entry at the launch",
     seriesAtmImageLabel: "Official key art: the ATM",

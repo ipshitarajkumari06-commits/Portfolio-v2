@@ -43,7 +43,7 @@ export default function HumAiNPage() {
       <div className="mx-auto max-w-2xl">
         <Reveal>
           <span className="mb-2 block font-sans text-kicker uppercase text-fg/75">{c.kicker}</span>
-          <span className="block font-sans text-kicker uppercase text-fg/75">{c.discipline} · {c.role}</span>
+          <span className="block font-sans text-kicker uppercase text-fg/75">{c.discipline}</span>
         </Reveal>
       </div>
 
