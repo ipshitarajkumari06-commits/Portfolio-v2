@@ -110,7 +110,7 @@ function Card({
         >
           {project.image ? (
             <div className="relative h-[72%] w-full overflow-hidden" style={{ borderRadius: "14px" }}>
-              <Image src={project.image} alt="" fill sizes="42vw" className="object-cover" />
+              <Image src={project.image} alt="" fill sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
             </div>
           ) : (
             <div
@@ -165,7 +165,7 @@ function StaticRings() {
           <Link key={project.label} href={project.href} className="group block">
             {project.image ? (
               <div className="relative aspect-[4/3] w-full">
-                <Image src={project.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+                <Image src={project.image} alt="" fill sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
               </div>
             ) : (
               <div className="aspect-[4/3] w-full bg-[#1A1A1A]" />

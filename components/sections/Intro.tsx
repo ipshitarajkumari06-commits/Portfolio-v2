@@ -8,16 +8,16 @@ import { intro } from "@/lib/content";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const TYPE_SPEED = 60;
-const DELETE_SPEED = 35;
-const HOLD_AFTER_TYPE = 1100;
-const PAUSE_BETWEEN_SEARCHES = 650;
-const PAUSE_BEFORE_WAIT = 2100;
-const WAIT_HOLD = 3000;
-const PAUSE_AFTER_WAIT = 1800;
-const INITIAL_CURSOR_HOLD = 400;
-const PHILOSOPHY_PAUSE = 500;
-const PAUSE_BEFORE_METHOD = 900;
+const TYPE_SPEED = 90;
+const DELETE_SPEED = 50;
+const HOLD_AFTER_TYPE = 1600;
+const PAUSE_BETWEEN_SEARCHES = 1000;
+const PAUSE_BEFORE_WAIT = 2800;
+const WAIT_HOLD = 3500;
+const PAUSE_AFTER_WAIT = 2200;
+const INITIAL_CURSOR_HOLD = 600;
+const PHILOSOPHY_PAUSE = 800;
+const PAUSE_BEFORE_METHOD = 1200;
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
