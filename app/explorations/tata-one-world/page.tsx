@@ -1,129 +1,156 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Container from "@/components/layout/Container";
-import Display from "@/components/typography/Display";
 import Reveal from "@/components/motion/Reveal";
-import Kicker from "@/components/typography/Kicker";
 import BackPrompt from "@/components/collections/BackPrompt";
 import { tataOneWorld as c } from "@/lib/collections/tata-one-world";
+import ContinuityCompare from "./ContinuityCompare";
+import Tilt3D from "./Tilt3D";
+import AssembleLogo from "./AssembleLogo";
+import CursorGlow, { GlowPanels } from "./CursorGlow";
+import Parallax from "./Parallax";
+import CollectionHero from "@/components/collections/CollectionHero";
 
-const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
-const HEADING = "font-serif text-2xl font-light leading-tight text-fg md:text-3xl";
-const CAPTION = "mt-6 font-sans text-sm font-light leading-relaxed text-fg/75";
+const BODY =
+  "font-sans text-lg font-light leading-relaxed text-fg/85 md:text-xl";
+const LABEL =
+  "font-sans text-xs font-medium uppercase tracking-[0.22em] text-fg/70";
+const CAPTION = "mt-5 font-sans text-sm font-light leading-relaxed text-fg/70";
 
-// Standard section: a hairline rule above, then a text column.
-const SECTION = "mx-auto mt-28 max-w-xl border-t border-white/10 pt-10 md:mt-32";
+// The chapters of the case, in reading order, for the side index on wide screens.
+const CHAPTERS = [
+  { id: "brief", label: "Brief" },
+  { id: "logo", label: "Logo" },
+  { id: "theme", label: "Theme" },
+  { id: "programme", label: "Programme" },
+  { id: "watch", label: "Watch" },
+];
 
-type Visual = { src: string; alt: string; caption: string; width: number; height: number };
+// The jharokha arch is the motif of this case: the image masks take its shape.
+const ARCH =
+  "overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03]";
 
-// Each render sits on a hairline frame offset behind it, as on the other case pages.
-function Figure({ v }: { v: Visual }) {
+// Champagne gradient for the closing line: a quieter, more refined accent than the ember tones.
+const CHAMPAGNE =
+  "bg-gradient-to-r from-amber-50 via-amber-200 to-amber-400 bg-clip-text text-transparent";
+
+type Visual = {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+};
+
+function ArchFigure({ v, className = "" }: { v: Visual; className?: string }) {
   return (
-    <figure className="max-w-[22rem]">
-      <div className="relative">
-        <div className="absolute inset-0 translate-x-4 translate-y-4 border border-white/10" aria-hidden="true" />
-        <Image
+    <Parallax speed={0.1}>
+      <figure className={className}>
+        <Tilt3D>
+          <div className={`tow-arch ${ARCH}`}>
+            <Image
+              src={v.src}
+              alt={v.alt}
+              width={v.width}
+              height={v.height}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="h-auto w-full"
+            />
+          </div>
+        </Tilt3D>
+        <figcaption className={CAPTION}>{v.caption}</figcaption>
+      </figure>
+    </Parallax>
+  );
+}
+
+// The Last Sword artwork is cut into puzzle segments that come together as it enters
+// view, the same assembly as the logo, so the whole image is shown.
+function PuzzleFigure({ v }: { v: Visual }) {
+  return (
+    <Parallax speed={0.12}>
+      <figure>
+        <AssembleLogo
           src={v.src}
           alt={v.alt}
           width={v.width}
           height={v.height}
-          sizes="(min-width: 768px) 22rem, 100vw"
-          className="relative h-auto w-full"
         />
-      </div>
-      <figcaption className={CAPTION}>{v.caption}</figcaption>
-    </figure>
+        <figcaption className={CAPTION}>{v.caption}</figcaption>
+      </figure>
+    </Parallax>
   );
 }
 
-// A full-width figure, for the logo rationale slide, which needs its text to stay legible.
-function WideFigure({ v }: { v: Visual }) {
-  return (
-    <figure>
-      <Image
-        src={v.src}
-        alt={v.alt}
-        width={v.width}
-        height={v.height}
-        sizes="(min-width: 1024px) 64rem, 100vw"
-        className="h-auto w-full"
-      />
-      <figcaption className={CAPTION}>{v.caption}</figcaption>
-    </figure>
-  );
-}
-
-// The retained elements, shown before and after. The BELIEVE image sits left and
-// the F.I.R.E. image right, joined by a hairline, so the thread reads across the change.
-function Continuity({ label, before, after }: { label: string; before: Visual; after: Visual }) {
+function Continuity({
+  label,
+  height,
+  before,
+  after,
+}: {
+  label: string;
+  height: string;
+  before: Visual;
+  after: Visual;
+}) {
   return (
     <Reveal>
       <div className="mt-16 md:mt-24">
-        <p className={LABEL}>{label}</p>
-        <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:items-center md:gap-8">
-          <figure>
-            <div className="relative bg-white/[0.03] p-4">
-              <Image
-                src={before.src}
-                alt={before.alt}
-                width={before.width}
-                height={before.height}
-                sizes="(min-width: 768px) 30vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <figcaption className={CAPTION}>{before.caption}</figcaption>
-          </figure>
-          <span aria-hidden="true" className="hidden h-px w-16 bg-white/20 md:block" />
-          <figure>
-            <div className="relative bg-white/[0.03] p-4">
-              <Image
-                src={after.src}
-                alt={after.alt}
-                width={after.width}
-                height={after.height}
-                sizes="(min-width: 768px) 30vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <figcaption className={CAPTION}>{after.caption}</figcaption>
-          </figure>
-        </div>
+        <p className={`${LABEL} mb-6`}>{label}</p>
+        <Parallax speed={0.1}>
+          <div className="overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03]">
+            <ContinuityCompare height={height} before={before} after={after} />
+          </div>
+        </Parallax>
       </div>
     </Reveal>
   );
 }
 
-function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }) {
+function Paragraphs({ items }: { items: string[] }) {
   return (
-    <>
-      {items.map((p, i) => (
-        <Reveal key={p} delay={delay + i * 0.08}>
-          <p className={`${BODY} mt-6`}>{p}</p>
-        </Reveal>
-      ))}
-    </>
+    <CursorGlow className="rounded-[32px] py-6">
+      <GlowPanels />
+      <div className="relative space-y-6">
+        {items.map((p, i) => (
+          <Reveal key={p} delay={i * 0.08}>
+            <p className={BODY}>{p}</p>
+          </Reveal>
+        ))}
+      </div>
+    </CursorGlow>
   );
 }
 
-// Decision layout: the label sits in a sticky left column on desktop, and the
-// reasoning and its render scroll past on the right.
-function Decision({ n, label, children }: { n: string; label: string; children: React.ReactNode }) {
+// Decision layout: a ruled section with the label held in a sticky left column,
+// and the reasoning and render on the right.
+function Decision({
+  id,
+  label,
+  children,
+  visual,
+}: {
+  id?: string;
+  label: string;
+  children: React.ReactNode;
+  visual: React.ReactNode;
+}) {
   return (
-    <section className="mx-auto mt-16 max-w-5xl border-t border-white/10 pt-10 md:mt-32 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16">
+    <section
+      id={id}
+      className="mx-auto mt-16 max-w-5xl scroll-mt-24 border-t border-white/10 pt-10 md:mt-32 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16"
+    >
       <div className="relative md:sticky md:top-40 md:self-start">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute -left-2 -top-20 select-none font-serif text-[7rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.14)]"
-        >
-          {n}
-        </span>
         <Reveal>
-          <h3 className={`relative ${HEADING}`}>{label}</h3>
+          <h3 className="relative font-serif text-2xl font-light leading-tight text-fg md:text-3xl">
+            {label}
+          </h3>
         </Reveal>
       </div>
-      <div className="max-w-xl">{children}</div>
+      <div className="max-w-xl">
+        {children}
+        <div className="mt-12">{visual}</div>
+      </div>
     </section>
   );
 }
@@ -133,119 +160,237 @@ export const metadata: Metadata = {
   description: c.thesis,
 };
 
+const TICKER = [
+  "BELIEVE",
+  "Become Excellence",
+  "F.I.R.E.",
+  "Fearless Innovation",
+  "Resilient Execution",
+  "One World",
+];
+
+// Tall, softly blurred columns of light, after the glowing panels of the Web3 reference.
 export default function TataOneWorldPage() {
   return (
-    <main>
-      <header>
-        <div className="relative h-[280px] w-full overflow-hidden sm:h-[60vh] sm:min-h-[360px]">
-          <Image
-            src="/images/tata-one-world/fire-key-visual.webp"
-            alt="The F.I.R.E. key visual for Tata Motors One World"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" aria-hidden="true" />
-        </div>
-        <div className="mt-16 sm:mt-20">
-          <Container>
-            <Reveal>
-              <Kicker className="text-fg/75">{c.kicker}</Kicker>
-              <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{c.discipline}</span>
-            </Reveal>
-            <Reveal delay={0.08}>
-              <Display as="h1" className="mt-6 max-w-4xl max-sm:!text-[2.5rem] max-sm:leading-[1.05]">
-                {c.title}
-              </Display>
-            </Reveal>
-          </Container>
-        </div>
-      </header>
+    <main className="overflow-x-hidden">
+      <style>{`
+        @keyframes tow-marquee { to { transform: translateX(-50%); } }
+        .tow-marquee { animation: tow-marquee 40s linear infinite; }
+        @keyframes tow-shimmer { to { background-position: 200% center; } }
+        .tow-shimmer { background-size: 200% auto; animation: tow-shimmer 7s linear infinite; }
+        @keyframes tow-arch-in {
+          from { clip-path: inset(100% 0 0 0 round 28px); }
+          to { clip-path: inset(0 0 0 0 round 28px); }
+        }
+        @supports (animation-timeline: view()) {
+          .tow-arch {
+            animation: tow-arch-in linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 45%;
+          }
+        }
+        @keyframes tow-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+        @supports (animation-timeline: scroll()) {
+          .tow-progress { animation: tow-progress linear both; animation-timeline: scroll(root); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .tow-progress { animation: none; }
+          .tow-marquee { animation: none; }
+          .tow-shimmer { animation: none; }
+          .tow-arch { animation: none; }
+        }
+      `}</style>
+
+      {/* Opening, set the same way as the BMW case: kicker, title, then the wide key visual. */}
+      <CollectionHero
+        kicker={c.kicker}
+        discipline={c.discipline}
+        title={c.title}
+        heroImageLabel="The F.I.R.E. key visual for Tata Motors One World"
+        heroImageSrc="/images/tata-one-world/fire-key-visual.webp"
+      />
+
+      {/* A quiet chapter index for wide screens, so the reader can jump between decisions. */}
+      <nav
+        aria-label="Chapters"
+        className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 2xl:block"
+      >
+        <ol className="space-y-4">
+          {CHAPTERS.map((ch) => (
+            <li key={ch.id}>
+              <a
+                href={`#${ch.id}`}
+                className="group flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.2em] text-fg/70 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-200"
+              >
+                <span
+                  aria-hidden="true"
+                  className="h-px w-6 bg-white/30 transition-all duration-500 group-hover:w-10 group-hover:bg-amber-200"
+                />
+                {ch.label}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
 
       <Container>
-        <section className="mx-auto mt-16 max-w-xl space-y-6 md:mt-20">
+        {/* The question, set as the opening statement. */}
+        <section className="mx-auto mt-28 max-w-5xl md:mt-48">
           <Reveal>
-            <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.question}</p>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <p className={BODY}>{c.answer}</p>
+            <p className="font-serif text-[clamp(2.5rem,6vw,5.5rem)] font-light leading-[1.02] text-fg">
+              {c.question}
+            </p>
           </Reveal>
         </section>
 
-        <section className={SECTION}>
+        {/* The brief and the first direction, as two arches side by side. */}
+        <section
+          id="brief"
+          className="mt-28 grid scroll-mt-24 gap-16 md:mt-48 md:grid-cols-2 md:gap-24"
+        >
           <Reveal>
             <p className={LABEL}>{c.brief.label}</p>
+            <div className="mt-8">
+              <Paragraphs items={c.brief.paragraphs} />
+            </div>
           </Reveal>
-          <Paragraphs items={c.brief.paragraphs} />
-        </section>
-
-        <section className={SECTION}>
-          <Reveal>
+          <Reveal delay={0.1}>
             <p className={LABEL}>{c.choice.label}</p>
+            <div className="mt-8">
+              <Paragraphs items={c.choice.paragraphs} />
+            </div>
           </Reveal>
-          <Paragraphs items={c.choice.paragraphs} />
         </section>
 
-        <Decision n="01" label={c.decisionOne.label}>
+        {/* The answer, after the setup it depends on. */}
+        <CursorGlow className="mx-auto mt-32 max-w-5xl rounded-[32px] py-6 md:mt-48">
+          <GlowPanels />
+          <div className="relative">
+            <Reveal delay={0.1}>
+              <p className={`${BODY} mt-10 max-w-2xl`}>{c.answer}</p>
+              <p className="mt-8 font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.principle}</p>
+            </Reveal>
+          </div>
+        </CursorGlow>
+
+
+
+
+        <Decision
+          label={c.decisionOne.label}
+          visual={<ArchFigure v={c.decisionOne.image} />}
+        >
           <Paragraphs items={c.decisionOne.paragraphs} />
-          <div className="mt-16">
-            <Figure v={c.decisionOne.image} />
-          </div>
         </Decision>
 
-        <section className="mx-auto mt-16 max-w-5xl md:mt-24">
+        {/* The rationale slide is shown full width, so its labels remain readable. */}
+        <section id="logo" className="mt-24 scroll-mt-24 md:mt-32">
           <Reveal>
-            <WideFigure v={c.decisionOne.rationale} />
+            <figure>
+              <Parallax speed={0.12}>
+                <AssembleLogo
+                  src={c.decisionOne.rationale.src}
+                  alt={c.decisionOne.rationale.alt}
+                />
+                <figcaption className={CAPTION}>
+                  {c.decisionOne.rationale.caption}
+                </figcaption>
+              </Parallax>
+            </figure>
           </Reveal>
         </section>
 
-        <Decision n="02" label={c.decisionTwo.label}>
+        <Decision
+          id="theme"
+          label={c.decisionTwo.label}
+          visual={<ArchFigure v={c.decisionTwo.image} />}
+        >
           <Paragraphs items={c.decisionTwo.paragraphs} />
-          <div className="mt-16">
-            <Figure v={c.decisionTwo.image} />
-          </div>
         </Decision>
 
-        <section className="mx-auto mt-16 max-w-5xl md:mt-24">
+        <section className="mt-12">
           {c.decisionTwo.continuity.map((item) => (
-            <Continuity key={item.label} label={item.label} before={item.before} after={item.after} />
+            <Continuity
+              key={item.label}
+              label={item.label}
+              height={item.height}
+              before={item.before}
+              after={item.after}
+            />
           ))}
         </section>
 
-        <Decision n="03" label={c.decisionThree.label}>
+        <Decision
+          id="programme"
+          label={c.decisionThree.label}
+          visual={<PuzzleFigure v={c.decisionThree.image} />}
+        >
           <Paragraphs items={c.decisionThree.paragraphs} />
-          <div className="mt-16">
-            <Figure v={c.decisionThree.image} />
-          </div>
         </Decision>
 
-        <section className={SECTION}>
-          <Reveal>
-            <p className={LABEL}>{c.language.label}</p>
-          </Reveal>
-          <Paragraphs items={c.language.paragraphs} />
+        {/* The reel, the short and the anthem, as three arches to open. */}
+        <section id="watch" className="mt-32 scroll-mt-24 md:mt-56">
+          <p className={`${LABEL} mb-6`}>Watch and listen</p>
+          <CursorGlow className="rounded-[32px] py-2">
+            <GlowPanels />
+            <div className="relative grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {c.videos.map((video, i) => (
+                <Reveal key={video.url} delay={i * 0.08}>
+                  <Tilt3D className="h-full">
+                    <a
+                      href={video.url}
+                      className="group relative flex h-full min-h-[200px] flex-col justify-between overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-8 transition-colors hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-amber-200/0 via-amber-200/15 to-rose-400/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                      />
+                      <span className="block font-sans text-[11px] uppercase tracking-[0.22em] text-fg/50">
+                        0{i + 1}
+                      </span>
+                      <span className="mt-6 flex items-end justify-between font-serif text-3xl font-light leading-tight text-fg">
+                        {video.label}
+                        <span
+                          aria-hidden="true"
+                          className="ml-4 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                        >
+                          ↗
+                        </span>
+                      </span>
+                    </a>
+                  </Tilt3D>
+                </Reveal>
+              ))}
+            </div>
+          </CursorGlow>
         </section>
 
-        {c.video.url && (
-          <section className={SECTION}>
-            <Reveal>
-              <a
-                href={c.video.url}
-                className="font-serif text-2xl font-light text-fg underline decoration-line underline-offset-8 transition-colors hover:text-accent md:text-3xl"
-              >
-                {c.video.label}
-              </a>
-            </Reveal>
-          </section>
-        )}
-
-        <section className="mx-auto mt-32 max-w-3xl border-t border-white/10 pb-32 pt-16">
+        <section className="mx-auto mt-32 max-w-3xl md:mt-48">
           <Reveal>
-            <h2 className="font-serif text-4xl font-light leading-tight text-fg md:text-5xl">{c.thesis}</h2>
+            <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
+              <p className={`${LABEL} mb-6`}>The trade-off</p>
+              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
+            </div>
           </Reveal>
         </section>
+
       </Container>
+
+      {/* The closing line, set over glowing panels in the manner of the Web3 reference. */}
+      <CursorGlow className="mt-40 py-40 md:mt-64 md:py-56">
+        <GlowPanels />
+        <Container>
+          <Reveal>
+            <h2 className="relative mx-auto max-w-6xl font-serif text-[clamp(3rem,6vw,5.5rem)] font-extralight leading-[0.95] tracking-[-0.03em] text-fg">
+              <span className="block">{c.closing.lead}</span>
+              <span className={`tow-shimmer block italic ${CHAMPAGNE}`}>
+                {c.closing.accent}
+              </span>
+            </h2>
+          </Reveal>
+        </Container>
+      </CursorGlow>
 
       <BackPrompt />
     </main>
