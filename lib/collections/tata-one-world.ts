@@ -136,6 +136,6 @@ export const tataOneWorld = {
 
   closing: {
     lead: "The name was new. The job was not.",
-    accent: "The same guests still had to be held together.",
+    accent: "The same 350 guests from 45 countries still had to be held together.",
   },
 };
