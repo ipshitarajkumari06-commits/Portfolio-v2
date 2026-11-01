@@ -44,7 +44,7 @@ function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }
 }
 
 export const metadata: Metadata = {
-  title: `${c.title} — MCAPS Start FY27`,
+  title: `${c.title} — ${c.discipline}`,
   description: c.thesis,
 };
 
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 export default function McapsStartPage() {
   return (
     <main>
-      <header className="pb-24">
+      <header>
         <div className="relative h-[60vh] min-h-[360px] w-full overflow-hidden">
           <Image
             src="/images/mcaps-start/title-hero.jpg"
@@ -76,15 +76,12 @@ export default function McapsStartPage() {
               {c.title}
             </Display>
           </Reveal>
-          <Reveal delay={0.16}>
-            <p className="mt-16 font-serif text-[clamp(2.5rem,8vw,6rem)] font-light leading-none text-fg md:mt-20">{c.hero}</p>
-          </Reveal>
         </Container>
         </div>
       </header>
 
       <Container>
-        <section className="mx-auto mt-24 max-w-2xl space-y-6">
+        <section className="mx-auto mt-16 max-w-2xl space-y-6 md:mt-20">
           <Reveal>
             <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.question}</p>
           </Reveal>
@@ -148,9 +145,6 @@ export default function McapsStartPage() {
             <Reveal>
               <SyncDiagram />
             </Reveal>
-          </div>
-          <div className="mt-12">
-            <Figure v={c.decisionTwo.image} />
           </div>
         </section>
 

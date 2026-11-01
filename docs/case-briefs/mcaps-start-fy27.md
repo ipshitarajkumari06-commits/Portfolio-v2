@@ -8,7 +8,7 @@ Source: `/Users/ipshitarajkumari/Desktop/PPT/MCAPS START - XP&D Proposal copy (1
 
 **Verified from the deck (proposal, not confirmed as executed):**
 - Brief (p.2): conceptualise MCAPS Start FY27. Three locations: Bengaluru 275, Mumbai 250, Gurugram 275. Dates 30–31 July 2026.
-- Concept: "Daily Greatness", with three pillars: Mental Agility, Physical Energy, Consistency (p.7).
+- Concept: a daily-practice theme with three pillars: Mental Agility, Physical Energy, Consistency (p.7).
 - Pre-event: a personalised "First Hello" invitation (pp.11–12); a 7-day wellbeing challenge on a microsite with a live leaderboard (p.15); a Greatness Passport with stamps and a 25-stamp title (p.16); daily memes as emails (p.18).
 - Main event: an opening Laughter Reset across the three cities (p.22); team games linked across cities: Memory Chain, Hook Step, Momentum Relay, Adaptive Tower, Build the Greatness Machine, The 45-minute Streak (pp.24–30); Mission: 60 Second Takeover, which hands control to one city every 90 minutes (p.31); One Cheer, One Team (p.32); Keep It Going, a balloon closing with rules that escalate (p.33).
 - Awards: an AI-generated "Main Character" film for each winner (p.37); a personalised cheer song (p.39).
@@ -20,7 +20,7 @@ Source: `/Users/ipshitarajkumari/Desktop/PPT/MCAPS START - XP&D Proposal copy (1
 **Not verified:**
 - Whether any of this was executed as proposed. The deck is a proposal.
 - Attendance, engagement or any post-event result. There is no sourced measure.
-- Whether "Daily Greatness" came from the client's brief or was created by the team.
+- Whether the theme name came from the client's brief or was created by the team.
 
 ## Stage 2 — Strategy
 
@@ -49,26 +49,11 @@ Open question for the author: which decisions were yours, and which were the tea
 ## Stage 4 — Draft copy (for review)
 
 **Title:** MCAPS Start FY27
-**Discipline:** Experience Strategy (final direction; also used by International Airports and Pritam & Pedro)
-**Question:** What should an annual gathering do when the work it celebrates happens every day?
+**Discipline:** Participation Design (final direction; replaces Experience Strategy and Behavioural Design)
+**Question:** What should an annual event celebrate when its work happens every day?
+**Answer:** Start the celebration on the ordinary days, and run it live across the cities.
 
-**Opening**
-One day of celebration is easy to plan. Three cities, one shared sense of progress, and a year of work that only shows up in a single room is harder.
-
-**Tension**
-The milestones are built in ordinary days. A conference, however well run, is a peak. Unless something carries the energy past the peak, it stays in the room.
-
-**Decision**
-We moved the event's start to before the event. A seven-day challenge gave everyone a daily task. A digital passport made the habit visible. The theme became a practice before it became a stage.
-
-**Decision**
-We treated three cities as one audience. Teams in each city played the same challenges, and control moved between them every 90 minutes. The room had to listen across locations, not just look at a screen.
-
-**Close**
-The last moment asked people to keep something going, with rules that changed as the balloon stayed up. We did not end the day with a farewell. We ended it with a habit.
-
-**Principle**
-A celebration is only as strong as the habit it starts.
+**Source of truth:** the case copy is `lib/collections/mcaps-start.ts`. This brief no longer holds a separate draft, so the two cannot drift apart. The closing line is the author's choice: "Three cities, two days. It began on an ordinary one."
 
 ## Notes for review
 
@@ -81,6 +66,8 @@ A celebration is only as strong as the habit it starts.
 Revision note: AI is now part of decision three's title and leads that decision (two paragraphs before the counting); the choice section closes on the reason for the theme; a bridge sentence links the counting to the tension. Author direction: AI carries more weight than a single paragraph.
 
 Revision note: the Copilot integration sentence moved from the idea section into the first AI paragraph of decision three.
+
+Revision note (current): the Stage 4 draft is replaced by a pointer to `lib/collections/mcaps-start.ts`. The discipline is Participation Design. The hero line is removed; the title is the event name. The timeline diagram sits after the principle. "Daily Greatness" is no longer used on the case page or in this brief.
 
 Revision note (repetition pass): closing now 'Three cities, two days. It had started before the first.'; repeated subject and phrasing removed in the choice, decision two, decision three and the tension.
 

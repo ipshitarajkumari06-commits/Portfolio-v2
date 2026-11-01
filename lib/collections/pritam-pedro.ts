@@ -5,7 +5,7 @@
 
 export const pritamPedro = {
   kicker: "JioHotstar",
-  discipline: "Experience Strategy",
+  discipline: "Audience Strategy",
   heroImageLabel: "Stage concept",
   title: "Pritam & Pedro",
 
