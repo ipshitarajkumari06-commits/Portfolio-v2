@@ -101,3 +101,10 @@ Fix pass 3: labels shortened; principle back after the choice; the brief aims re
 Fix pass 4: closing now 'The event lasted two days. Its start came earlier, on an ordinary day.'; the alternatives rewritten as prose; decision one's first paragraph split; the brief's aims stated as design intent in two sentences.
 
 Fix pass 5: closing now 'The event lasted two days. Its start came on an ordinary day.'; decision three's AI section reduced from three paragraphs to two (content unchanged, merged). Image decisions deferred to design.
+
+Design pass 1: hero gradient now fades to black (#000), removing the seam; decision titles set in serif display (h3) instead of small uppercase labels.
+
+Diagrams built (not renders): a timeline (seven days before, two event days) placed before decision one, and a three-city sync diagram placed in decision two. Each is labelled 'Diagram, not a render'. The timeline shows daily unlocks and the two event days only; it claims no per-day content.
+
+Logo approval: the author has approved use of the Microsoft logo title image (public/images/mcaps-start/title-hero.jpg) on the title page. It sits in its own band above the title, with no overlap. The earlier "pending client permission" note is superseded by this approval.
+

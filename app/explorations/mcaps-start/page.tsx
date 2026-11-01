@@ -5,6 +5,7 @@ import Display from "@/components/typography/Display";
 import Reveal from "@/components/motion/Reveal";
 import Kicker from "@/components/typography/Kicker";
 import BackPrompt from "@/components/collections/BackPrompt";
+import { TimelineDiagram, SyncDiagram } from "@/components/collections/McapsDiagrams";
 import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
 const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
@@ -52,13 +53,19 @@ export const metadata: Metadata = {
 export default function McapsStartPage() {
   return (
     <main>
-      <header
-        className="pb-24 pt-32 sm:pt-40"
-        style={{
-          background:
-            "radial-gradient(ellipse at 85% 75%, rgba(90, 71, 53, 0.55), transparent 60%), linear-gradient(to bottom, #020812 0%, #060f1a 60%, #0d0b09 100%)",
-        }}
-      >
+      <header className="pb-24">
+        <div className="relative h-[60vh] min-h-[360px] w-full overflow-hidden">
+          <Image
+            src="/images/mcaps-start/title-hero.jpg"
+            alt="Microsoft logo on a blue abstract background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" aria-hidden="true" />
+        </div>
+        <div className="mt-16 sm:mt-20">
         <Container>
           <Reveal>
             <Kicker className="text-fg/75">{c.kicker}</Kicker>
@@ -73,6 +80,7 @@ export default function McapsStartPage() {
             <p className="mt-16 font-serif text-[clamp(2.5rem,8vw,6rem)] font-light leading-none text-fg md:mt-20">{c.hero}</p>
           </Reveal>
         </Container>
+        </div>
       </header>
 
       <Container>
@@ -114,9 +122,15 @@ export default function McapsStartPage() {
           </Reveal>
         </section>
 
+        <section className="mx-auto mt-24 max-w-3xl">
+          <Reveal>
+            <TimelineDiagram />
+          </Reveal>
+        </section>
+
         <section className="mx-auto mt-24 max-w-2xl">
           <Reveal>
-            <p className={LABEL}>{c.decisionOne.label}</p>
+            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionOne.label}</h3>
           </Reveal>
           <Paragraphs items={c.decisionOne.paragraphs} />
           <div className="mt-12">
@@ -126,10 +140,15 @@ export default function McapsStartPage() {
 
         <section className="mx-auto mt-24 max-w-2xl">
           <Reveal>
-            <p className={LABEL}>{c.decisionTwo.label}</p>
+            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionTwo.label}</h3>
           </Reveal>
           <Paragraphs items={c.decisionTwo.paragraphs} />
           <Paragraphs items={c.decisionTwo.evidence} delay={0.1} />
+          <div className="mt-12">
+            <Reveal>
+              <SyncDiagram />
+            </Reveal>
+          </div>
           <div className="mt-12">
             <Figure v={c.decisionTwo.image} />
           </div>
@@ -137,7 +156,7 @@ export default function McapsStartPage() {
 
         <section className="mx-auto mt-24 max-w-2xl">
           <Reveal>
-            <p className={LABEL}>{c.decisionThree.label}</p>
+            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionThree.label}</h3>
           </Reveal>
           <Paragraphs items={c.decisionThree.paragraphs} />
           <div className="mt-12">
