@@ -78,7 +78,7 @@ export default function BMWArtFairPage() {
       {/* Section 1 — Hero, untouched. */}
       <CollectionHero
         kicker={c.kicker}
-        discipline={c.discipline}
+        discipline={`${c.discipline} · ${c.role}`}
         title={c.title}
         heroImageLabel={c.heroImageLabel}
         heroImageSrc={`${IMG}/lounge-interior.jpg`}

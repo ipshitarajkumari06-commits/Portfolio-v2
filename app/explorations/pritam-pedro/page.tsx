@@ -116,7 +116,7 @@ export default function PritamPedroPage() {
         <div className="mx-auto mt-10 flex max-w-2xl flex-col items-center gap-4 text-center">
           <p className={LABEL}>{c.kicker}</p>
           <h1 className="font-serif text-[clamp(1.75rem,5.5vw,3.25rem)] font-light leading-[1.1] text-fg">{c.challenge.question}</h1>
-          <p className="font-sans text-[13px] uppercase tracking-[0.16em] text-fg/70">{c.discipline} · 3 Episodes</p>
+          <p className="font-sans text-[13px] uppercase tracking-[0.16em] text-fg/70">{c.discipline} · {c.role} · 3 Episodes</p>
         </div>
 
         <div className="mx-auto mt-10 max-w-2xl">

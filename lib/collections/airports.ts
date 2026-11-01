@@ -8,6 +8,7 @@
 export const airports = {
   kicker: "International Airports",
   discipline: "Experience Strategy",
+  role: "Co-lead",
   title: "When architecture captures attention, what should the experience say next?",
 
   hero: {

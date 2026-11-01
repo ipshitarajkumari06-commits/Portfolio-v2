@@ -9,6 +9,7 @@
 export const bmwArtFair = {
   kicker: "BMW",
   discipline: "Brand Strategy",
+  role: "Lead",
   title: "What survives when a brand changes medium?",
   heroImageLabel: "BMW Collectors' Lounge, full interior",
 

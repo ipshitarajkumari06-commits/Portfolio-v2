@@ -115,7 +115,7 @@ export default function McapsStartPage() {
           <Container>
             <Reveal>
               <Kicker className="text-fg/75">{c.kicker}</Kicker>
-              <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{c.discipline}</span>
+              <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{c.discipline} · {c.role}</span>
             </Reveal>
             <Reveal delay={0.08}>
               <Display as="h1" className="mt-6 max-w-4xl max-sm:!text-[2.5rem] max-sm:leading-[1.05]">
