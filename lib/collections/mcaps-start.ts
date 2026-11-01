@@ -37,7 +37,7 @@ export const mcapsStart = {
     image: {
       src: "/images/mcaps-start/greatness-machine-render.jpg",
       alt: "Render of the Greatness Machine team challenge from the proposal deck",
-      caption: "Render from the proposal deck.",
+      caption: "The Greatness Machine team challenge, as rendered in the proposal deck.",
       width: 1000,
       height: 1500,
     },
@@ -61,12 +61,13 @@ export const mcapsStart = {
     paragraphs: [
       "Three mechanisms count participation. The passport records accumulated actions through stamps, and at 25 stamps it unlocks the Champion title. The leaderboard ranks points and participation by city, so each city's position is visible to the others. Greatness Tokens reward each successful round in a 45-minute streak: five teams per location compete across five rounds, and the city with the most tokens wins.",
       "AI runs through the activities and the mechanics, not beside them. Microsoft Copilot was in the plan from the start: the passport's sample stamps include Copilot Champion, for a task done with Copilot. Guess the Hero identified colleagues from AI-generated descriptions, which made recognising people a task everyone could complete. Award winners received AI-generated film sequences, and a personalised invitation greeted each employee by name.",
-      "Counting makes the accumulation visible, and that is where the trade-off lies. The leaderboard set the cities against each other, while the synced rounds asked them to act together. The trade-off was worth it: it bought a competitive spirit, along with a sense of oneness across the cities.",
     ],
+    tradeOff:
+      "Counting makes the accumulation visible, and that is where the trade-off lies. The leaderboard set the cities against each other, while the synced rounds asked them to act together. The trade-off was worth it: it bought a competitive spirit, along with a sense of oneness across the cities.",
     image: {
       src: "/images/mcaps-start/p16-passport-render.jpg",
       alt: "Render of the digital passport from the proposal deck",
-      caption: "Render from the proposal deck.",
+      caption: "The digital passport, as rendered in the proposal deck.",
       width: 1000,
       height: 1500,
     },

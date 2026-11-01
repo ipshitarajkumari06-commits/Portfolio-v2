@@ -9,24 +9,32 @@ import { TimelineDiagram, SyncDiagram } from "@/components/collections/McapsDiag
 import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
 const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const LABEL = "font-sans text-[13px] uppercase tracking-[0.14em] text-fg/60";
+const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
+const HEADING = "font-serif text-[clamp(1.375rem,3.5vw,2rem)] font-light leading-tight text-fg";
+
+// Standard section: a hairline rule above, then a text column.
+const SECTION = "mx-auto mt-28 max-w-xl border-t border-white/10 pt-10 md:mt-32";
 
 type Visual = { src: string; alt: string; caption: string; width: number; height: number };
 
 // Concept renders from the proposal deck. Each is captioned as a render, so
-// nothing reads as event photography.
+// nothing reads as event photography. A hairline frame sits offset behind the
+// image, so the render reads as a layer over the page rather than a flat box.
 function Figure({ v }: { v: Visual }) {
   return (
-    <figure>
-      <Image
-        src={v.src}
-        alt={v.alt}
-        width={v.width}
-        height={v.height}
-        sizes="(min-width: 768px) 40vw, 100vw"
-        className="h-auto w-full"
-      />
-      <figcaption className="mt-4 font-sans text-sm font-light leading-relaxed text-fg/70">{v.caption}</figcaption>
+    <figure className="max-w-[22rem]">
+      <div className="relative">
+        <div className="absolute inset-0 translate-x-4 translate-y-4 border border-white/10" aria-hidden="true" />
+        <Image
+          src={v.src}
+          alt={v.alt}
+          width={v.width}
+          height={v.height}
+          sizes="(min-width: 768px) 22rem, 100vw"
+          className="relative h-auto w-full"
+        />
+      </div>
+      <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/80">{v.caption}</figcaption>
     </figure>
   );
 }
@@ -43,6 +51,29 @@ function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }
   );
 }
 
+// Decision layout: on desktop the label sits in a sticky left column with an
+// outlined numeral behind it, so the reader keeps the decision in view while
+// its reasoning scrolls past on the right.
+function Decision({ n, label, children }: { n: string; label: string; children: React.ReactNode }) {
+  return (
+    <section className="mx-auto mt-28 max-w-5xl border-t border-white/10 pt-10 md:mt-32 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16">
+      <div className="relative md:sticky md:top-32 md:self-start">
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-2 -top-8 select-none font-serif text-[7rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.2)]"
+        >
+          {n}
+        </span>
+        <Reveal>
+          <p className={`relative ${LABEL} mb-4 text-amber-200/80`}>Decision {n}</p>
+          <h3 className={`relative ${HEADING}`}>{label}</h3>
+        </Reveal>
+      </div>
+      <div className="max-w-xl">{children}</div>
+    </section>
+  );
+}
+
 export const metadata: Metadata = {
   title: `${c.title} — ${c.discipline}`,
   description: c.thesis,
@@ -54,7 +85,7 @@ export default function McapsStartPage() {
   return (
     <main>
       <header>
-        <div className="relative h-[60vh] min-h-[360px] w-full overflow-hidden">
+        <div className="relative h-[280px] w-full overflow-hidden sm:h-[60vh] sm:min-h-[360px]">
           <Image
             src="/images/mcaps-start/title-hero.jpg"
             alt="Microsoft logo on a blue abstract background"
@@ -66,22 +97,22 @@ export default function McapsStartPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black" aria-hidden="true" />
         </div>
         <div className="mt-16 sm:mt-20">
-        <Container>
-          <Reveal>
-            <Kicker className="text-fg/75">{c.kicker}</Kicker>
-            <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{c.discipline}</span>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <Display as="h1" className="mt-6 max-w-4xl max-sm:!text-[2.5rem] max-sm:leading-[1.05]">
-              {c.title}
-            </Display>
-          </Reveal>
-        </Container>
+          <Container>
+            <Reveal>
+              <Kicker className="text-fg/75">{c.kicker}</Kicker>
+              <span className="mt-1 block font-sans text-kicker uppercase text-fg/60">{c.discipline}</span>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <Display as="h1" className="mt-6 max-w-4xl max-sm:!text-[2.5rem] max-sm:leading-[1.05]">
+                {c.title}
+              </Display>
+            </Reveal>
+          </Container>
         </div>
       </header>
 
       <Container>
-        <section className="mx-auto mt-16 max-w-2xl space-y-6 md:mt-20">
+        <section className="mx-auto mt-16 max-w-xl space-y-6 md:mt-20">
           <Reveal>
             <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.question}</p>
           </Reveal>
@@ -90,21 +121,22 @@ export default function McapsStartPage() {
           </Reveal>
         </section>
 
-        <section className="mx-auto mt-24 max-w-2xl">
+        <section className={SECTION}>
           <Reveal>
             <p className={LABEL}>{c.brief.label}</p>
           </Reveal>
           <Paragraphs items={c.brief.paragraphs} />
         </section>
 
-        <section className="mx-auto mt-24 max-w-2xl">
+        <section className={SECTION}>
           <Reveal>
             <p className={LABEL}>{c.choice.label}</p>
           </Reveal>
           <Paragraphs items={c.choice.paragraphs} />
         </section>
 
-        <section className="mx-auto mt-24 max-w-3xl">
+        {/* The principle is the case's one argument, set alone with space around it. */}
+        <section className="mx-auto mt-28 max-w-3xl border-t border-white/10 py-24 md:mt-32 md:py-32">
           <Reveal>
             <Display as="h2" className="font-serif font-light">
               {c.principle}
@@ -112,46 +144,43 @@ export default function McapsStartPage() {
           </Reveal>
         </section>
 
-        <section className="mx-auto mt-24 max-w-3xl">
+        <section className="mx-auto mt-28 max-w-3xl md:mt-32">
           <Reveal>
             <TimelineDiagram />
           </Reveal>
         </section>
 
-        <section className="mx-auto mt-24 max-w-2xl">
-          <Reveal>
-            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionOne.label}</h3>
-          </Reveal>
+        <Decision n="01" label={c.decisionOne.label}>
           <Paragraphs items={c.decisionOne.paragraphs} />
-          <div className="mt-12">
+          <div className="mt-16">
             <Figure v={c.decisionOne.image} />
           </div>
-        </section>
+        </Decision>
 
-        <section className="mx-auto mt-24 max-w-2xl">
-          <Reveal>
-            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionTwo.label}</h3>
-          </Reveal>
+        <Decision n="02" label={c.decisionTwo.label}>
           <Paragraphs items={c.decisionTwo.paragraphs} />
           <Paragraphs items={c.decisionTwo.evidence} delay={0.1} />
-          <div className="mt-12">
+          <div className="mt-16">
             <Reveal>
               <SyncDiagram />
             </Reveal>
           </div>
-        </section>
+        </Decision>
 
-        <section className="mx-auto mt-24 max-w-2xl">
-          <Reveal>
-            <h3 className="font-serif text-[clamp(1.75rem,4vw,2.75rem)] font-light leading-tight text-fg">{c.decisionThree.label}</h3>
-          </Reveal>
+        <Decision n="03" label={c.decisionThree.label}>
           <Paragraphs items={c.decisionThree.paragraphs} />
-          <div className="mt-12">
+          <Reveal delay={0.2}>
+            <div className="relative mt-16 border border-white/10 bg-white/[0.03] p-6 md:p-8">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
+              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionThree.tradeOff}</p>
+            </div>
+          </Reveal>
+          <div className="mt-16">
             <Figure v={c.decisionThree.image} />
           </div>
-        </section>
+        </Decision>
 
-        <section className="mx-auto mt-32 max-w-3xl pb-24">
+        <section className="mx-auto mt-32 max-w-3xl border-t border-white/10 pb-32 pt-16">
           <Reveal>
             <Display as="h2" className="font-serif font-light">
               {c.thesis}

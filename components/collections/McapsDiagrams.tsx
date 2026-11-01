@@ -140,11 +140,6 @@ function Tile({
       <rect x={hitX} y={hitY} width={hitW} height={hitBottom - hitY} fill="rgba(0,0,0,0)" />
       <polygon points={footprint} fill="#000" opacity={active ? 0.45 : 0.3} filter="url(#tl-shadow-wide)" transform="translate(14 22)" />
       <polygon points={footprint} fill="#000" opacity={active ? 0.7 : 0.5} filter="url(#tl-shadow)" transform="translate(4 7)" />
-      {event && (
-        <polygon points={top} fill="none" stroke={AMBER} strokeWidth="14" strokeOpacity="0.3" filter="url(#tl-glow)">
-          {!reduce && <animate attributeName="stroke-opacity" values="0.18;0.42;0.18" dur="5s" repeatCount="indefinite" />}
-        </polygon>
-      )}
       <polygon points={front} fill={sideFill} />
       <polygon points={side} fill={sideFill} />
       <polygon points={top} fill={event ? "url(#tl-event-top)" : "url(#tl-glass-top)"} />
@@ -269,9 +264,6 @@ export function TimelineDiagram() {
             </filter>
             <filter id="tl-shadow" x="-20%" y="-20%" width="140%" height="150%">
               <feGaussianBlur stdDeviation="4" />
-            </filter>
-            <filter id="tl-glow" x="-20%" y="-30%" width="140%" height="160%">
-              <feGaussianBlur stdDeviation="5" />
             </filter>
           </defs>
 
