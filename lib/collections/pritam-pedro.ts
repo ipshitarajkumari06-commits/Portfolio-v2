@@ -16,7 +16,7 @@ export const pritamPedro = {
       "The objective was to celebrate the show and hold back its reveal until the trailer launch. The guests were mainly media, creators and Bollywood, for whom a series launch matters as much as a film's: it drives press and marketing momentum.",
       "The show is set in Goa, but the launch drew on it through detail rather than the postcard view: the lighthouse, the cassettes and the ATM. The answer was to let guests into that setting first.",
     ],
-    summary: "A launch that let guests in before the trailer.",
+    summary: "A relationship-led launch experience.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
