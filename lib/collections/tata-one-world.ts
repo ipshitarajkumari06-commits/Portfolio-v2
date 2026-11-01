@@ -52,9 +52,10 @@ export const tataOneWorld = {
   decisionTwo: {
     label: "Answering the request with a quirkier theme",
     paragraphs: [
-      "The BELIEVE identity had already been chosen for the project when the client asked for a quirkier name, one that could also reach the younger generation. F.I.R.E. (Fearless Innovation, Resilient Execution) was developed in response.",
-      "The name works across generations, and most of all as an abbreviation: F.I.R.E. is short enough to say and remember. Its identity was rebuilt, and the design, activities and engagements were adapted to it.",
-      "The team deliberately retained the arch and lotus from BELIEVE. The arch is Udaipur's architecture and the lotus stands for inner belief, so both could outlast the name. Keeping them let the reader see BELIEVE inside F.I.R.E.",
+      "The BELIEVE identity had already been chosen for the project when the client asked for a quirkier name, one that could also reach the younger generation. F.I.R.E. (Fearless Innovation, Resilient Execution) was my answer to that request.",
+      "The name works across generations, most of all as an abbreviation. For younger audiences, FIRE means something LIT; for older audiences, it means on fire. As F.I.R.E., both meanings fit in one name.",
+      "Its identity was rebuilt, and the design, activities and engagements were adapted to it.",
+      "I chose to keep the arch and lotus from BELIEVE. For me, the arch is a doorway to greater things, and the lotus is inner belief, the blooming of excellence from within. Keeping them let the reader see BELIEVE inside F.I.R.E.",
     ],
     image: {
       src: "/images/tata-one-world/fire-key-visual.webp",
@@ -106,12 +107,26 @@ export const tataOneWorld = {
   decisionThree: {
     label: "Keeping the programme's structure",
     paragraphs: [
-      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and adapted its activities to F.I.R.E. The Last Sword of Maharana Pratap, for example, sent 400 participants through five challenge zones to restore a lost sword. The photo shows the F.I.R.E. identity that framed the activities.",
+      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and adapted its activities to F.I.R.E. The Last Sword of Maharana Pratap, for example, sent 400 participants through five challenge zones to restore a lost sword. Over the palace, drones spelled out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E. in turn.",
     ],
     image: {
-      src: "/images/tata-one-world/fire-drone-show.jpg",
-      alt: "A drone show over a dark sky: ONE WORLD in lights, then F.I.R.E. with an arch of lights above it",
-      caption: "The F.I.R.E. drone show at One World 2026, the final identity in the sky.",
+      src: "/images/tata-one-world/fire-drone-sequence.jpg",
+      alt: "Drone formations over a lit palace at night: ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
+      caption: "The drone sequence over the palace, as shared by Tata Motors.",
+      width: 495,
+      height: 619,
+    },
+    detail: {
+      src: "/images/tata-one-world/fire-drone-poster.webp",
+      alt: "A Tata Motors poster of four drone-show photographs: ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
+      caption: "The same show, with its four formations shown together as a poster.",
+      width: 1482,
+      height: 1500,
+    },
+    closeUp: {
+      src: "/images/tata-one-world/fire-drone-close.jpg",
+      alt: "Close-up of drone formations: ONE WORLD in lights, then F.I.R.E. under an arch of lights",
+      caption: "Close-up of the drone formations: ONE WORLD, then F.I.R.E. under an arch of lights.",
       width: 1110,
       height: 2000,
     },
@@ -125,7 +140,7 @@ export const tataOneWorld = {
     { label: "Watch: The countdown begins", url: "https://www.youtube.com/shorts/lC2jfSss-rA" },
   ],
 
-  tradeOff: "The cost was rebuilding an identity the client had already chosen, then delivering the whole programme in it. The payoff was a new creative direction.",
+  tradeOff: "The cost was rebuilding an identity the client had already chosen. The team and I spent that time brainstorming and adapting the programme to it. The payoff was a new creative direction.",
 
   thesis: "The look was rebuilt around a programme that could carry it.",
 

@@ -323,7 +323,17 @@ export default function TataOneWorldPage() {
         <Decision
           id="programme"
           label={c.decisionThree.label}
-          visual={<PuzzleFigure v={c.decisionThree.image} />}
+          visual={
+          <>
+            <PuzzleFigure v={c.decisionThree.image} />
+            <div className="mt-16">
+              <PuzzleFigure v={c.decisionThree.detail} />
+            </div>
+            <div className="mt-16">
+              <PuzzleFigure v={c.decisionThree.closeUp} />
+            </div>
+          </>
+        }
         >
           <Paragraphs items={c.decisionThree.paragraphs} />
         </Decision>
