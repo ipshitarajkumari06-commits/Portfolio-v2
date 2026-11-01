@@ -22,7 +22,7 @@ export const tataOneWorld = {
   choice: {
     label: "The first direction",
     paragraphs: [
-      "The first direction was “BELIEVE, Become Excellence.” The direction drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city's craft, and a shikara for forward movement.",
+      "The first direction was “Believe to become.” The direction drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city's craft, and a shikara for forward movement.",
       "The belief line became the mark. The BELIEVE identity was developed and proposed, and it won the project.",
     ],
   },
@@ -30,7 +30,7 @@ export const tataOneWorld = {
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME, so the red BE carried the whole line: BELIEVE, BECOME EXCELLENCE. The tagline picked up the same red B and E, tying the wordmark to its promise.",
+      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME, meaning to be exceptional, so the red BE carried the whole line: you have to believe to become. The tagline picked up the same red B and E, tying the wordmark to its promise.",
       "The key visual placed those motifs around the wordmark, giving it a direct link to the city.",
     ],
     image: {
@@ -53,7 +53,7 @@ export const tataOneWorld = {
     label: "Answering the request with a quirkier theme",
     paragraphs: [
       "The BELIEVE identity had already been chosen for the project when the client asked for a quirkier name, one that could also reach the younger generation. F.I.R.E. (Fearless Innovation, Resilient Execution) was my answer to that request.",
-      "The name works across generations, most of all as an abbreviation. For younger audiences, FIRE means something LIT; for older audiences, it means on fire. As F.I.R.E., both meanings fit in one name.",
+      "The name works across generations, and most of all as an abbreviation. To younger audiences, FIRE means LIT, slang for something outstanding. To older audiences, it means on fire. As F.I.R.E., both meanings fit in one name.",
       "Its identity was rebuilt, and the design, activities and engagements were adapted to it.",
       "I chose to keep the arch and lotus from BELIEVE. For me, the arch is a doorway to greater things, and the lotus is inner belief, the blooming of excellence from within. Keeping them let the reader see BELIEVE inside F.I.R.E.",
     ],
