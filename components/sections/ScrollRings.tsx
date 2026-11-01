@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import {
+  useSpring,
   motion,
   MotionValue,
   useInView,
@@ -18,6 +19,9 @@ import { CHANNELS, type Channel } from "@/components/collections/PlatformMarks";
 const WINE = "#6B1E2E";
 const RINGS = [16, 24, 32, 40, 50];
 const DISK_FILL = 12;
+// Progress at which the circle has resolved and the first card (BMW) is centred.
+// The gallery travels from here to the end, so the first card holds focus first.
+const FOCUS_HOLD = 0.9;
 
 const PROJECTS: { label: string; title: string; href: string; image: string | null; channels?: Channel[] }[] = [
   { label: "Brand Strategy", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.png" },
@@ -57,6 +61,13 @@ const CARD_W = 42;
 const GAP = 4;
 const STEP = CARD_W + GAP;
 
+// Maps scroll progress to a card position. Holds at 0 until FOCUS_HOLD, then
+// eases in and out (smoothstep) so the gallery starts and settles gently.
+function travelPos(p: number) {
+  const t = Math.min(Math.max((p - FOCUS_HOLD) / (1 - FOCUS_HOLD), 0), 1);
+  return (t * t * (3 - 2 * t)) * (N - 1);
+}
+
 
 
 function Card({
@@ -69,7 +80,7 @@ function Card({
   progress: MotionValue<number>;
 }) {
   const signed = useTransform(progress, (p) => {
-    const pos = Math.min(Math.max((p - 0.82) / 0.18, 0), 1) * (N - 1);
+    const pos = travelPos(p);
     return Math.max(-1.5, Math.min(1.5, pos - index));
   });
   const dist = useTransform(signed, (v) => Math.abs(v));
@@ -124,10 +135,10 @@ function Card({
 }
 
 function Gallery({ progress }: { progress: MotionValue<number> }) {
-  const labelOpacity = useTransform(progress, [0.82, 0.88], [0, 1], { clamp: true });
-  const galleryOpacity = useTransform(progress, [0.82, 0.86], [0, 1], { clamp: true });
+  const labelOpacity = useTransform(progress, [0.84, 0.92], [0, 1], { clamp: true });
+  const galleryOpacity = useTransform(progress, [0.78, 0.9], [0, 1], { clamp: true });
   const x = useTransform(progress, (p) => {
-    const pos = Math.min(Math.max((p - 0.82) / 0.18, 0), 1) * (N - 1);
+    const pos = travelPos(p);
     return `${(N * STEP) / 2 - CARD_W / 2 - pos * STEP}vw`;
   });
   return (
@@ -176,6 +187,7 @@ export default function ScrollRings() {
   const reduced = useReducedMotion();
   const live = useInView(ref, { margin: "0px 0px -10% 0px" });
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
+  const smoothProgress = useSpring(scrollYProgress, { stiffness: 140, damping: 32, mass: 0.6 });
   const [geo, setGeo] = useState({ startX: 0, baseline: 0, w0: 0, dot: 0, endX: 0, endY: 0, end: 0 });
 
   useLayoutEffect(() => {
@@ -202,13 +214,13 @@ export default function ScrollRings() {
   }, []);
 
   // Arriving from a "back to selected work" link lands on the cards, not the
-  // top of the scene. 0.91 is where the middle card sits centred in the gallery.
+  // top of the scene. FOCUS_HOLD is where the first card sits centred in the gallery.
   useEffect(() => {
     if (window.location.hash !== "#selected-work") return;
     const timer = window.setTimeout(() => {
       const el = ref.current;
       if (!el) return;
-      const top = el.getBoundingClientRect().top + window.scrollY + 0.91 * (el.offsetHeight - window.innerHeight);
+      const top = el.getBoundingClientRect().top + window.scrollY + FOCUS_HOLD * (el.offsetHeight - window.innerHeight);
       window.scrollTo({ top, behavior: "instant" as ScrollBehavior });
     }, 60);
     return () => window.clearTimeout(timer);
@@ -290,7 +302,7 @@ export default function ScrollRings() {
           </motion.div>
         </div>
 
-        <Gallery progress={scrollYProgress} />
+        <Gallery progress={smoothProgress} />
       </div>
     </div>
   );
