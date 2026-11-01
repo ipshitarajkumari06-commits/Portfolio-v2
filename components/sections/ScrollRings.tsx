@@ -24,6 +24,7 @@ const PROJECTS: { label: string; title: string; href: string; image: string | nu
   { label: "Experience Strategy", title: "When architecture captures attention, what should the experience say next?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
   { label: "Narrative Strategy", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: null, channels: CHANNELS },
   { label: "Experience Strategy", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },
+  { label: "Experience Strategy", title: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/hook-step-render.jpg" },
 ];
 
 function polar(angle: number, r: number) {
