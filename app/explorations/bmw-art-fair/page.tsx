@@ -298,12 +298,10 @@ export default function BMWArtFairPage() {
       </div>
 
       {/* Back to the selected work on the homepage, directly above the footer. */}
-      <div className="pt-section pb-section">
-        <div className={CONTAINER}>
-          <Reveal>
-            <BackPrompt />
-          </Reveal>
-        </div>
+      <div className={CONTAINER}>
+        <Reveal>
+          <BackPrompt />
+        </Reveal>
       </div>
     </>
   );

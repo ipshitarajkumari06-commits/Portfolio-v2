@@ -169,9 +169,7 @@ export default function HumAiNPage() {
 
 
 
-      <div className="mt-[clamp(4rem,10vh,6rem)]">
-        <BackPrompt />
-      </div>
+      <BackPrompt />
     </Container>
   );
 }

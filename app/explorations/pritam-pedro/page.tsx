@@ -237,7 +237,7 @@ export default function PritamPedroPage() {
       </div>
 
       {/* The way back to the selected work, as in the other case studies. */}
-      <div className={`mt-[clamp(4rem,10vh,6rem)] pb-[clamp(4rem,10vh,6rem)] ${LARGE}`}>
+      <div className={LARGE}>
         <BackPrompt />
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function BackPrompt() {
   const open = !sent && !declined;
 
   return (
-    <div className="relative mx-auto flex max-w-2xl flex-col gap-4">
+    <div className="relative mx-auto mb-12 mt-24 flex max-w-2xl flex-col gap-4 md:mb-16 md:mt-32">
       <style
         dangerouslySetInnerHTML={{
           __html:
