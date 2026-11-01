@@ -18,7 +18,7 @@ export const tataOneWorld = {
     scale: [
       { value: "350", label: "guests" },
       { value: "45", label: "countries" },
-      { value: "400", label: "participants in one challenge" },
+      { value: "5", label: "challenge zones" },
       { value: "4", label: "drone formations" },
     ],
   },
@@ -110,7 +110,7 @@ export const tataOneWorld = {
   decisionThree: {
     label: "Keeping the programme's structure",
     paragraphs: [
-      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and the team adapted its activities to F.I.R.E. The Last Sword of Maharana Pratap, for example, sent 400 participants through five challenge zones to restore a lost sword. Over the palace, drones spelled out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E. in turn.",
+      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and the team adapted its activities to F.I.R.E. The Last Sword of Maharana Pratap, for example, sent all 350 guests through five challenge zones to restore a lost sword. Over the palace, drones spelled out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E. in turn.",
     ],
     formations: {
       src: "/images/tata-one-world/fire-drone-formations.webp",
