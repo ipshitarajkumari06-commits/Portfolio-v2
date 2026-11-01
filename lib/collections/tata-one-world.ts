@@ -15,6 +15,12 @@ export const tataOneWorld = {
     paragraphs: [
       "One World is the annual distributor meet of Tata Motors Commercial Vehicles International Business. This seventh edition brought 350 guests from 45 countries to Fairmont Udaipur, and the theme had to hold them together.",
     ],
+    scale: [
+      { value: "350", label: "guests" },
+      { value: "45", label: "countries" },
+      { value: "400", label: "participants in one challenge" },
+      { value: "4", label: "drone formations" },
+    ],
   },
 
   choice: {

@@ -253,6 +253,14 @@ export default function TataOneWorldPage() {
             <div className="mt-8">
               <Paragraphs items={c.brief.paragraphs} />
             </div>
+            <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6">
+              {c.brief.scale.map((item) => (
+                <div key={item.label} className="border-t border-white/10 pt-4">
+                  <dt className="font-serif text-4xl font-light text-fg">{item.value}</dt>
+                  <dd className={`${LABEL} mt-2`}>{item.label}</dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
           <Reveal delay={0.1}>
             <p className={LABEL}>{c.choice.label}</p>
