@@ -8,8 +8,8 @@ export const mcapsStart = {
   discipline: "Participation Design",
   title: "MCAPS Start FY27",
 
-  question: "What should an annual event celebrate when its work happens every day?",
-  answer: "The celebration begins on the ordinary days, and runs live across the cities.",
+  question: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?",
+  answer: "The celebration began on the days leading up to it, and ran live across the cities.",
 
   brief: {
     label: "The brief",
@@ -21,49 +21,49 @@ export const mcapsStart = {
   choice: {
     label: "The choice",
     paragraphs: [
-      "The idea is a daily practice, celebrated at the event and organised by three pillars: Mental Agility, Physical Energy and Consistency. Three alternatives were considered. “Co-Start”, “The Sync” and “The Vibe” built the theme around a single moment: three cities, a shared energy, a shared celebration, at once. “Code the Next” put the audience inside Microsoft's own language. “Start with Purpose, Passion and People” split the theme by session.",
-      "The choice was between a moment and an accumulation. A moment theme would have started the sequence at the event. MCAPS Start is annual, and the work it celebrates is built on ordinary days, so the theme has to begin before the event. The idea is that extension: its daily action gives Start something to begin.",
+      "The idea was a daily practice, carried into the event and organised by three pillars: Mental Agility, Physical Energy and Consistency. Three alternatives were considered. The first, “Co-Start”, “The Sync” or “The Vibe”, built the theme around a single moment, with Gurugram, Mumbai and Bengaluru sharing one energy and one celebration. The second, “Code the Next”, put the audience inside Microsoft's own language. The third, “Start with Purpose, Passion and People”, split the theme by session.",
+      "The choice was between a moment and an accumulation. A moment theme would have started the sequence at the event. MCAPS Start is annual, and the work it celebrates is built on ordinary days. The daily practice carried that accumulation into the year, so the theme began before the event.",
     ],
   },
 
-  principle: "An event can celebrate a moment, but the work it celebrates accumulates on ordinary days.",
+  principle: "The conference shows what was practised. The habits behind it were built in the seven days before.",
 
   decisionOne: {
-    label: "Decision one: the daily work before the event",
+    label: "The daily work before the event",
     paragraphs: [
       "A seven-day programme ran before the event, with a new task unlocked each day on the event microsite. The tasks split between mind and body, and consistency was the goal they served. Among the tasks was a Gangnam Style hook-step, and every task was built so that anyone could take part, whatever their fitness level.",
-      "A live leaderboard ranked participation by person and by city, which made progress visible before the event began. At the conference, team building ran for 45 minutes, in three 15-minute rounds, one per pillar, and the Greatness Machine linked the teams into a chain.",
+      "A live leaderboard ranked participation by person and by city, which made progress visible ahead of the conference. At the conference, team building ran for 45 minutes, in 15-minute rounds, one per pillar, and the Greatness Machine linked the teams together.",
     ],
     image: {
       src: "/images/mcaps-start/greatness-machine-render.jpg",
       alt: "Render of the Greatness Machine team challenge from the proposal deck",
       caption: "The Greatness Machine team challenge, as rendered in the proposal deck.",
-      width: 1000,
-      height: 1500,
+      width: 1200,
+      height: 800,
     },
   },
 
   decisionTwo: {
-    label: "Decision two: the cities in real time",
+    label: "The cities in real time",
     paragraphs: [
-      "The conference opened with a Laughter Reset. As laughter spread across Gurugram, Mumbai and Bengaluru, the three cities came together in shared energy.",
-      "Three cities, one clock. The cities were synced in real time over a live video and audio network, so one city's actions affected what another did. No city could finish a round alone. Taken together, the synced activities made the three cities feel like one team.",
+      "The conference opened with a Laughter Reset. As laughter spread across Gurugram, Mumbai and Bengaluru, the cities came together in shared energy.",
+      "One clock ran across all of them. The cities were synced in real time over a live video and audio network, so one city's actions affected what another did. No city could finish a round alone. From where I stood, the synced activities made the cities feel like one team.",
     ],
     evidence: [
       "The takeover gave one city control every 90 minutes. That city set a surprise round, and the other two had 60 seconds to complete it.",
-      "A memory chain carried across all three cities, and a shared cheer gave each city its own word.",
+      "A memory chain carried across every city, and a shared cheer gave each city its own word.",
       "The conference closed with a balloon that each employee kept in the air, with a new rule every 30 to 45 seconds.",
     ],
   },
 
   decisionThree: {
-    label: "Decision three: counting participation, built with AI",
+    label: "Counting participation, built with AI",
     paragraphs: [
-      "Three mechanisms count participation. The passport records accumulated actions through stamps, and at 25 stamps it unlocks the Champion title. The leaderboard ranks points and participation by city, so each city's position is visible to the others. Greatness Tokens reward each successful round in a 45-minute streak: five teams per location compete across five rounds, and the city with the most tokens wins.",
-      "AI runs through the activities and the mechanics, not beside them. Microsoft Copilot was in the plan from the start: the passport's sample stamps include Copilot Champion, for a task done with Copilot. Guess the Hero identified colleagues from AI-generated descriptions, which made recognising people a task everyone could complete. Award winners received AI-generated film sequences, and a personalised invitation greeted each employee by name.",
+      "Participation was counted by a passport, a leaderboard and Greatness Tokens. The passport recorded accumulated actions through stamps, and at 25 stamps it unlocked the Champion title. The leaderboard ranked points and participation by city, so each city's position was visible to the others. Greatness Tokens rewarded each successful round in a 45-minute streak: five teams per location competed across five rounds, and the city with the most tokens won.",
+      "AI ran through the activities and the mechanics, not beside them. Microsoft Copilot was in the plan from the start: the passport's sample stamps included Copilot Champion, for a task done with Copilot. Guess the Hero identified colleagues from AI-generated descriptions, which made recognising people a task everyone could complete. Award winners received AI-generated film sequences, and a personalised invitation greeted each employee by name.",
     ],
     tradeOff:
-      "Counting makes the accumulation visible, and that is where the trade-off lies. The leaderboard set the cities against each other, while the synced rounds asked them to act together. The trade-off was worth it: it bought a competitive spirit, along with a sense of oneness across the cities.",
+      "Counting made the accumulation visible, and that was where the trade-off lay. The leaderboard set the cities against each other, while the synced rounds asked them to act together.",
     image: {
       src: "/images/mcaps-start/p16-passport-render.jpg",
       alt: "Render of the digital passport from the proposal deck",
@@ -73,5 +73,5 @@ export const mcapsStart = {
     },
   },
 
-  thesis: "Three cities, two days. It began on an ordinary day.",
+  thesis: "Three cities, two days. It all began on an ordinary day.",
 };

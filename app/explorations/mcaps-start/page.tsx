@@ -10,7 +10,7 @@ import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
 const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
 const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
-const HEADING = "font-serif text-[clamp(1.375rem,3.5vw,2rem)] font-light leading-tight text-fg";
+const HEADING = "font-serif text-2xl font-light leading-tight text-fg md:text-3xl";
 
 // Standard section: a hairline rule above, then a text column.
 const SECTION = "mx-auto mt-28 max-w-xl border-t border-white/10 pt-10 md:mt-32";
@@ -34,7 +34,7 @@ function Figure({ v }: { v: Visual }) {
           className="relative h-auto w-full"
         />
       </div>
-      <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/80">{v.caption}</figcaption>
+      <figcaption className="mt-8 font-sans text-sm font-light leading-relaxed text-fg/75">{v.caption}</figcaption>
     </figure>
   );
 }
@@ -51,21 +51,36 @@ function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }
   );
 }
 
+// Evidence reads as a short ruled list, so the proof points stand apart from the argument.
+function Evidence({ items }: { items: string[] }) {
+  return (
+    <div className="mt-10 border-t border-white/10">
+      {items.map((item, i) => (
+        <Reveal key={item} delay={0.1 + i * 0.08}>
+          <div className="flex gap-5 border-b border-white/10 py-4 md:py-6">
+            <span className="font-sans text-sm tabular-nums text-amber-200/80">{String(i + 1).padStart(2, "0")}</span>
+            <p className="font-sans text-base font-light leading-relaxed text-fg/90 md:text-lg">{item}</p>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  );
+}
+
 // Decision layout: on desktop the label sits in a sticky left column with an
 // outlined numeral behind it, so the reader keeps the decision in view while
 // its reasoning scrolls past on the right.
 function Decision({ n, label, children }: { n: string; label: string; children: React.ReactNode }) {
   return (
-    <section className="mx-auto mt-28 max-w-5xl border-t border-white/10 pt-10 md:mt-32 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16">
-      <div className="relative md:sticky md:top-32 md:self-start">
+    <section className="mx-auto mt-16 max-w-5xl border-t border-white/10 pt-10 md:mt-32 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-16">
+      <div className="relative md:sticky md:top-40 md:self-start">
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -left-2 -top-8 select-none font-serif text-[7rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.2)]"
+          className="pointer-events-none absolute -left-2 -top-20 select-none font-serif text-[7rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.14)]"
         >
           {n}
         </span>
         <Reveal>
-          <p className={`relative ${LABEL} mb-4 text-amber-200/80`}>Decision {n}</p>
           <h3 className={`relative ${HEADING}`}>{label}</h3>
         </Reveal>
       </div>
@@ -159,7 +174,7 @@ export default function McapsStartPage() {
 
         <Decision n="02" label={c.decisionTwo.label}>
           <Paragraphs items={c.decisionTwo.paragraphs} />
-          <Paragraphs items={c.decisionTwo.evidence} delay={0.1} />
+          <Evidence items={c.decisionTwo.evidence} />
           <div className="mt-16">
             <Reveal>
               <SyncDiagram />
@@ -182,9 +197,7 @@ export default function McapsStartPage() {
 
         <section className="mx-auto mt-32 max-w-3xl border-t border-white/10 pb-32 pt-16">
           <Reveal>
-            <Display as="h2" className="font-serif font-light">
-              {c.thesis}
-            </Display>
+            <h2 className="font-serif text-4xl font-light leading-tight text-fg md:text-5xl">{c.thesis}</h2>
           </Reveal>
         </section>
       </Container>

@@ -71,11 +71,11 @@ function summaryFor(tile: TileDef): { title: string; body: string } {
     return tile.label === "Event 1"
       ? {
           title: "Event, 30 July 2026",
-          body: "The conference opens with a Laughter Reset that the three cities take part in together.",
+          body: "The conference opened with a Laughter Reset that the three cities took part in together.",
         }
       : {
           title: "Event, 31 July 2026",
-          body: "The conference closes with Keep It Going: a balloon kept in the air while new rules appear every 30 to 45 seconds.",
+          body: "The conference closed with Keep It Going: a balloon kept in the air while new rules appeared every 30 to 45 seconds.",
         };
   }
   const n = Number(tile.label.slice(2));
@@ -207,17 +207,17 @@ export function TimelineDiagram() {
       <figcaption className={LABEL}>Diagram, not a render</figcaption>
 
       <div className="mt-6 font-sans sm:hidden">
-        <p className="text-sm text-fg/80">One challenge unlocks each day</p>
+        <p className="text-sm text-fg/90">One challenge unlocks each day</p>
         <ol className="mt-3 grid grid-cols-4 gap-2">
           {DAYS.map((d, i) => (
-            <li key={d} className="rounded-xl border border-sky-200/25 bg-gradient-to-b from-sky-300/25 to-sky-900/10 px-1.5 py-2.5 text-center text-fg/85 backdrop-blur-md">
+            <li key={d} className="rounded-xl border border-sky-200/25 bg-gradient-to-b from-sky-300/25 to-sky-900/10 px-1.5 py-2.5 text-center text-fg/90 backdrop-blur-md">
               <span className="block text-[12px]">{d}</span>
               <span className="mt-1 block text-[10px] leading-tight text-fg/60">{DAY_PLAN[i].wellbeing}</span>
               {DAY_PLAN[i].mind && <span className="mt-0.5 block text-[10px] leading-tight text-amber-200/80">+ {DAY_PLAN[i].mind}</span>}
             </li>
           ))}
         </ol>
-        <p className="mt-6 text-sm text-fg/80">Event, two days</p>
+        <p className="mt-6 text-sm text-fg/90">Event, two days</p>
         <ol className="mt-3 grid grid-cols-2 gap-2">
           {EVENT_DAYS.map((d) => (
             <li key={d} className="rounded-xl border border-amber-200/60 bg-gradient-to-b from-amber-300/35 to-amber-600/10 px-2 py-4 text-center text-[13px] text-amber-100 shadow-[0_0_20px_rgba(251,191,36,0.25)] backdrop-blur-md">
@@ -225,7 +225,7 @@ export function TimelineDiagram() {
             </li>
           ))}
         </ol>
-        <p className="mt-4 text-right text-sm text-fg/65">Synced across three cities</p>
+        <p className="mt-4 text-right text-sm text-fg/75">Synced across three cities</p>
       </div>
 
       <div className="relative mt-6 hidden sm:block">
@@ -296,7 +296,7 @@ export function TimelineDiagram() {
           </text>
         </svg>
 
-        <p className="mt-4 font-sans text-[10px] uppercase tracking-[0.14em] text-fg/60">
+        <p className="mt-4 font-sans text-[12px] uppercase tracking-[0.14em] text-fg/75">
           Hover a day or event for its detail
         </p>
 
@@ -316,7 +316,7 @@ export function TimelineDiagram() {
             }}
           >
             <p className="text-[11px] uppercase tracking-[0.12em] text-amber-200">{activeSummary.title}</p>
-            <p className="mt-1 text-[13px] leading-snug text-fg/85">{activeSummary.body}</p>
+            <p className="mt-1 text-[13px] leading-snug text-fg/90">{activeSummary.body}</p>
           </div>
         )}
       </div>
@@ -483,9 +483,9 @@ const [fBengaluru, fMumbai, fGurugram] = CITY_GROUND.map(([x, y]) => loopFractio
 
 // Each handoff, in the order it runs. Text is taken from the case copy.
 const EVENTS = [
-  { title: "Takeover", text: "One city takes control every 90 minutes, with 60 seconds for the other two to respond." },
-  { title: "Memory chain", text: "A memory chain is carried across all three cities." },
-  { title: "Shared cheer", text: "A shared cheer gives each city its own word." },
+  { title: "Takeover", text: "One city took control every 90 minutes, with 60 seconds for the other two to respond." },
+  { title: "Memory chain", text: "A memory chain was carried across all three cities." },
+  { title: "Shared cheer", text: "A shared cheer gave each city its own word." },
 ];
 
 // Where each event's number sits on the loop, in base coordinates.
@@ -670,7 +670,7 @@ export function SyncDiagram() {
               <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-amber-400 font-sans text-sm text-amber-300">
                 {i + 1}
               </span>
-              <span className="font-sans text-base font-light leading-relaxed text-fg/85">
+              <span className="font-sans text-base font-light leading-relaxed text-fg/90">
                 <span className="text-fg">{ev.title}.</span> {ev.text}
               </span>
             </button>
@@ -678,7 +678,7 @@ export function SyncDiagram() {
         ))}
       </ol>
 
-      <p className="mt-6 text-center font-sans text-sm font-light text-fg/70">
+      <p className="mt-6 text-center font-sans text-sm font-light text-fg/75">
         Three cities linked live: one city&apos;s actions affect another. Handoff order is illustrative.
       </p>
     </figure>

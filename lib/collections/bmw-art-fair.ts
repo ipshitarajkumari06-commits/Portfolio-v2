@@ -55,7 +55,7 @@ export const bmwArtFair = {
   ],
 
   participation: [
-    "The lounge's approach was simple: invite, don't display. Visitors were asked to interpret the concept car, not just look at it, and to make something of their own.",
+    "The lounge's approach was simple: it invited and did not display. Visitors were asked to interpret the concept car, not just look at it, and to make something of their own.",
   ],
   participationClose: "Guests left with a Speedtop they had sketched, customised or printed themselves.",
   participationImageLabels: [
