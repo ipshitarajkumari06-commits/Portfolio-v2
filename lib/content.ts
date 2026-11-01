@@ -42,6 +42,11 @@ export const featuredWork = {
       title: "What makes this Tata Motors?",
       href: "/explorations/hum-ai-n",
     },
+    {
+      client: "Microsoft",
+      title: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?",
+      href: "/explorations/mcaps-start",
+    },
   ],
 };
 

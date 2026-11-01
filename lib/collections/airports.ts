@@ -34,7 +34,7 @@ export const airports = {
     facets: [
       "Kaziranga's rhinos and elephants answered a visitor's own movement on a living wall, because in Assam nature takes part. Lachit Barphukan stands in bronze as the reason the region measures its courage against its own history. Tea arrived by the hands that grow it.",
       "Seven tableaus, framed like aircraft windows, revealed themselves along a travelling route.",
-      "Leadership, sport, wellness, nature, tourism, culture and ambition. Each one true on its own.",
+      "Leadership, sport, wellness, nature, tourism, culture and ambition. Each one is true on its own.",
     ],
     modelImageLabel: "Prime Minister Narendra Modi reviewing the airport masterplan model, Guwahati",
     discipline: [

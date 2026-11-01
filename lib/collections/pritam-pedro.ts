@@ -35,7 +35,7 @@ export const pritamPedro = {
     label: "Lights, Camera, Case.",
     paragraphs: [
       "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. Two guests took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
-      "Along the way, portraits came in two paces: a live caricature in about five minutes, or an AI sketch bot in about a minute.",
+      "Along the way, portraits came in two speeds: a live caricature in about five minutes, or an AI sketch bot in about a minute.",
       "The badges sent guests hunting for clues, and finishing a code meant finding a stranger to pair with.",
       "The media, creators and Bollywood guests took part at every stage: registering, cracking the code, claiming the reward and reaching the main stage.",
     ],
