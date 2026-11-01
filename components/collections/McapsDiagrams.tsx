@@ -12,7 +12,7 @@ const AMBER = "#F59E0B";
 const CORE = "#FDE68A";
 const NAVY = "#0b1220";
 const SLAB = "#1b2740";
-const INK = "rgba(243,237,224,0.85)";
+const INK = "rgba(243,237,224,0.9)";
 const RULE = "rgba(243,237,224,0.35)";
 const CYCLE = 12;
 
@@ -157,7 +157,7 @@ function Tile({
         strokeWidth={active ? 1.6 : 1}
       />
       <line x1={hx1} y1={hy1} x2={hx2} y2={hy2} stroke="rgba(255,255,255,0.75)" strokeWidth="1.2" />
-      <text x={cx} y={cy + 5} textAnchor="middle" fontSize="15" letterSpacing="0.06em" fill={event ? CORE : "rgba(235,242,255,0.92)"}>
+      <text x={cx} y={cy + 5} textAnchor="middle" fontSize="15" letterSpacing="0.06em" fill={event ? CORE : INK}>
         {label}
       </text>
     </g>

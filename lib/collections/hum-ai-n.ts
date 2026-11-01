@@ -80,7 +80,7 @@ export const humAiN = {
   // recover this if the sequence reverts. Verified against the real
   // source material; do not repurpose without the same editorial pass.
   landscape:
-    "A single number, C75, is built from four billion kilometres of real Indian driving, the first voluntarily published range standard of its kind.",
+    "A single number, C75, is built from four billion kilometres of real Indian driving, and Tata publishes it voluntarily alongside the official range.",
   field: [
     "A panel gap, measured in fractions of a millimetre, checked by a vision system built to catch what a human eye would miss.",
     "A dashboard glowing at midnight, tracking a fleet whose driver is already asleep.",

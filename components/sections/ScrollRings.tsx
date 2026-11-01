@@ -24,7 +24,7 @@ const DISK_FILL = 12;
 const FOCUS_HOLD = 0.9;
 
 const PROJECTS: { label: string; title: string; href: string; image: string | null; channels?: Channel[] }[] = [
-  { label: "Brand Strategy", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.png" },
+  { label: "Brand Strategy", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.jpg" },
   { label: "Experience Strategy", title: "When architecture captures attention, what should the experience say next?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
   { label: "Narrative Strategy", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: null, channels: CHANNELS },
   { label: "Audience Strategy", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },

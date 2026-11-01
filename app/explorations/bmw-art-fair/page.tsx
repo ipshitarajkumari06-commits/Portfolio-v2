@@ -81,7 +81,7 @@ export default function BMWArtFairPage() {
         discipline={c.discipline}
         title={c.title}
         heroImageLabel={c.heroImageLabel}
-        heroImageSrc={`${IMG}/lounge-interior.png`}
+        heroImageSrc={`${IMG}/lounge-interior.jpg`}
       />
 
       {/* Section 2 */}
@@ -99,7 +99,7 @@ export default function BMWArtFairPage() {
 
           <div className={`mt-8 md:mt-10 ${STANDARD}`}>
             <RevealImage>
-              <ImagePlaceholder label={c.openingImageLabel} aspect="wide" src={`${IMG}/facade-back.png`} />
+              <ImagePlaceholder label={c.openingImageLabel} aspect="wide" src={`${IMG}/facade-back.jpg`} />
             </RevealImage>
           </div>
         </div>
@@ -137,9 +137,9 @@ export default function BMWArtFairPage() {
             <RevealImage hover={false}>
               <CycleImages
                 images={[
-                  { src: `${IMG}/speedtop-sketch.png`, label: c.loungeEvolutionImageLabels[0] },
-                  { src: `${IMG}/lounge-sketch-front.png`, label: c.loungeEvolutionImageLabels[1] },
-                  { src: `${IMG}/lounge-sketch-2.png`, label: c.loungeEvolutionImageLabels[2] },
+                  { src: `${IMG}/speedtop-sketch.jpg`, label: c.loungeEvolutionImageLabels[0] },
+                  { src: `${IMG}/lounge-sketch-front.jpg`, label: c.loungeEvolutionImageLabels[1] },
+                  { src: `${IMG}/lounge-sketch-2.jpg`, label: c.loungeEvolutionImageLabels[2] },
                 ]}
                 aspect="video"
               />
@@ -169,7 +169,7 @@ export default function BMWArtFairPage() {
               <ImagePlaceholder
                 label={c.speedtopImageLabels[1]}
                 aspect="video"
-                src={`${IMG}/facade-speedtop-view.png`}
+                src={`${IMG}/facade-speedtop-view.jpg`}
                 objectFit="contain"
               />
             </RevealImage>
@@ -180,7 +180,7 @@ export default function BMWArtFairPage() {
               <ImagePlaceholder
                 label={c.loungeExteriorImageLabel}
                 aspect="wide"
-                src={`${IMG}/facade-front.png`}
+                src={`${IMG}/facade-front.jpg`}
                 objectFit="contain"
               />
             </RevealImage>
@@ -191,7 +191,7 @@ export default function BMWArtFairPage() {
               <ImagePlaceholder
                 label={c.interiorLoungeImageLabel}
                 aspect="wide"
-                src={`${IMG}/art-car-collection.png`}
+                src={`${IMG}/art-car-collection.jpg`}
                 objectFit="contain"
               />
             </RevealImage>
@@ -217,8 +217,8 @@ export default function BMWArtFairPage() {
             <RevealImage hover={false}>
               <CycleImages
                 images={[
-                  { src: `${IMG}/robb-report-interview.png`, label: c.hostImageLabels[0] },
-                  { src: `${IMG}/lounge-conversation.png`, label: c.hostImageLabels[1] },
+                  { src: `${IMG}/robb-report-interview.jpg`, label: c.hostImageLabels[0] },
+                  { src: `${IMG}/lounge-conversation.jpg`, label: c.hostImageLabels[1] },
                 ]}
                 aspect="video"
               />
@@ -243,8 +243,8 @@ export default function BMWArtFairPage() {
             <RevealImage hover={false}>
               <CycleImages
                 images={[
-                  { src: `${IMG}/activity-sketching.png`, label: c.participationImageLabels[0], objectFit: "contain" },
-                  { src: `${IMG}/activity-screenprint.png`, label: c.participationImageLabels[1] },
+                  { src: `${IMG}/activity-sketching.jpg`, label: c.participationImageLabels[0], objectFit: "contain" },
+                  { src: `${IMG}/activity-screenprint.jpg`, label: c.participationImageLabels[1] },
                 ]}
                 aspect="video"
               />
@@ -268,7 +268,7 @@ export default function BMWArtFairPage() {
               <ImagePlaceholder
                 label={c.flowInMotionImageLabels[0]}
                 aspect="video"
-                src={`${IMG}/art-commission-front.png`}
+                src={`${IMG}/art-commission-front.jpg`}
                 objectFit="contain"
               />
             </RevealImage>

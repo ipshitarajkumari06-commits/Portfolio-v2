@@ -41,7 +41,7 @@ export const airports = {
       "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song: unity is never sameness, but many voices agree to sing toward the same point.",
       "Nothing repeated. That was the discipline. A performance did not explain the wildlife wall, and the wildlife wall did not explain the tea. Each intervention carried one idea.",
       "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: specificity, a place introducing itself through its own details.",
-      "The terminal that followed is designed to handle 13.1 million passengers a year, up from about six million.",
+      "The terminal that followed is designed to handle 13.1 million passengers a year, up from about 3.4 million.",
     ],
     close: [
       "The building gave Assam its first impression.",
