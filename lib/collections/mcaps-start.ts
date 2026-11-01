@@ -6,7 +6,6 @@
 export const mcapsStart = {
   kicker: "Microsoft",
   discipline: "Participation Design",
-  role: "Lead",
   title: "MCAPS Start FY27",
 
   question: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?",

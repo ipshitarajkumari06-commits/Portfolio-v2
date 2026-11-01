@@ -4,7 +4,6 @@
 export const humAiN = {
   kicker: "Tata Motors",
   discipline: "Narrative Strategy",
-  role: "Lead",
 
   brief: {
     line: "The brief was one line.",
