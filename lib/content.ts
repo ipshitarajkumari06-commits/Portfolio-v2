@@ -32,7 +32,7 @@ export const featuredWork = {
     },
     {
       client: "Microsoft",
-      title: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?",
+      title: "How do you make a once-a-year event work across three cities, and matter on the days between editions?",
       href: "/explorations/mcaps-start",
     },
     {

@@ -32,7 +32,7 @@ export default function Realisation() {
     return (
       <div className="mx-auto flex max-w-2xl flex-col gap-3">
         {humAiN.realisation.lines.map((line) => (
-          <p key={line} className="font-serif text-xl leading-snug text-fg/80 md:text-2xl">
+          <p key={line} className="font-serif text-xl leading-snug text-center text-fg/80 md:text-2xl">
             {line}
           </p>
         ))}
@@ -49,7 +49,7 @@ export default function Realisation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.8, ease } }}
             exit={{ opacity: 0, transition: { duration: 0.8, ease } }}
-            className="font-serif text-xl leading-snug text-fg/80 md:text-2xl"
+            className="font-serif text-xl leading-snug text-center text-fg/80 md:text-2xl"
           >
             {humAiN.realisation.lines[index]}
           </motion.p>
