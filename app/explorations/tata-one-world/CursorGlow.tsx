@@ -38,7 +38,7 @@ export function GlowPanels() {
     "from-fuchsia-400/55 via-violet-900/25",
   ];
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 flex gap-3 px-6 opacity-70">
+    <div aria-hidden="true" className="pointer-events-none absolute inset-0 flex gap-3 opacity-70">
       {panels.map((tone, i) => (
         <div key={i} className={`flex-1 rounded-full bg-gradient-to-t ${tone} to-transparent blur-3xl`} />
       ))}

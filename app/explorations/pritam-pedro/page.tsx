@@ -8,8 +8,8 @@ import { pritamPedro as c } from "@/lib/collections/pritam-pedro";
 const IMG = "/images/pritam-pedro";
 const LARGE = "mx-auto w-full max-w-container px-gutter";
 const STANDARD = "flex w-full max-w-2xl flex-col gap-8";
-const BODY = "font-sans text-justify text-xl font-light leading-relaxed text-fg/90 md:text-2xl";
-const EMPHASIS = "font-serif text-justify text-3xl font-light leading-snug text-fg md:text-4xl";
+const BODY = "font-sans text-left sm:text-justify text-xl font-light leading-relaxed text-fg/90 md:text-2xl";
+const EMPHASIS = "font-serif text-left sm:text-justify text-3xl font-light leading-snug text-fg md:text-4xl";
 const LABEL = "font-sans text-[12px] uppercase tracking-[0.16em] text-fg/70";
 
 export const metadata: Metadata = {
@@ -224,7 +224,7 @@ export default function PritamPedroPage() {
 
       {/* The launch in one paragraph, with the reports it rests on. */}
       <div className={`mt-[clamp(3rem,8vh,4rem)] ${LARGE}`}>
-        <p className="max-w-3xl text-justify font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl">{c.experience.launchNote}</p>
+        <p className="max-w-3xl text-left sm:text-justify font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl">{c.experience.launchNote}</p>
         <p className={`mt-4 ${LABEL}`}>
           Sources:{" "}
           {c.experience.launchNoteSources.map((s, i) => (

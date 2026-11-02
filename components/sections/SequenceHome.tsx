@@ -21,7 +21,7 @@ function Name() {
         <br />
         Rajkumari
       </h1>
-      <p className="mt-6 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">{hero.role}</p>
+      <p className="mt-6 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">{hero.role.replace("Experience Designer", "Experience Designer")}</p>
       <p className="mt-2 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">Events, brands, stories and AI.</p>
     </div>
   );
