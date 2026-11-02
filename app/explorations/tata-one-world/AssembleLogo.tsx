@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
+import { createPortal } from "react-dom";
 import { useEffect, useRef, useState } from "react";
 
 // The logo rationale, cut into segments that scatter and then come together into the
-// logo, with the text, once the figure is in view. Plain CSS transitions, so it works in
+// logo, with the text, once the figure is in view. The segments lock in from the centre out. Plain CSS transitions, so it works in
 // every browser. Visitors who prefer reduced motion see the logo assembled.
 
 const COLS = 6;
@@ -22,6 +24,17 @@ export default function AssembleLogo({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [assembled, setAssembled] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+
+  // Escape closes the enlarged slide.
+  useEffect(() => {
+    if (!zoomed) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setZoomed(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [zoomed]);
 
   useEffect(() => {
     const el = ref.current;
@@ -37,8 +50,6 @@ export default function AssembleLogo({
           io.disconnect();
         }
       },
-      // Assemble only once the logo sits in the middle of the screen, so the scattered
-      // state is seen first and the reader watches it come together.
       // Assemble once a third of the logo is on screen, so the scattered state is seen first.
       { threshold: 0.3, rootMargin: "-20% 0px -20% 0px" },
     );
@@ -57,7 +68,9 @@ export default function AssembleLogo({
     const dz = (((i * 17) % 7) + 2) * 30;
     const rx = ((i * 13) % 9) - 4;
     const ry = ((i * 11) % 9) - 4;
-    return { i, c, r, dx: dx * 46, dy: dy * 38, dz, rx, ry, rot: rot * 3 };
+    // Distance from the centre, so the pieces lock in from the middle outward.
+    const d = Math.hypot((c - (COLS - 1) / 2) / COLS, (r - (ROWS - 1) / 2) / ROWS);
+    return { i, c, r, dx: dx * 46, dy: dy * 38, dz, rx, ry, rot: rot * 3, delay: Math.round(d * 1000) };
   });
 
   // The artwork fits the card at every width, so the whole logo and its labels stay visible.
@@ -95,7 +108,7 @@ export default function AssembleLogo({
                   ? "translateZ(0)"
                   : `translate3d(${t.dx}px, ${t.dy}px, ${t.dz}px) rotateX(${t.rx}deg) rotateY(${t.ry}deg) rotate(${t.rot}deg) scale(1.08)`,
                 opacity: assembled ? 1 : 0.35,
-                transition: `transform 2.2s cubic-bezier(0.2, 0.7, 0.1, 1) ${t.i * 45}ms, opacity 1.4s ease ${t.i * 45}ms`,
+                transition: `transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) ${t.delay}ms, opacity 1s ease ${t.delay}ms`,
               }}
             >
               <div
@@ -110,6 +123,41 @@ export default function AssembleLogo({
           ))}
         </div>
       </div>
+      <div className="mt-3 flex justify-end">
+        <button
+          type="button"
+          onClick={() => setZoomed(true)}
+          className="font-sans text-sm font-light text-fg/85 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-300"
+        >
+          View larger
+        </button>
+      </div>
+      {zoomed && createPortal(
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={alt}
+          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/90 p-4"
+          onClick={() => setZoomed(false)}
+        >
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            sizes="95vw"
+            className="h-auto max-h-[90vh] w-auto max-w-full rounded-[20px] object-contain"
+          />
+          <button
+            type="button"
+            onClick={() => setZoomed(false)}
+            className="absolute right-6 top-6 font-sans text-sm uppercase tracking-[0.2em] text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-300"
+          >
+            Close
+          </button>
+        </div>,
+        document.body,
+      )}
     </div>
   );
 }

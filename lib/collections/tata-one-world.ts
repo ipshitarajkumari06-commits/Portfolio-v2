@@ -10,7 +10,7 @@ export const tataOneWorld = {
   title: "Tata Motors One World",
 
   question: "The name changed. What stays?",
-  answer: "The programme stayed, and so did the arch and the lotus. The client liked the work but wanted a new theme name, so the team rebuilt the identity.",
+  answer: "The programme stayed, and so did the arch and the lotus. The client liked the work but wanted a quirkier name for every generation, so the team rebuilt the identity.",
 
   brief: {
     label: "The brief",
@@ -29,7 +29,7 @@ export const tataOneWorld = {
     label: "The first direction",
     paragraphs: [
       "The first direction was “Believe to become.” The direction drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city's craft, and a shikara for forward movement.",
-      "The belief line became the mark. The team developed and proposed the BELIEVE identity, and it won the project.",
+      "The belief line became the mark. The team developed and proposed the BELIEVE identity,.",
     ],
   },
 
@@ -39,13 +39,6 @@ export const tataOneWorld = {
       "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME, to be exceptional, so the red BE carried the whole line: you have to believe to become.",
       "The key visual placed those motifs around the wordmark, giving it a direct link to the city.",
     ],
-    image: {
-      src: "/images/tata-one-world/believe-key-visual.jpg",
-      alt: "The BELIEVE key visual: a peacock, a chhatri, a shikara and lotus flowers around the BELIEVE wordmark",
-      caption: "The BELIEVE key visual, as shown in the proposal.",
-      width: 994,
-      height: 1053,
-    },
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
       alt: "The logo rationale slide: the BELIEVE key visual with each element labelled and explained",
@@ -56,19 +49,12 @@ export const tataOneWorld = {
   },
 
   decisionTwo: {
-    label: "A quirkier name for every generation",
+    label: "Why F.I.R.E. works for both ends",
     paragraphs: [
-      "The client had already chosen the first direction when it asked for a quirkier name. The network spans every generation, from new joiners in the market to its most senior members, so the name had to reach all of them. F.I.R.E. (Fearless Innovation, Resilient Execution) was my answer to that request.",
-      "As an abbreviation, the name reaches both ends of that range. To younger audiences, FIRE means LIT, slang for something outstanding. To older audiences, it means on fire. As F.I.R.E., both meanings fit in one name.",
+      "The network spans every generation, from new joiners in the market to its most senior members, so the name had to reach all of them. F.I.R.E. (Fearless Innovation, Resilient Execution) was my answer to the client's request. The BELIEVE identity had already won the project.",
+      "As an abbreviation, the name reaches both ends of that range. To younger audiences, FIRE means LIT, slang for something outstanding. To older audiences, it means on fire. As F.I.R.E., both meanings fit in one name. The hazard reading is softened by the arch, the lotus and the wordmark around it, which frame the name as a brand rather than a warning.",
       "I chose to keep the arch and lotus from BELIEVE. For me, the arch is a doorway to greater things, and the lotus is inner belief, the blooming of excellence from within. Both let the reader see BELIEVE inside F.I.R.E.",
     ],
-    image: {
-      src: "/images/tata-one-world/fire-key-visual.webp",
-      alt: "The F.I.R.E. key visual: a metallic F.I.R.E. wordmark under an arch, with lotus flowers, elephants and palms at dusk",
-      caption: "The F.I.R.E. key visual, the final direction.",
-      width: 2000,
-      height: 1124,
-    },
     continuity: [
       {
         label: "The arch",
@@ -133,20 +119,20 @@ export const tataOneWorld = {
   // Each frame holds two scenes side by side.
   scenes: [
     [
-      { src: "/images/tata-one-world/scene-city-of-lakes.jpg", alt: "Guests in a group at the City of Lakes, holding One World banners", caption: "City of Lakes." },
-      { src: "/images/tata-one-world/scene-team-building-cropped.jpg", alt: "Team-building moment with guests gathered outside the palace", caption: "Team building." },
+      { src: "/images/tata-one-world/scene-city-of-lakes.jpg", alt: "Guests in a group at the City of Lakes, holding One World banners", caption: "Guests at the City of Lakes, with One World banners." },
+      { src: "/images/tata-one-world/scene-team-building-cropped.jpg", alt: "Team-building moment with guests gathered outside the palace", caption: "Teams at work outside the palace." },
     ],
     [
-      { src: "/images/tata-one-world/scene-chand-baori-night.jpg", alt: "The Chand Baori night setting, lit for the evening", caption: "Chand Baori at night." },
-      { src: "/images/tata-one-world/scene-truck-stage.jpg", alt: "A Tata Motors truck on the stage in front of the audience", caption: "A Tata truck on stage." },
+      { src: "/images/tata-one-world/scene-chand-baori-night.jpg", alt: "The Chand Baori night setting, lit for the evening", caption: "The Chand Baori, lit for the evening." },
+      { src: "/images/tata-one-world/scene-truck-stage.jpg", alt: "A Tata Motors truck on the stage in front of the audience", caption: "A Tata truck on the stage." },
     ],
     [
-      { src: "/images/tata-one-world/scene-driven-by-innovation-cropped.jpg", alt: "Tata Motors trucks with guests gathered for the ribbon cutting", caption: "Driven by innovation." },
-      { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Rewarding the champions." },
+      { src: "/images/tata-one-world/scene-driven-by-innovation-cropped.jpg", alt: "Tata Motors trucks with guests gathered for the ribbon cutting", caption: "Trucks and guests at the ribbon cutting." },
+      { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Winners on the awards stage." },
     ],
     [
       { src: "/images/tata-one-world/scene-truck-one-world.jpg", alt: "ONE WORLD lettering in front of a Tata Motors truck", caption: "ONE WORLD, in front of a truck." },
-      { src: "/images/tata-one-world/scene-truck-cab.jpg", alt: "The cab and dashboard of a Tata Motors truck", caption: "Inside the truck cab." },
+      { src: "/images/tata-one-world/scene-truck-cab.jpg", alt: "The cab and dashboard of a Tata Motors truck", caption: "The cab and dashboard, up close." },
     ],
   ],
 

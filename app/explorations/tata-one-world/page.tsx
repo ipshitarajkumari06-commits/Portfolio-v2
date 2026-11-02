@@ -60,28 +60,6 @@ type Visual = {
   height: number;
 };
 
-function ArchFigure({ v, className = "" }: { v: Visual; className?: string }) {
-  return (
-    <Parallax speed={0.1}>
-      <figure className={className}>
-        <Tilt3D>
-          <div className={`tow-arch ${ARCH}`}>
-            <Image
-              src={v.src}
-              alt={v.alt}
-              width={v.width}
-              height={v.height}
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="h-auto w-full"
-            />
-          </div>
-        </Tilt3D>
-        <figcaption className={CAPTION}>{v.caption}</figcaption>
-      </figure>
-    </Parallax>
-  );
-}
-
 // The Last Sword artwork is cut into puzzle segments that come together as it enters
 // view, the same assembly as the logo, so the whole image is shown.
 function PuzzleFigure({ v }: { v: Visual }) {
@@ -151,7 +129,7 @@ function Decision({
   id?: string;
   label: string;
   children: React.ReactNode;
-  visual: React.ReactNode;
+  visual?: React.ReactNode;
 }) {
   return (
     <section
@@ -167,7 +145,7 @@ function Decision({
       </div>
       <div className="max-w-xl">
         {children}
-        <div className="mt-12">{visual}</div>
+        {visual && <div className="mt-12">{visual}</div>}
       </div>
     </section>
   );
@@ -313,7 +291,6 @@ export default function TataOneWorldPage() {
 
         <Decision
           label={c.decisionOne.label}
-          visual={<ArchFigure v={c.decisionOne.image} />}
         >
           <Paragraphs items={c.decisionOne.paragraphs} />
         </Decision>
@@ -338,7 +315,6 @@ export default function TataOneWorldPage() {
         <Decision
           id="theme"
           label={c.decisionTwo.label}
-          visual={<ArchFigure v={c.decisionTwo.image} />}
         >
           <Paragraphs items={c.decisionTwo.paragraphs} />
         </Decision>
@@ -355,21 +331,32 @@ export default function TataOneWorldPage() {
           ))}
         </section>
 
-        <section className="mx-auto mt-32 max-w-3xl md:mt-48">
-          <Reveal>
-            <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-fuchsia-300/80 via-sky-300/60 to-transparent" />
-              <p className={`${LABEL} mb-6`}>The trade-off</p>
-              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
-            </div>
-          </Reveal>
-        </section>
-
         <Decision
           id="programme"
           label={c.decisionThree.label}
           visual={
           <>
+            {/* Scenes from the event, as they were captioned in the highlights film. */}
+            <section className="mb-16">
+              <p className={`${LABEL} mb-8`}>Scenes from the week</p>
+              <div className="grid gap-16">
+                {c.scenes.map((pair, i) => (
+                  <div
+                    key={pair[0].src}
+                    className={`grid grid-cols-2 gap-4 md:gap-6 ${i % 2 === 0 ? "md:[&>figure:first-child]:mr-12" : "md:[&>figure:last-child]:ml-12"}`}
+                  >
+                    {pair.map((scene) => (
+                      <figure key={scene.src}>
+                        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] transition-transform duration-500 active:scale-[0.98]">
+                          <Image src={scene.src} alt={scene.alt} fill sizes="(min-width: 768px) 50vw, 50vw" className="object-cover" />
+                        </div>
+                        <figcaption className="mt-3 font-sans text-sm font-light text-fg/85">{scene.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </section>
             <ScrollWipe>
               <PlainFigure v={c.decisionThree.formations} />
             </ScrollWipe>
@@ -382,26 +369,14 @@ export default function TataOneWorldPage() {
           <Paragraphs items={c.decisionThree.paragraphs} />
         </Decision>
 
-        {/* Scenes from the event, as they were captioned in the highlights film. */}
-        <section className="mt-32 md:mt-48">
-          <p className={`${LABEL} mb-8`}>Scenes from the week</p>
-          <div className="grid gap-16">
-            {c.scenes.map((pair, i) => (
-              <div
-                key={pair[0].src}
-                className={`grid grid-cols-2 gap-4 md:gap-6 ${i % 2 === 0 ? "md:[&>figure:first-child]:mr-12" : "md:[&>figure:last-child]:ml-12"}`}
-              >
-                {pair.map((scene) => (
-                  <figure key={scene.src}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] transition-transform duration-500 active:scale-[0.98]">
-                      <Image src={scene.src} alt={scene.alt} fill sizes="(min-width: 768px) 50vw, 50vw" className="object-cover" />
-                    </div>
-                    <figcaption className="mt-3 font-sans text-sm font-light text-fg/85">{scene.caption}</figcaption>
-                  </figure>
-                ))}
-              </div>
-            ))}
-          </div>
+        <section className="mx-auto mt-32 max-w-3xl md:mt-48">
+          <Reveal>
+            <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-fuchsia-300/80 via-sky-300/60 to-transparent" />
+              <p className={`${LABEL} mb-6`}>The trade-off</p>
+              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
+            </div>
+          </Reveal>
         </section>
 
         {/* The reel, the short and the anthem, as three arches to open. */}
