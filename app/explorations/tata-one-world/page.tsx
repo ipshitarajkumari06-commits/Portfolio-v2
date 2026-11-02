@@ -9,6 +9,7 @@ import Tilt3D from "./Tilt3D";
 import AssembleLogo from "./AssembleLogo";
 import CursorGlow, { GlowPanels } from "./CursorGlow";
 import Parallax from "./Parallax";
+import ScrollWipe from "./ScrollWipe";
 import CollectionHero from "@/components/collections/CollectionHero";
 
 // A plain image with its caption, without the assembly effect.
@@ -23,7 +24,7 @@ function PlainFigure({ v }: { v: { src: string; alt: string; caption: string; wi
         sizes="(min-width: 1320px) 720px, 100vw"
         className="h-auto w-full rounded-[20px]"
       />
-      <figcaption className="mt-3 font-sans text-sm font-light text-fg/70">{v.caption}</figcaption>
+      <figcaption className="mt-3 font-sans text-sm font-light text-fg/85">{v.caption}</figcaption>
     </figure>
   );
 }
@@ -31,8 +32,8 @@ function PlainFigure({ v }: { v: { src: string; alt: string; caption: string; wi
 const BODY =
   "font-sans text-lg font-light leading-relaxed text-fg/85 md:text-xl";
 const LABEL =
-  "font-sans text-xs font-medium uppercase tracking-[0.22em] text-fg/70";
-const CAPTION = "mt-5 font-sans text-sm font-light leading-relaxed text-fg/70";
+  "font-sans text-xs font-medium uppercase tracking-[0.22em] text-fg/85";
+const CAPTION = "mt-5 font-sans text-sm font-light leading-relaxed text-fg/85";
 
 // The chapters of the case, in reading order, for the side index on wide screens.
 const CHAPTERS = [
@@ -49,7 +50,7 @@ const ARCH =
 
 // Champagne gradient for the closing line: a quieter, more refined accent than the ember tones.
 const CHAMPAGNE =
-  "bg-gradient-to-r from-amber-50 via-amber-200 to-amber-400 bg-clip-text text-transparent";
+  "bg-gradient-to-r from-amber-50 via-fuchsia-200 to-sky-300 bg-clip-text text-transparent";
 
 type Visual = {
   src: string;
@@ -219,13 +220,23 @@ export default function TataOneWorldPage() {
       `}</style>
 
       {/* Opening, set the same way as the BMW case: kicker, title, then the wide key visual. */}
-      <CollectionHero
-        kicker={c.kicker}
-        discipline={c.discipline}
-        title={c.title}
-        heroImageLabel="The F.I.R.E. key visual for Tata Motors One World"
-        heroImageSrc="/images/tata-one-world/fire-key-visual.webp"
-      />
+      <div className="relative">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-1/4 h-[80%] opacity-70 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(40% 50% at 28% 60%, rgba(244,114,182,0.35), transparent 70%), radial-gradient(40% 50% at 72% 60%, rgba(56,189,248,0.3), transparent 70%)",
+          }}
+        />
+        <CollectionHero
+          kicker={c.kicker}
+          discipline={c.discipline}
+          title={c.title}
+          heroImageLabel="The F.I.R.E. key visual for Tata Motors One World"
+          heroImageSrc="/images/tata-one-world/fire-key-visual.webp"
+        />
+      </div>
 
       {/* A quiet chapter index for wide screens, so the reader can jump between decisions. */}
       <nav
@@ -237,11 +248,11 @@ export default function TataOneWorldPage() {
             <li key={ch.id}>
               <a
                 href={`#${ch.id}`}
-                className="group flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.2em] text-fg/70 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-200"
+                className="group flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.2em] text-fg/70 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-300"
               >
                 <span
                   aria-hidden="true"
-                  className="h-px w-6 bg-white/30 transition-all duration-500 group-hover:w-10 group-hover:bg-amber-200"
+                  className="h-px w-6 bg-white/30 transition-all duration-500 group-hover:w-10 group-hover:bg-fuchsia-300"
                 />
                 {ch.label}
               </a>
@@ -347,7 +358,7 @@ export default function TataOneWorldPage() {
         <section className="mx-auto mt-32 max-w-3xl md:mt-48">
           <Reveal>
             <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-fuchsia-300/80 via-sky-300/60 to-transparent" />
               <p className={`${LABEL} mb-6`}>The trade-off</p>
               <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
             </div>
@@ -359,7 +370,9 @@ export default function TataOneWorldPage() {
           label={c.decisionThree.label}
           visual={
           <>
-            <PlainFigure v={c.decisionThree.formations} />
+            <ScrollWipe>
+              <PlainFigure v={c.decisionThree.formations} />
+            </ScrollWipe>
             <div className="mt-16">
               <PlainFigure v={c.decisionThree.closeUp} />
             </div>
@@ -373,14 +386,17 @@ export default function TataOneWorldPage() {
         <section className="mt-32 md:mt-48">
           <p className={`${LABEL} mb-8`}>Scenes from the week</p>
           <div className="grid gap-16">
-            {c.scenes.map((pair) => (
-              <div key={pair[0].src} className="grid grid-cols-2 gap-4 md:gap-6">
+            {c.scenes.map((pair, i) => (
+              <div
+                key={pair[0].src}
+                className={`grid grid-cols-2 gap-4 md:gap-6 ${i % 2 === 0 ? "md:[&>figure:first-child]:mr-12" : "md:[&>figure:last-child]:ml-12"}`}
+              >
                 {pair.map((scene) => (
                   <figure key={scene.src}>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] transition-transform duration-500 active:scale-[0.98]">
                       <Image src={scene.src} alt={scene.alt} fill sizes="(min-width: 768px) 50vw, 50vw" className="object-cover" />
                     </div>
-                    <figcaption className="mt-3 font-sans text-sm font-light text-fg/70">{scene.caption}</figcaption>
+                    <figcaption className="mt-3 font-sans text-sm font-light text-fg/85">{scene.caption}</figcaption>
                   </figure>
                 ))}
               </div>
@@ -399,11 +415,11 @@ export default function TataOneWorldPage() {
                   <Tilt3D className="h-full">
                     <a
                       href={video.url}
-                      className="group relative flex h-full min-h-[200px] flex-col justify-between overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-8 transition-colors hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-200"
+                      className="group relative flex h-full min-h-[200px] flex-col justify-between overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-8 transition-colors hover:bg-white/[0.07] active:scale-[0.98] active:bg-white/[0.07] transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-300"
                     >
                       <span
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-amber-200/0 via-amber-200/15 to-rose-400/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-fuchsia-300/0 via-sky-300/20 to-amber-200/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                       />
                       <span className="block font-sans text-[11px] uppercase tracking-[0.22em] text-fg/50">
                         0{i + 1}

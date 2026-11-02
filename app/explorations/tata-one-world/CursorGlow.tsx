@@ -14,9 +14,11 @@ export default function CursorGlow({ className = "", children }: { className?: s
 
   return (
     <section onPointerMove={track} className={`group relative overflow-hidden ${className}`}>
+      {/* On touch screens there is no pointer, so the glow drifts slowly on its own. */}
+      <style>{`@media (hover: none) { .tow-ambient { opacity: 1 !important; animation: tow-drift 14s ease-in-out infinite; } } @keyframes tow-drift { 0%, 100% { transform: translate(-6%, -4%); } 50% { transform: translate(6%, 4%); } }`}</style>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        className="tow-ambient pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
           background: "radial-gradient(640px circle at var(--gx, 50%) var(--gy, 50%), rgba(253, 230, 138, 0.26), transparent 62%)",
         }}
