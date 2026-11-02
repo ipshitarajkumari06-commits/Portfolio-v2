@@ -103,16 +103,22 @@ function Continuity({
   );
 }
 
-function Paragraphs({ items }: { items: string[] }) {
+type ParagraphItem = string | { text: string; emphasis?: boolean };
+
+function Paragraphs({ items }: { items: ParagraphItem[] }) {
   return (
     <CursorGlow className="rounded-[32px] py-6">
       <GlowPanels />
       <div className="relative space-y-6">
-        {items.map((p, i) => (
-          <Reveal key={p} delay={i * 0.08}>
-            <p className={BODY}>{p}</p>
-          </Reveal>
-        ))}
+        {items.map((p, i) => {
+          const text = typeof p === "string" ? p : p.text;
+          const emphasis = typeof p !== "string" && p.emphasis;
+          return (
+            <Reveal key={i} delay={i * 0.08}>
+              <p className={emphasis ? "font-serif text-2xl font-light text-fg md:text-3xl" : BODY}>{text}</p>
+            </Reveal>
+          );
+        })}
       </div>
     </CursorGlow>
   );

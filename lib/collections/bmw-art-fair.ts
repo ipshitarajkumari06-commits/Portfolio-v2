@@ -21,7 +21,7 @@ export const bmwArtFair = {
     { text: "A showroom is built for comparison. An art fair is built for interpretation.", emphasis: true },
   ],
   openingClose:
-    "A car in a showroom asks to be bought. In a fair, people judge what they are asked to look at, so the question became how BMW should behave where every object is judged through art, craft and form.",
+    "A car in a showroom asks to be bought. At a fair, people judge what they are invited to look at, so the question became how BMW should behave where every object is weighed through art, craft and form.",
   openingImageLabel: "Collectors' Lounge, entrance",
 
   speedtop: [
@@ -33,7 +33,7 @@ export const bmwArtFair = {
   speedtopImageLabels: ["BMW Concept Speedtop, studio render", "BMW Concept Speedtop, at India Art Fair"],
 
   lounge: [
-    "The principle was to carry the concept car's movement and colour into the architecture, never its body. The lounge rebuilt its silhouette at the scale of a room, its flowing geometry guiding movement and framing views of the concept car from inside and outside. Visitors saw it long before they stood beside it.",
+    "The principle was to carry the concept car's motion and colour into the architecture, never its body. The lounge rebuilt its silhouette at the scale of a room, and its flowing geometry guided visitors and framed views of the concept car from inside and outside. Visitors saw its curves long before they stood beside the car.",
   ],
   loungeEvolutionImageLabels: [
     "Speedtop, design sketch",
@@ -45,7 +45,7 @@ export const bmwArtFair = {
   interiorLoungeImageLabel: "The Collectors' Lounge, full room",
 
   host: [
-    "Inside, the lounge shifted BMW's role from exhibitor to host. Throughout the fair, it became a place for conversations between collectors, artists, designers and cultural voices.",
+    "Inside, the lounge changed BMW's role from exhibitor to host. Across the fair, it filled with conversation between collectors, artists, designers and cultural voices.",
     "BMW's Art Car Collection was presented as a conversation about collecting, not only as a product display.",
   ],
   hostClose: ["The objects changed.", "The behaviour behind them didn't."],

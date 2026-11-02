@@ -10,12 +10,12 @@ export const tataOneWorld = {
   title: "Tata Motors One World",
 
   question: "The name changed. What stays?",
-  answer: "The programme stayed, and so did the arch and the lotus. The client liked the work but wanted a quirkier name for every generation, so the team rebuilt the identity.",
+  answer: "The programme held, and the arch and the lotus came through the change. A new name, however, meant a rebuilt identity.",
 
   brief: {
     label: "The brief",
     paragraphs: [
-      "One World is the annual distributor meet of Tata Motors Commercial Vehicles International Business. This seventh edition brought 350 guests from 45 countries to Fairmont Udaipur, and the theme had to hold them together.",
+      "One World was the annual distributor meet of Tata Motors Commercial Vehicles International Business. Its seventh edition drew 350 guests from 45 countries to Fairmont Udaipur, and the theme had to bind them together.",
     ],
     scale: [
       { value: "350", label: "guests" },
@@ -28,32 +28,33 @@ export const tataOneWorld = {
   choice: {
     label: "The first direction",
     paragraphs: [
-      "The first direction was “Believe to become.” The direction drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city's craft, and a shikara for forward movement.",
-      "The belief line became the mark. The team developed and proposed the BELIEVE identity,.",
+      "The first direction was “Believe to become.” It drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city’s craft, and a shikara for forward movement.",
+      "The belief line became the mark, and the BELIEVE identity won the project. The client liked the work but wanted a name flexible enough to reach every generation, which meant rebuilding the identity.",
     ],
   },
 
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME, to be exceptional, so the red BE carried the whole line: you have to believe to become.",
-      "The key visual placed those motifs around the wordmark, giving it a direct link to the city.",
+      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: you have to believe to become.",
     ],
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
       alt: "The logo rationale slide: the BELIEVE key visual with each element labelled and explained",
-      caption: "The thinking behind the logo.",
+      caption: "The thinking behind the logo, element by element.",
       width: 2000,
       height: 1179,
     },
   },
 
   decisionTwo: {
-    label: "Why F.I.R.E. works for both ends",
+    label: "Why F.I.R.E. worked for both ends",
     paragraphs: [
-      "The network spans every generation, from new joiners in the market to its most senior members, so the name had to reach all of them. F.I.R.E. (Fearless Innovation, Resilient Execution) was my answer to the client's request. The BELIEVE identity had already won the project.",
-      "As an abbreviation, the name reaches both ends of that range. To younger audiences, FIRE means LIT, slang for something outstanding. To older audiences, it means on fire. As F.I.R.E., both meanings fit in one name. The hazard reading is softened by the arch, the lotus and the wordmark around it, which frame the name as a brand rather than a warning.",
-      "I chose to keep the arch and lotus from BELIEVE. For me, the arch is a doorway to greater things, and the lotus is inner belief, the blooming of excellence from within. Both let the reader see BELIEVE inside F.I.R.E.",
+      "The network stretched across every generation, from new joiners in the market to its most senior members. One name had to reach all of them, and F.I.R.E. did.",
+      "Guests first met the name on the microsite, where they shook, tilted and dragged their phones to uncover the theme.",
+      { text: "One name, two readings.", emphasis: true },
+      "As an abbreviation, the name reached both ends of that range: FIRE meant LIT to younger audiences and on fire to older ones. Spelled out as F.I.R.E., for Fearless Innovation and Resilient Execution, it carried both meanings.",
+      "The arch and the lotus carried over from BELIEVE. The arch stood as a gateway to greater things, honouring Udaipur at the same time. The lotus, India’s national flower, blossomed as an emblem of inner conviction and of excellence that grows from within. The elephants symbolised the shikara’s movement into a journey, while the waves showed everyone advancing as one world. Together, these distinctly Indian motifs opened the way to greatness for everyone.",
     ],
     continuity: [
       {
@@ -96,9 +97,15 @@ export const tataOneWorld = {
   },
 
   decisionThree: {
-    label: "Keeping the programme's structure",
+    label: "The programme, on the ground",
     paragraphs: [
-      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and the team adapted its activities to F.I.R.E. The Last Sword of Maharana Pratap, for example, sent all 350 guests through five challenge zones to restore a lost sword. Over the palace, drones spelled out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E. in turn.",
+      "The welcome began at the airport, with royal guards escorting guests to Tata cars. At the palace, Ghoomar dancers swirled and dhol beats filled the entrance.",
+      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and each one took on the F.I.R.E. theme.",
+      "Collaborate opened with team building. Teams of 20 to 25 designed, named and flew their own kites, each carrying a belief statement of what ignited them to be excellent. In the Royal Runway, teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget. The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
+      "Connect rolled Tata vehicles onto the ground. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks beside e-Dukaan, and a display of Tata vehicles stood in the parking area.",
+      "Celebrate closed the week with a gala night. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed.",
+      { text: "Every pillar had a moment on the ground.", emphasis: true },
+      "The belief reached the sky, too. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
     ],
     formations: {
       src: "/images/tata-one-world/fire-drone-formations.webp",
@@ -110,7 +117,7 @@ export const tataOneWorld = {
     closeUp: {
       src: "/images/tata-one-world/fire-drone-close.jpg",
       alt: "Close-up of drone formations: ONE WORLD in lights, then F.I.R.E. under an arch of lights",
-      caption: "Close-up of the drone formations: ONE WORLD, then F.I.R.E. under an arch of lights.",
+      caption: "Close-up: ONE WORLD, then F.I.R.E. under an arch of lights.",
       width: 1110,
       height: 2000,
     },
@@ -119,16 +126,16 @@ export const tataOneWorld = {
   // Each frame holds two scenes side by side.
   scenes: [
     [
-      { src: "/images/tata-one-world/scene-city-of-lakes.jpg", alt: "Guests in a group at the City of Lakes, holding One World banners", caption: "Guests at the City of Lakes, with One World banners." },
-      { src: "/images/tata-one-world/scene-team-building-cropped.jpg", alt: "Team-building moment with guests gathered outside the palace", caption: "Teams at work outside the palace." },
+      { src: "/images/tata-one-world/scene-city-of-lakes.jpg", alt: "Guests in a group at the City of Lakes, holding One World banners", caption: "Guests gather at the City of Lakes, holding One World banners." },
+      { src: "/images/tata-one-world/scene-team-building-cropped.jpg", alt: "Team-building moment with guests gathered outside the palace", caption: "Teams gather outside the palace." },
     ],
     [
-      { src: "/images/tata-one-world/scene-chand-baori-night.jpg", alt: "The Chand Baori night setting, lit for the evening", caption: "The Chand Baori, lit for the evening." },
-      { src: "/images/tata-one-world/scene-truck-stage.jpg", alt: "A Tata Motors truck on the stage in front of the audience", caption: "A Tata truck on the stage." },
+      { src: "/images/tata-one-world/scene-chand-baori-night.jpg", alt: "The Chand Baori night setting, lit for the evening", caption: "The Chand Baori, lit for the night." },
+      { src: "/images/tata-one-world/scene-truck-stage.jpg", alt: "A Tata Motors truck on the stage in front of the audience", caption: "A Tata truck takes the stage." },
     ],
     [
       { src: "/images/tata-one-world/scene-driven-by-innovation-cropped.jpg", alt: "Tata Motors trucks with guests gathered for the ribbon cutting", caption: "Trucks and guests at the ribbon cutting." },
-      { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Winners on the awards stage." },
+      { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Winners take the awards stage." },
     ],
     [
       { src: "/images/tata-one-world/scene-truck-one-world.jpg", alt: "ONE WORLD lettering in front of a Tata Motors truck", caption: "ONE WORLD, in front of a truck." },
@@ -144,9 +151,9 @@ export const tataOneWorld = {
     { label: "Watch: The countdown begins", url: "https://www.youtube.com/shorts/lC2jfSss-rA" },
   ],
 
-  tradeOff: "The cost was rebuilding a finished identity. The team spent that time brainstorming and adjusting the programme to it. The payoff was a new creative direction, and the team delivered the project successfully.",
+  tradeOff: "Rebuilding a finished identity cost time, but the reworked programme still held 350 guests together.",
 
-  thesis: "The look was rebuilt around a programme that could carry it.",
+  thesis: "A new look needed a programme strong enough to carry it.",
 
   closing: {
     lead: "The name was new. The job was not.",
