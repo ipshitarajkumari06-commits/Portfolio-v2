@@ -41,7 +41,7 @@ function Ring({ r, index, progress, live }: { r: number; index: number; progress
   const start = 0.5 + index * 0.02;
   const entrance = useTransform(progress, [start, start + 0.06], [0, 1], { clamp: true });
   const direction = index % 2 ? 1 : -1;
-  const ringColor = useTransform(progress, [0.74, 0.8], ["rgba(26,26,26,0.5)", "rgba(243,237,224,0.5)"]);
+  const ringColor = useTransform(progress, [0.66, 0.72], ["rgba(26,26,26,0.5)", "rgba(243,237,224,0.5)"]);
   return (
     <motion.div
       className="absolute"
@@ -92,7 +92,7 @@ function Card({
   const arch = useTransform(dist, (d) => `${-9 * (1 - Math.min(d, 1) ** 2)}vh`);
   const opacity = useTransform(dist, (d) => 1 - 0.45 * Math.min(d, 1));
   const [visible, setVisible] = useState(false);
-  useMotionValueEvent(progress, "change", (p) => setVisible(p > 0.82));
+  useMotionValueEvent(progress, "change", (p) => setVisible(p > 0.76));
 
   return (
     <motion.div
@@ -136,8 +136,9 @@ function Card({
 }
 
 function Gallery({ progress }: { progress: MotionValue<number> }) {
-  const labelOpacity = useTransform(progress, [0.84, 0.92], [0, 1], { clamp: true });
-  const galleryOpacity = useTransform(progress, [0.78, 0.9], [0, 1], { clamp: true });
+  const labelOpacity = useTransform(progress, [0.76, 0.84], [0, 1], { clamp: true });
+  // Fades in as the wine disc finishes filling the stage (it completes at 0.74), so there is no blank wine stretch.
+  const galleryOpacity = useTransform(progress, [0.68, 0.76], [0, 1], { clamp: true });
   const x = useTransform(progress, (p) => {
     const pos = travelPos(p);
     return `${(N * STEP) / 2 - CARD_W / 2 - pos * STEP}vw`;
@@ -208,12 +209,15 @@ export default function ScrollRings() {
       const l = lineRef.current.getBoundingClientRect();
       const fs = parseFloat(getComputedStyle(lineRef.current).fontSize);
       const end = Math.min(window.innerWidth * 0.92, window.innerHeight * 0.8, 760) * 44 / 100;
+      // On narrow screens the line wraps. A rule under a wrapped block would start at the box edge,
+      // not at the text, so it becomes a dot centred under the text.
+      const wrapped = lineRef.current.offsetHeight > fs * 1.5;
       setGeo({
-        startX: l.left - s.left,
+        startX: wrapped ? s.width / 2 : l.left - s.left,
         // Offsets ignore CSS transforms, so the reveal animation can't skew the measure.
         // The text baseline sits about 0.2em above the box bottom; the rule sits just under it.
         baseline: offsetTopWithin(lineRef.current, stageRef.current) + lineRef.current.offsetHeight - 0.05 * fs,
-        w0: l.width,
+        w0: wrapped ? 0 : l.width,
         dot: 0.16 * fs,
         end,
         endX: s.width / 2 - end / 2,
@@ -268,14 +272,14 @@ export default function ScrollRings() {
   });
   const morphRadius = useTransform(shrinkT, (sh) => `${999 * sh}px`);
   const morphScale = useTransform(scrollYProgress, (p) => {
-    if (p < 0.74) return 1;
-    if (p < 0.82) return 1 + ((p - 0.74) / 0.08) * (DISK_FILL - 1);
+    if (p < 0.66) return 1;
+    if (p < 0.74) return 1 + ((p - 0.66) / 0.08) * (DISK_FILL - 1);
     return DISK_FILL;
   });
-  const discOpacity = useTransform(scrollYProgress, [0.74, 0.82], [0.8, 1], { clamp: true });
+  const discOpacity = useTransform(scrollYProgress, [0.66, 0.74], [0.8, 1], { clamp: true });
   const textOpacity = useTransform(scrollYProgress, [0.24, 0.3], [1, 0], { clamp: true });
-  const scaffoldOpacity = useTransform(scrollYProgress, [0.5, 0.56, 0.74, 0.82], [0, 1, 1, 0], { clamp: true });
-  const scaffoldScale = useTransform(scrollYProgress, [0.74, 0.82], [1, 0.6], { clamp: true });
+  const scaffoldOpacity = useTransform(scrollYProgress, [0.5, 0.56, 0.66, 0.74], [0, 1, 1, 0], { clamp: true });
+  const scaffoldScale = useTransform(scrollYProgress, [0.66, 0.74], [1, 0.6], { clamp: true });
 
   if (reduced) return <StaticRings />;
 
