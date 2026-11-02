@@ -30,7 +30,7 @@ function PlainFigure({ v }: { v: { src: string; alt: string; caption: string; wi
 }
 
 const BODY =
-  "font-sans text-lg font-light leading-relaxed text-fg/85 md:text-xl";
+  "font-sans text-justify text-lg font-light leading-relaxed text-fg/85 md:text-xl";
 const LABEL =
   "font-sans text-xs font-medium uppercase tracking-[0.22em] text-fg/85";
 const CAPTION = "mt-5 font-sans text-sm font-light leading-relaxed text-fg/85";
@@ -115,7 +115,7 @@ function Paragraphs({ items }: { items: ParagraphItem[] }) {
           const emphasis = typeof p !== "string" && p.emphasis;
           return (
             <Reveal key={i} delay={i * 0.08}>
-              <p className={emphasis ? "font-serif text-2xl font-light text-fg md:text-3xl" : BODY}>{text}</p>
+              <p className={emphasis ? "font-serif text-justify text-2xl font-light text-fg md:text-3xl" : BODY}>{text}</p>
             </Reveal>
           );
         })}
@@ -380,7 +380,7 @@ export default function TataOneWorldPage() {
             <div className="relative border border-white/10 bg-white/[0.03] p-6 md:p-8">
               <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-fuchsia-300/80 via-sky-300/60 to-transparent" />
               <p className={`${LABEL} mb-6`}>The trade-off</p>
-              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
+              <p className="font-serif text-justify text-2xl font-light leading-snug text-fg md:text-3xl">{c.tradeOff}</p>
             </div>
           </Reveal>
         </section>

@@ -8,8 +8,8 @@ import { airports as c } from "@/lib/collections/airports";
 import BackPrompt from "@/components/collections/BackPrompt";
 
 const IMG = "/images/airports";
-const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const EMPHASIS = "font-serif text-2xl font-light text-fg md:text-3xl";
+const BODY = "font-sans text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
+const EMPHASIS = "font-serif text-justify text-2xl font-light text-fg md:text-3xl";
 
 export const metadata: Metadata = {
   title: `${c.title} — International Airports, Ipshita Rajkumari`,

@@ -8,7 +8,7 @@ import BackPrompt from "@/components/collections/BackPrompt";
 import { TimelineDiagram, SyncDiagram } from "@/components/collections/McapsDiagrams";
 import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
-const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
+const BODY = "font-sans text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
 const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
 const HEADING = "font-serif text-2xl font-light leading-tight text-fg md:text-3xl";
 
@@ -59,7 +59,7 @@ function Evidence({ items }: { items: string[] }) {
         <Reveal key={item} delay={0.1 + i * 0.08}>
           <div className="flex gap-5 border-b border-white/10 py-4 md:py-6">
             <span className="font-sans text-sm tabular-nums text-amber-200/80">{String(i + 1).padStart(2, "0")}</span>
-            <p className="font-sans text-base font-light leading-relaxed text-fg/90 md:text-lg">{item}</p>
+            <p className="font-sans text-justify text-base font-light leading-relaxed text-fg/90 md:text-lg">{item}</p>
           </div>
         </Reveal>
       ))}
@@ -187,7 +187,7 @@ export default function McapsStartPage() {
           <Reveal delay={0.2}>
             <div className="relative mt-16 border border-white/10 bg-white/[0.03] p-6 md:p-8">
               <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
-              <p className="font-serif text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionThree.tradeOff}</p>
+              <p className="font-serif text-justify text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionThree.tradeOff}</p>
             </div>
           </Reveal>
           <div className="mt-16">
