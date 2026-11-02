@@ -60,12 +60,27 @@ export const mcapsStart = {
 
   decisionThree: {
     label: "Participation, where AI shaped the games",
-    paragraphs: [
-      "Three things tracked progress: a digital passport, a leaderboard and Greatness Tokens. Stamps built up in the passport, and at 25 the holder unlocked the Champion title.",
-      "Greatness Tokens piled up with every win, and five teams per location raced for the top spot until the city with the most tokens pulled ahead.",
-      "AI built the content behind the games, and people made every call on the outcome. Guess the Hero turned AI-generated descriptions into a game, and colleagues tried to name the person behind each one.",
-      "Copilot ran through the work tools, and a sample stamp, Copilot Champion, was earned by using it.",
-      "Award winners were unveiled through AI-made film sequences, and each employee found a personalised invitation with their name on it.",
+    items: [
+      {
+        label: "Progress",
+        text: "Three things tracked progress: a digital passport, a leaderboard and Greatness Tokens. Stamps built up in the passport, and at 25 the holder unlocked the Champion title.",
+      },
+      {
+        label: "Cities",
+        text: "Greatness Tokens piled up with every win, and five teams per location raced for the top spot until the city with the most tokens pulled ahead.",
+      },
+      {
+        label: "AI in the games",
+        text: "AI built the content behind the games, and people made every call on the outcome. Guess the Hero turned AI-generated descriptions into a game, and colleagues tried to name the person behind each one.",
+      },
+      {
+        label: "Copilot",
+        text: "Copilot ran through the work tools, and a sample stamp, Copilot Champion, was earned by using it.",
+      },
+      {
+        label: "Awards",
+        text: "Award winners were unveiled through AI-made film sequences, and each employee found a personalised invitation with their name on it.",
+      },
     ],
     image: {
       src: "/images/mcaps-start/p16-passport-render.jpg",

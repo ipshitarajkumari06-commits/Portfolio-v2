@@ -6,6 +6,7 @@ import Reveal from "@/components/motion/Reveal";
 import Kicker from "@/components/typography/Kicker";
 import BackPrompt from "@/components/collections/BackPrompt";
 import { TimelineDiagram, SyncDiagram } from "@/components/collections/McapsDiagrams";
+import McapsMechanics from "@/components/collections/McapsMechanics";
 import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
 const BODY = "font-sans text-left sm:text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
@@ -163,7 +164,9 @@ export default function McapsStartPage() {
         </Decision>
 
         <Decision n="03" label={c.decisionThree.label}>
-          <Paragraphs items={c.decisionThree.paragraphs} />
+          <Reveal delay={0.08}>
+            <McapsMechanics items={c.decisionThree.items} />
+          </Reveal>
           <div className="mt-16">
             <Figure v={c.decisionThree.image} />
           </div>
