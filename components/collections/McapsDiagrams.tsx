@@ -23,9 +23,9 @@ const EVENT_DAYS = ["Event 1", "Event 2"];
 
 // Challenges from the proposal deck (slides 13 to 15). The 3-minute reset runs every day.
 // The wellbeing task and mind challenge per day are a random draw, not a confirmed order.
-const RESET_LINE = "The 3-minute reset is a guided breathing exercise, every day.";
+const RESET_LINE = "A three-minute guided breathing reset, every day.";
 const WELLBEING_DETAIL: Record<string, string> = {
-  "Hook step": "A fun hook-step dance challenge.",
+  "Hook step": "A hook-step dance challenge, easy enough for anyone to join.",
   "Desk yoga": "A 5-minute desk yoga session.",
   "Beginner workout": "A 10-minute beginner workout.",
 };
@@ -33,9 +33,9 @@ const MIND_DETAIL: Record<string, string> = {
   Crossword: "Solve a crossword by filling in the right habits.",
   "Word sprint": "Make as many words as possible from a set of letters in 60 seconds.",
   "Guess the Hero": "Identify office heroes from short AI-generated descriptions.",
-  "Creative challenge": "A creative challenge that keeps the mind thinking differently.",
-  "Logic puzzle": "A logic puzzle to keep the mind engaged.",
-  "Brain teaser": "A brain teaser to keep the mind engaged.",
+  "Creative challenge": "A creative challenge that stretches the mind sideways.",
+  "Logic puzzle": "A logic puzzle that tests the mind.",
+  "Brain teaser": "A brain teaser that sharpens the mind.",
 };
 // Index 0 is D-7, index 6 is D-1.
 const DAY_PLAN: { wellbeing?: string; mind?: string }[] = [
@@ -71,7 +71,7 @@ function summaryFor(tile: TileDef): { title: string; body: string } {
     return tile.label === "Event 1"
       ? {
           title: "Event, 30 July 2026",
-          body: "The conference opened with a Laughter Reset that the three cities took part in together.",
+          body: "The conference opened with a Laughter Reset, and the three cities laughed together.",
         }
       : {
           title: "Event, 31 July 2026",
