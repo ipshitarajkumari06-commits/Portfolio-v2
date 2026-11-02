@@ -9,8 +9,10 @@ import { TimelineDiagram, SyncDiagram } from "@/components/collections/McapsDiag
 import McapsMechanics from "@/components/collections/McapsMechanics";
 import { mcapsStart as c } from "@/lib/collections/mcaps-start";
 
-const BODY = "font-sans text-left sm:text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const LABEL = "font-sans text-sm uppercase tracking-[0.14em] text-fg/75";
+const BODY = "font-sans text-justify hyphens-auto text-lg font-light leading-relaxed text-fg/90 md:text-xl";
+// Section labels carry a short amber rule, the accent the diagrams use.
+const LABEL =
+  "flex items-center gap-4 font-sans text-sm uppercase tracking-[0.14em] text-fg/75 before:h-px before:w-8 before:bg-amber-200/70 before:content-['']";
 const HEADING = "font-serif text-2xl font-light leading-tight text-fg md:text-3xl";
 
 // Standard section: a hairline rule above, then a text column.
@@ -19,19 +21,18 @@ const SECTION = "mx-auto mt-28 max-w-xl border-t border-white/10 pt-10 md:mt-32"
 type Visual = { src: string; alt: string; caption: string; width: number; height: number };
 
 // Concept renders from the proposal deck. Each is captioned as a render, so
-// nothing reads as event photography. A hairline frame sits offset behind the
-// image, so the render reads as a layer over the page rather than a flat box.
-function Figure({ v, wide = false }: { v: Visual; wide?: boolean }) {
+// nothing reads as event photography. The image sits on the text column edge,
+// so its outline lines up with the paragraphs above it.
+function Figure({ v }: { v: Visual }) {
   return (
-    <figure className={wide ? "w-full" : "max-w-[22rem]"}>
-      <div className="relative">
-        <div className="absolute inset-0 translate-x-4 translate-y-4 border border-white/10" aria-hidden="true" />
+    <figure className="w-full">
+      <div className="relative overflow-hidden border border-white/10">
         <Image
           src={v.src}
           alt={v.alt}
           width={v.width}
           height={v.height}
-          sizes={wide ? "(min-width: 768px) 36rem, 100vw" : "(min-width: 768px) 22rem, 100vw"}
+          sizes="(min-width: 768px) 36rem, 100vw"
           className="relative h-auto w-full"
         />
       </div>
@@ -61,7 +62,7 @@ function Decision({ n, label, children }: { n: string; label: string; children: 
       <div className="relative md:sticky md:top-40 md:self-start">
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute -left-2 -top-20 select-none font-serif text-[7rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.14)]"
+          className="pointer-events-none mb-4 block select-none font-serif text-[4.5rem] font-light leading-none text-transparent [-webkit-text-stroke:1px_rgba(243,237,224,0.14)] md:absolute md:-left-2 md:-top-20 md:mb-0 md:text-[7rem]"
         >
           {n}
         </span>
@@ -148,7 +149,7 @@ export default function McapsStartPage() {
         <Decision n="02" label={c.decisionTwo.label}>
           <Paragraphs items={c.decisionTwo.paragraphs} />
           <div className="mt-16">
-            <Figure v={c.decisionTwo.image} wide />
+            <Figure v={c.decisionTwo.image} />
           </div>
           <div className="mt-16">
             <Reveal>
@@ -158,7 +159,7 @@ export default function McapsStartPage() {
           <Reveal delay={0.2}>
             <div className="relative mt-16 border border-white/10 bg-white/[0.03] p-6 md:p-8">
               <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
-              <p className="font-serif text-left sm:text-justify text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionTwo.tradeOff}</p>
+              <p className="font-serif text-justify hyphens-auto text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionTwo.tradeOff}</p>
             </div>
           </Reveal>
         </Decision>

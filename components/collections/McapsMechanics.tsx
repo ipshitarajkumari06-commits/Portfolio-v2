@@ -30,7 +30,7 @@ export default function McapsMechanics({ items }: { items: Mechanic[] }) {
             <p
               id={`mechanic-${i}`}
               hidden={!isOpen}
-              className="pb-6 font-sans text-left sm:text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl"
+              className="pb-6 font-sans text-justify hyphens-auto text-lg font-light leading-relaxed text-fg/90 md:text-xl"
             >
               {item.text}
             </p>
