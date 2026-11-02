@@ -11,6 +11,23 @@ import CursorGlow, { GlowPanels } from "./CursorGlow";
 import Parallax from "./Parallax";
 import CollectionHero from "@/components/collections/CollectionHero";
 
+// A plain image with its caption, without the assembly effect.
+function PlainFigure({ v }: { v: { src: string; alt: string; caption: string; width: number; height: number } }) {
+  return (
+    <figure>
+      <Image
+        src={v.src}
+        alt={v.alt}
+        width={v.width}
+        height={v.height}
+        sizes="(min-width: 1320px) 720px, 100vw"
+        className="h-auto w-full rounded-[20px]"
+      />
+      <figcaption className="mt-3 font-sans text-sm font-light text-fg/70">{v.caption}</figcaption>
+    </figure>
+  );
+}
+
 const BODY =
   "font-sans text-lg font-light leading-relaxed text-fg/85 md:text-xl";
 const LABEL =
@@ -342,15 +359,34 @@ export default function TataOneWorldPage() {
           label={c.decisionThree.label}
           visual={
           <>
-            <PuzzleFigure v={c.decisionThree.formations} />
+            <PlainFigure v={c.decisionThree.formations} />
             <div className="mt-16">
-              <PuzzleFigure v={c.decisionThree.closeUp} />
+              <PlainFigure v={c.decisionThree.closeUp} />
             </div>
           </>
         }
         >
           <Paragraphs items={c.decisionThree.paragraphs} />
         </Decision>
+
+        {/* Scenes from the event, as they were captioned in the highlights film. */}
+        <section className="mt-32 md:mt-48">
+          <p className={`${LABEL} mb-8`}>Scenes from the week</p>
+          <div className="grid gap-16">
+            {c.scenes.map((pair) => (
+              <div key={pair[0].src} className="grid grid-cols-2 gap-4 md:gap-6">
+                {pair.map((scene) => (
+                  <figure key={scene.src}>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-[20px]">
+                      <Image src={scene.src} alt={scene.alt} fill sizes="(min-width: 768px) 50vw, 50vw" className="object-cover" />
+                    </div>
+                    <figcaption className="mt-3 font-sans text-sm font-light text-fg/70">{scene.caption}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* The reel, the short and the anthem, as three arches to open. */}
         <section id="watch" className="mt-32 scroll-mt-24 md:mt-56">

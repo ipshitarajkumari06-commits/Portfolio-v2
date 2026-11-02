@@ -130,6 +130,26 @@ export const tataOneWorld = {
     },
   },
 
+  // Each frame holds two scenes side by side.
+  scenes: [
+    [
+      { src: "/images/tata-one-world/scene-city-of-lakes.jpg", alt: "Guests in a group at the City of Lakes, holding One World banners", caption: "City of Lakes." },
+      { src: "/images/tata-one-world/scene-team-building-cropped.jpg", alt: "Team-building moment with guests gathered outside the palace", caption: "Team building." },
+    ],
+    [
+      { src: "/images/tata-one-world/scene-chand-baori-night.jpg", alt: "The Chand Baori night setting, lit for the evening", caption: "Chand Baori at night." },
+      { src: "/images/tata-one-world/scene-truck-stage.jpg", alt: "A Tata Motors truck on the stage in front of the audience", caption: "A Tata truck on stage." },
+    ],
+    [
+      { src: "/images/tata-one-world/scene-driven-by-innovation-cropped.jpg", alt: "Tata Motors trucks with guests gathered for the ribbon cutting", caption: "Driven by innovation." },
+      { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Rewarding the champions." },
+    ],
+    [
+      { src: "/images/tata-one-world/scene-truck-one-world.jpg", alt: "ONE WORLD lettering in front of a Tata Motors truck", caption: "ONE WORLD, in front of a truck." },
+      { src: "/images/tata-one-world/scene-truck-cab.jpg", alt: "The cab and dashboard of a Tata Motors truck", caption: "Inside the truck cab." },
+    ],
+  ],
+
   videos: [
     { label: "Watch: When Leadership Inspires", url: "https://www.youtube.com/shorts/EyMIW558Blg" },
     { label: "Watch: Ideas, Conversations & Connection", url: "https://www.youtube.com/shorts/XZbexiLyHS0" },
