@@ -19,7 +19,7 @@ const noProgress = motionValue(0);
 
 function Name() {
   return (
-    <div className="absolute left-6 top-[10vh] z-20 sm:left-12 sm:top-[12vh]">
+    <div className="absolute left-6 right-6 top-[10vh] z-20 sm:left-12 sm:right-12 sm:top-[12vh]">
       <h1 className="font-sans text-[clamp(3.5rem,11vw,11rem)] font-bold leading-[0.88] tracking-[-0.03em] text-white">
         Ipshita
         <br />
