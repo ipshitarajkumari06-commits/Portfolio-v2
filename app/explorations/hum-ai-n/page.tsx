@@ -22,7 +22,7 @@ const EPISODES = [
 
 export const metadata: Metadata = {
   title: "HUM.AI.N — Tata Motors, Ipshita Rajkumari",
-  description: c.brief.statement,
+  description: c.idea,
 };
 
 // One continuous editorial essay, not a sequence of screens. Spacing
@@ -58,11 +58,11 @@ export default function HumAiNPage() {
       <div className="mx-auto mt-[clamp(1.5rem,4vh,2.5rem)] flex max-w-2xl flex-col">
         {c.firstInstinct.lines.map((line, i) => (
           <Reveal key={i} delay={i * 0.08} className={i === 0 ? "" : "mt-3"}>
-            <p className="font-serif text-xl leading-snug text-fg/75 md:text-2xl">{line}</p>
+            <p className="font-serif text-xl leading-snug text-left text-fg/75 sm:text-justify md:text-2xl">{line}</p>
           </Reveal>
         ))}
         <Reveal delay={0.4} className="mt-8">
-          <p className="font-serif text-lg text-fg/75 md:text-xl">{c.firstInstinct.displayLead}</p>
+          <p className="font-serif text-lg text-left text-fg/75 sm:text-justify md:text-xl">{c.firstInstinct.displayLead}</p>
         </Reveal>
         <Reveal delay={0.5} className="mt-1">
           <p className="font-serif text-[clamp(1.75rem,5.5vw,3.25rem)] font-light leading-snug text-fg">
@@ -74,20 +74,37 @@ export default function HumAiNPage() {
       {/* Research */}
       <div className="mx-auto mt-[clamp(4rem,10vh,6rem)] max-w-2xl">
         <Reveal>
-          <p className="font-serif text-xl leading-snug text-fg/75 md:text-2xl">{c.research.opening}</p>
+          <p className="font-serif text-xl leading-snug text-left text-fg/75 sm:text-justify md:text-2xl">{c.research.opening}</p>
         </Reveal>
         <Reveal delay={0.05}>
-          <p className="mt-4 font-serif text-lg text-fg/75 md:text-xl">{c.research.summary}</p>
+          <p className="mt-4 font-serif text-lg text-left text-fg/75 sm:text-justify md:text-xl">{c.research.summary}</p>
         </Reveal>
         <div className="mt-4">
           {c.research.reflection.map((line, i) => (
             <Reveal key={line} delay={i * 0.08} className={i === 0 ? "" : "mt-1"}>
-              <p className="font-serif text-lg leading-relaxed text-fg/75 md:text-xl">{line}</p>
+              <p className="font-serif text-lg leading-relaxed text-left text-fg/75 sm:text-justify md:text-xl">{line}</p>
             </Reveal>
           ))}
         </div>
-        <Reveal delay={0.15} className="mt-4">
-          <p className="font-serif text-2xl font-light text-fg md:text-3xl">{c.research.closing}</p>
+      </div>
+
+      {/* Insights: confirmed claims, each attributed to its source. */}
+      <div className="mx-auto mt-[clamp(3rem,8vh,5rem)] max-w-2xl">
+        <p className="font-sans text-kicker uppercase text-fg/75">{c.insights.label}</p>
+        <div className="mt-6 flex flex-col gap-8">
+          {c.insights.items.map((item, i) => (
+            <Reveal key={item.text} delay={i * 0.08}>
+              <p className="font-serif text-lg leading-relaxed text-left text-fg/75 sm:text-justify md:text-xl">{item.text}</p>
+              <p className="mt-2 font-sans text-[12px] uppercase tracking-[0.16em] text-fg/75">{item.source}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+
+      {/* Research closing: lands after the evidence, not before it. */}
+      <div className="mx-auto mt-[clamp(3rem,8vh,5rem)] max-w-2xl">
+        <Reveal>
+          <p className="font-serif text-2xl font-light text-left text-fg sm:text-justify md:text-3xl">{c.research.closing}</p>
         </Reveal>
       </div>
 
@@ -104,11 +121,21 @@ export default function HumAiNPage() {
         <Realisation />
       </div>
 
-      {/* The Idea */}
+      {/* The answer: the brief's open question, closed. */}
       <Reveal className="mx-auto mt-[clamp(4rem,10vh,6rem)] max-w-2xl">
-        <p className="font-serif text-[clamp(1.75rem,5.5vw,3.25rem)] font-light leading-snug text-fg">{c.idea}</p>
+        <p className="font-serif text-xl leading-snug text-center text-fg/75 md:text-2xl">{c.answer}</p>
       </Reveal>
 
+      {/* The Idea */}
+      <Reveal className="mx-auto mt-[clamp(4rem,10vh,6rem)] max-w-2xl">
+        <p className="font-serif text-[clamp(1.75rem,5.5vw,3.25rem)] font-light leading-snug text-center text-fg">{c.idea}</p>
+      </Reveal>
+
+
+      {/* Connector: names the aim before the transformation reveals the name. */}
+      <Reveal className="mx-auto mt-[clamp(4rem,10vh,6rem)] max-w-2xl">
+        <p className="font-serif text-xl leading-snug text-center text-fg/75 md:text-2xl">{c.connector}</p>
+      </Reveal>
 
       {/* Transformation */}
       <div className="mt-[clamp(4rem,10vh,6rem)]">

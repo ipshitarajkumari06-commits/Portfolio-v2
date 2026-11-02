@@ -1,5 +1,4 @@
-// Locked copy — HUM.AI.N, Tata Motors.
-// Do not edit prose here without going back through the same editorial pass this went through.
+// Copy — HUM.AI.N, Tata Motors.
 
 export const humAiN = {
   kicker: "Tata Motors",
@@ -20,18 +19,38 @@ export const humAiN = {
   firstInstinct: {
     lines: [
       "My first instinct was AI.",
-      "Everyone was already talking about AI.",
+      "Every panel and pitch deck was talking about it.",
       "But that would have been another AI campaign.",
+      "AI is contested, and a campaign that only displayed it would join the argument. Any answer had to account for the people making it, because who builds it decides what the effort is worth.",
     ],
-    displayLead: "The real question was:",
+    displayLead: "The real issue was:",
     display: "What makes this Tata Motors?",
   },
 
   research: {
-    opening: "AI was already at work across Tata Motors, on several fronts.",
+    opening: "AI was at work across Tata Motors, on several fronts.",
     summary: "From manufacturing to engineering, quality, logistics, mobility and customer experience.",
-    reflection: ["The deeper I went,", "the clearer one thing became."],
-    closing: "The exchange was never one-directional.",
+    reflection: ["The deeper I went,", "the thread kept leading back to people."],
+    closing: "Each of these results had a hand behind it.",
+  },
+
+  // Confirmed, attributed claims. No dates, per the portfolio rule.
+  insights: {
+    label: "Insights",
+    items: [
+      {
+        text: "Tata Group had more than 100 GenAI projects under way.",
+        source: "N Chandrasekaran, Tata Group chairman, at the TCS annual general meeting",
+      },
+      {
+        text: "A technician asks ServiceSage a vehicle diagnostics question in plain language, and generative AI answers it.",
+        source: "Tata Motors, as described in a MathWorks customer story",
+      },
+      {
+        text: "A public charging network of more than 25,000 chargers, spread across more than 150 cities, serves Tata Motors' electric small commercial vehicles.",
+        source: "Tata Motors",
+      },
+    ],
   },
 
   // The two notebook lists. Word order is fixed and meaningful: index 0
@@ -40,20 +59,23 @@ export const humAiN = {
   test: {
     ai: ["Scale", "Precision", "Memory", "Pattern Recognition", "Prediction"],
     human: ["Intent", "Judgement", "Empathy", "Experience", "Creativity"],
-    rule: "Strike every capability, on either side. What survives is direction.",
+    rule: "Strike every capability from both lists. One word stays.",
   },
 
   // Restated after the notebook, in the strategist's own words rather than
-  // the notebook's visual proof. Does not repeat "It was never a one-sided
-  // relationship." from research.closing — the notebook already proved
-  // that; this picks the thought up from there.
+  // the notebook's visual proof. Picks the thought up from there.
   realisation: {
     lines: [
       "AI was becoming more capable.",
+      "Ability was never the open question. Intent was.",
     ],
   },
 
-  idea: "AI shaped by human intent.",
+  answer: "The brief said what to make. The strategy said what to say.",
+
+  idea: "Tata Motors leads generative AI in India's automobile industry, with the principle that guided its work long before the current wave.",
+
+  connector: "That intent lent the approach its name.",
 
   // Quiet typographic transform, not a morph or particle effect. "Human"
   // gains one word mid-string to become "Humane", then the whole word
@@ -64,29 +86,4 @@ export const humAiN = {
     final: "HUM.AI.N",
   },
 
-  ending: {
-    principle: "One principle.",
-    stories: "Ten stories.",
-  },
-
-  campaign: {
-    cta: "Watch HUM.AI.N",
-    href: "https://www.youtube.com/results?search_query=tata+motors+hum.ai.n",
-  },
-
-  // NOT USED in the current architecture (superseded by The First
-  // Instinct / The Test / The Pivot). Preserved rather than deleted,
-  // this project has no version control, so there is no other way to
-  // recover this if the sequence reverts. Verified against the real
-  // source material; do not repurpose without the same editorial pass.
-  landscape:
-    "A single number, C75, is built from four billion kilometres of real Indian driving, and Tata publishes it voluntarily alongside the official range.",
-  field: [
-    "A panel gap, measured in fractions of a millimetre, checked by a vision system built to catch what a human eye would miss.",
-    "A dashboard glowing at midnight, tracking a fleet whose driver is already asleep.",
-    "A truck moving through the night, its route logged for efficiency. At a rest stop, the same driver waters a sapling at the edge of a city.",
-    "A factory worker describing a fault out loud, in his own language, to a system built to understand it.",
-    "A car reaching the end of its life. Its steel sorted, melted, reshaped into a new one. Somewhere in the same company, a person is offered a second career.",
-    "An ambulance moving through an empty street at three in the morning.",
-  ],
 };

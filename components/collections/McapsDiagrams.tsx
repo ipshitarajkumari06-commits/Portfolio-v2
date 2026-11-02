@@ -484,8 +484,8 @@ const [fBengaluru, fMumbai, fGurugram] = CITY_GROUND.map(([x, y]) => loopFractio
 // Each handoff, in the order it runs. Text is taken from the case copy.
 const EVENTS = [
   { title: "Takeover", text: "One city took control every 90 minutes, with 60 seconds for the other two to respond." },
-  { title: "Memory chain", text: "A memory chain was carried across all three cities." },
-  { title: "Shared cheer", text: "A shared cheer gave each city its own word." },
+  { title: "Memory chain", text: "A memory chain passed through all three cities." },
+  { title: "Shared cheer", text: "A shared cheer lent each city its own word." },
 ];
 
 // Where each event's number sits on the loop, in base coordinates.
