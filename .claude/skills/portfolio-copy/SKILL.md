@@ -13,6 +13,15 @@ Governing rules are in the Portfolio Editorial Director memory (voice, change co
 - Every sentence earns its place. If two words do the job, use two.
 - Impersonal by default. Tata One World has no sentences starting with "I" or "The team". Other case studies keep first person only where it already exists and the author wrote it.
 
+## No obligation
+
+The copy describes and invites. It never lectures or commands the reader.
+
+- Avoid "you have to", "you must", "you need to", "you should" and "we need to".
+- Put the idea as a description or a consequence: "believe, and you become excellence" beats "you have to believe to become."
+- Use "should" only in questions about what something should do, such as "what should come next?". Never as a rule for the reader.
+- Avoid moral framing and slogans that tell the reader what to feel or do.
+
 ## Make it visual
 
 The reader should see the thing. Prefer the concrete image to the abstract summary.
