@@ -29,6 +29,7 @@ const PROJECTS: { label: string; title: string; href: string; image: string | nu
   { label: "Narrative Strategy", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: null, channels: CHANNELS },
   { label: "Experience Concept & Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },
   { label: "Participation Design", title: "How do you make a once-a-year event work across three cities, and matter on the days it isn't held?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/title-hero-card-v2.jpg" },
+  { label: "Brand Concept & Identity", title: "When the theme changes, what stays?", href: "/explorations/tata-one-world", image: "/images/tata-one-world/fire-key-visual.webp" },
 ];
 
 function polar(angle: number, r: number) {
@@ -110,7 +111,7 @@ function Card({
         >
           {project.image ? (
             <div className="relative h-[72%] w-full overflow-hidden" style={{ borderRadius: "14px" }}>
-              <Image src={project.image} alt="" fill sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
+              <Image src={project.image} alt="" fill quality={90} sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
             </div>
           ) : (
             <div
@@ -165,7 +166,7 @@ function StaticRings() {
           <Link key={project.label} href={project.href} className="group block">
             {project.image ? (
               <div className="relative aspect-[4/3] w-full">
-                <Image src={project.image} alt="" fill sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
+                <Image src={project.image} alt="" fill quality={90} sizes="(min-width: 768px) 1600px, 100vw" className="object-cover" />
               </div>
             ) : (
               <div className="aspect-[4/3] w-full bg-[#1A1A1A]" />

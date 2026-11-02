@@ -25,7 +25,7 @@ export const pritamPedro = {
     pullQuote: "Find Your Bro.",
     display: "Guests experienced segments of the story before they saw it, so anticipation grew from their connection to Pritam & Pedro.",
     paragraphs: [
-      "The series pairs an old-school cop with a young hacker, two people who would not normally find each other.",
+      "The series pairs an old-school cop with a young hacker, two people who would never normally share a room.",
       "Rather than treating the launch as a showcase for the trailer, the series' central relationship became the organising idea. It gave guests a way to approach strangers, and asked them to act on what the series is actually about.",
     ],
     imageLabel: "Find Your Bro badge pair",
@@ -39,13 +39,13 @@ export const pritamPedro = {
       "The badges sent guests hunting for clues, and finishing a code meant finding a stranger to pair with.",
       "The media, creators and Bollywood guests took part at every stage: registering, cracking the code, claiming the reward and reaching the main stage.",
     ],
-    demoText: "Cybersecurity expert Amit Dubey hacked a journalist's phone live to show how easily scammers can cause harm, and the room watched. The series grew from the cybercrime stories he shared with its makers. It gave guests the show's premise ahead of its story.",
+    demoText: "Cybersecurity expert Amit Dubey hacked a journalist's phone live to show how easily scammers can cause harm, and the room watched. The series grew from the cybercrime stories he shared with its makers. It gave guests the show's premise before the story itself.",
     demoSources: [
       { label: "Bollywood Hungama", url: "https://www.bollywoodhungama.com/news/features/pritam-and-pedro-trailer-launch-arshad-warsi-recalls-shooting-with-rajkumar-hiranis-son-vir-for-lage-raho-munna-bhai-jab-tak-usko-paise-nahin-diye-usne-shot-nahin-diya/" },
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/rajkumar-hirani-and-arshad-warsi-lay-bare-the-world-of-pritam-and-pedro/2006066" },
     ],
     afterDemo: [
-      "Towards the end of the evening, Shreya Ghoshal made a special appearance and sang. The series led the night rather than serving as its backdrop, and the marketing was built around the show.",
+      "Late in the evening, Shreya Ghoshal stepped out and sang. The series led the night rather than serving as its backdrop, and the marketing was built around the show.",
     ],
     liveCaricatureImageLabel: "Live caricature",
     caricatureImageLabel: "AI caricature portrait",
@@ -55,7 +55,7 @@ export const pritamPedro = {
     seriesAtmImageLabel: "Official key art: the ATM",
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Teaser on the main-stage LED",
-    summary: "The idea was carried into the guest journey, which opened at registration and became a game.",
+    summary: "The idea ran through the guest journey, which opened at registration and became a game.",
     close: "The journey ended with guests who had already lived part of the story before the teaser played on the main stage.",
     guestBackdropImageLabel: "Guests at the series backdrop",
     guestLobbyImageLabel: "Guests arriving at the launch",

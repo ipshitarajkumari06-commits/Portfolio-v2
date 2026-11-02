@@ -28,8 +28,8 @@ const SECTION = "pt-section pb-0";
 const CONTAINER = "mx-auto w-full max-w-container px-gutter";
 // Three text sizes, site-wide: the hero title (largest, in Display), this
 // "reflection statement" emphasis, and body copy. Nothing else.
-const BODY = "font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const EMPHASIS = "font-serif text-2xl font-light text-fg md:text-3xl";
+const BODY = "font-sans text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
+const EMPHASIS = "font-serif text-justify text-2xl font-light text-fg md:text-3xl";
 // The brief sits in a raised wine box: 3D edge highlights, no flat rectangle.
 const BRIEF_BOX =
   "relative mb-6 p-6 md:p-8";
@@ -298,12 +298,10 @@ export default function BMWArtFairPage() {
       </div>
 
       {/* Back to the selected work on the homepage, directly above the footer. */}
-      <div className="pt-section pb-section">
-        <div className={CONTAINER}>
-          <Reveal>
-            <BackPrompt />
-          </Reveal>
-        </div>
+      <div className={CONTAINER}>
+        <Reveal>
+          <BackPrompt />
+        </Reveal>
       </div>
     </>
   );
