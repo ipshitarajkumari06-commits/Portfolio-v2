@@ -145,7 +145,7 @@ function Gallery({ progress }: { progress: MotionValue<number> }) {
   });
   return (
     <motion.div className="absolute inset-0 flex flex-col items-center justify-center" style={{ opacity: galleryOpacity }}>
-      <motion.h2 className="absolute left-6 top-[12vh] font-sans text-[11px] font-normal uppercase tracking-[0.16em] text-[#F3EDE0] sm:left-12" style={{ opacity: labelOpacity }}>
+      <motion.h2 className="absolute bottom-[8vh] left-6 font-sans text-[11px] font-normal uppercase tracking-[0.16em] text-[#F3EDE0] sm:left-12" style={{ opacity: labelOpacity }}>
         Selected work
       </motion.h2>
       <motion.div className="flex items-start" style={{ x, perspective: 1200 }}>
