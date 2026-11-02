@@ -68,7 +68,7 @@ function Paragraphs({ lines, delayStep = 0.06 }: { lines: ParagraphLine[]; delay
 
 export const metadata: Metadata = {
   title: `${c.title} — BMW, Ipshita Rajkumari`,
-  description: c.opening[0].text,
+  description: "A Collectors' Lounge for BMW at India Art Fair 2026, carrying the Speedtop's motion and colour into architecture.",
 };
 
 export default function BMWArtFairPage() {

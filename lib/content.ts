@@ -2,8 +2,8 @@
 
 export const hero = {
   line1: "Seeing differently.",
-  line2A: "Reframing deliberately.",
-  line2B: "Building deliberately.",
+  line2A: "Reframing with intent.",
+  line2B: "Building with intent.",
   name: "Ipshita Rajkumari",
   role: "Brand Strategist & Experience Designer",
 };
@@ -56,7 +56,7 @@ export const featuredWork = {
 };
 
 export const contact = {
-  line: "Every good story needs a next chapter.",
+  line: "Every brief starts another chapter.",
   sub: "Send a brief, a problem or a room that needs building. I would love to hear it.",
   email: "ipshita.rajkumari06@gmail.com",
 };
