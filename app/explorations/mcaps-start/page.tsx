@@ -20,9 +20,9 @@ type Visual = { src: string; alt: string; caption: string; width: number; height
 // Concept renders from the proposal deck. Each is captioned as a render, so
 // nothing reads as event photography. A hairline frame sits offset behind the
 // image, so the render reads as a layer over the page rather than a flat box.
-function Figure({ v }: { v: Visual }) {
+function Figure({ v, wide = false }: { v: Visual; wide?: boolean }) {
   return (
-    <figure className="max-w-[22rem]">
+    <figure className={wide ? "w-full" : "max-w-[22rem]"}>
       <div className="relative">
         <div className="absolute inset-0 translate-x-4 translate-y-4 border border-white/10" aria-hidden="true" />
         <Image
@@ -30,7 +30,7 @@ function Figure({ v }: { v: Visual }) {
           alt={v.alt}
           width={v.width}
           height={v.height}
-          sizes="(min-width: 768px) 22rem, 100vw"
+          sizes={wide ? "(min-width: 768px) 36rem, 100vw" : "(min-width: 768px) 22rem, 100vw"}
           className="relative h-auto w-full"
         />
       </div>
@@ -48,22 +48,6 @@ function Paragraphs({ items, delay = 0.08 }: { items: string[]; delay?: number }
         </Reveal>
       ))}
     </>
-  );
-}
-
-// Evidence reads as a short ruled list, so the proof points stand apart from the argument.
-function Evidence({ items }: { items: string[] }) {
-  return (
-    <div className="mt-10 border-t border-white/10">
-      {items.map((item, i) => (
-        <Reveal key={item} delay={0.1 + i * 0.08}>
-          <div className="flex gap-5 border-b border-white/10 py-4 md:py-6">
-            <span className="font-sans text-sm tabular-nums text-amber-200/80">{String(i + 1).padStart(2, "0")}</span>
-            <p className="font-sans text-left sm:text-justify text-base font-light leading-relaxed text-fg/90 md:text-lg">{item}</p>
-          </div>
-        </Reveal>
-      ))}
-    </div>
   );
 }
 
@@ -150,15 +134,6 @@ export default function McapsStartPage() {
           <Paragraphs items={c.choice.paragraphs} />
         </section>
 
-        {/* The principle is the case's one argument, set alone with space around it. */}
-        <section className="mx-auto mt-28 max-w-3xl border-t border-white/10 py-24 md:mt-32 md:py-32">
-          <Reveal>
-            <Display as="h2" className="font-serif font-light">
-              {c.principle}
-            </Display>
-          </Reveal>
-        </section>
-
         <section className="mx-auto mt-28 max-w-3xl md:mt-32">
           <Reveal>
             <TimelineDiagram />
@@ -167,29 +142,28 @@ export default function McapsStartPage() {
 
         <Decision n="01" label={c.decisionOne.label}>
           <Paragraphs items={c.decisionOne.paragraphs} />
-          <div className="mt-16">
-            <Figure v={c.decisionOne.image} />
-          </div>
         </Decision>
 
         <Decision n="02" label={c.decisionTwo.label}>
           <Paragraphs items={c.decisionTwo.paragraphs} />
-          <Evidence items={c.decisionTwo.evidence} />
+          <div className="mt-16">
+            <Figure v={c.decisionTwo.image} wide />
+          </div>
           <div className="mt-16">
             <Reveal>
-              <SyncDiagram />
+              <SyncDiagram events={c.decisionTwo.evidence} />
             </Reveal>
           </div>
+          <Reveal delay={0.2}>
+            <div className="relative mt-16 border border-white/10 bg-white/[0.03] p-6 md:p-8">
+              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
+              <p className="font-serif text-left sm:text-justify text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionTwo.tradeOff}</p>
+            </div>
+          </Reveal>
         </Decision>
 
         <Decision n="03" label={c.decisionThree.label}>
           <Paragraphs items={c.decisionThree.paragraphs} />
-          <Reveal delay={0.2}>
-            <div className="relative mt-16 border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <span aria-hidden="true" className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-amber-200/80 to-transparent" />
-              <p className="font-serif text-left sm:text-justify text-2xl font-light leading-snug text-fg md:text-3xl">{c.decisionThree.tradeOff}</p>
-            </div>
-          </Reveal>
           <div className="mt-16">
             <Figure v={c.decisionThree.image} />
           </div>

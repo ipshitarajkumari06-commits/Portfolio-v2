@@ -204,7 +204,6 @@ export function TimelineDiagram() {
 
   return (
     <figure className={CARD}>
-      <figcaption className={LABEL}>Diagram, not a render</figcaption>
 
       <div className="mt-6 font-sans sm:hidden">
         <p className="text-sm text-fg/90">One challenge unlocks each day</p>
@@ -296,8 +295,8 @@ export function TimelineDiagram() {
           </text>
         </svg>
 
-        <p className="mt-4 font-sans text-[12px] uppercase tracking-[0.14em] text-fg/75">
-          Hover a day or event for its detail
+        <p className="mt-2 text-left font-sans text-xs font-medium leading-snug text-amber-200">
+          Hover a day or event for its detail.
         </p>
 
         {activeTile && activeSummary && (
@@ -481,20 +480,6 @@ function loopFraction(px: number, py: number) {
 
 const [fBengaluru, fMumbai, fGurugram] = CITY_GROUND.map(([x, y]) => loopFraction(x, y));
 
-// Each handoff, in the order it runs. Text is taken from the case copy.
-const EVENTS = [
-  { title: "Takeover", text: "One city took control every 90 minutes, with 60 seconds for the other two to respond." },
-  { title: "Memory chain", text: "A memory chain passed through all three cities." },
-  { title: "Shared cheer", text: "A shared cheer lent each city its own word." },
-];
-
-// Where each event's number sits on the loop, in base coordinates.
-const EVENT_AT = [
-  [11.4, 5.4],
-  [8, 12.6],
-  [5.5, 5.4],
-] as const;
-
 // One handoff: a dot that travels along the loop between two fractions, then fades.
 function Hop({ from, to, start, end }: { from: number; to: number; start: number; end: number }) {
   const s = start / CYCLE;
@@ -545,12 +530,33 @@ function CityLabel({ hx, hy, text, side, at }: { hx: number; hy: number; text: s
   );
 }
 
-// The handoff number, drawn on the loop.
-function EventChip({ x, y, n, opacity }: { x: number; y: number; n: number; opacity: number }) {
+// Where each event's number sits on the loop, in base coordinates.
+const EVENT_AT = [
+  [11.4, 5.4],
+  [8, 12.6],
+  [5.5, 5.4],
+] as const;
+
+// The handoff number, drawn on the loop. Clicking or pressing Enter opens its text below the diagram.
+function EventChip({ x, y, n, on, onToggle }: { x: number; y: number; n: number; on: boolean; onToggle: () => void }) {
   return (
-    <g opacity={opacity}>
-      <circle cx={x} cy={y} r="9" fill={NAVY} stroke={AMBER} strokeWidth="1.5" />
-      <text x={x} y={y + 4} textAnchor="middle" fill={CORE} fontSize="12" fontWeight="600">{n}</text>
+    <g
+      role="button"
+      tabIndex={0}
+      aria-pressed={on}
+      aria-label={`Handoff ${n}`}
+      style={{ cursor: "pointer" }}
+      onClick={onToggle}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onToggle();
+        }
+      }}
+    >
+      <circle cx={x} cy={y} r="16" fill="transparent" />
+      <circle cx={x} cy={y} r="9" fill={on ? AMBER : NAVY} stroke={AMBER} strokeWidth="1.5" />
+      <text x={x} y={y + 4} textAnchor="middle" fill={on ? NAVY : CORE} fontSize="12" fontWeight="600">{n}</text>
     </g>
   );
 }
@@ -580,18 +586,15 @@ function SimpleSync() {
   );
 }
 
-export function SyncDiagram() {
+export function SyncDiagram({ events = [] }: { events?: string[] }) {
   const reduce = Boolean(useReducedMotion());
   const [active, setActive] = useState<number | null>(null);
   const hubs = CITY_GROUND.map(([x, y]) => iso(x, y, 0.05));
   const chips = EVENT_AT.map(([x, y]) => iso(x, y, 0.05));
   const wrap = (node: JSX.Element, delay: number) => (reduce ? node : <Bob delay={delay}>{node}</Bob>);
-  const opacityFor = (i: number) => (active === null || active === i ? 1 : 0.35);
 
   return (
     <figure className={CARD}>
-      <figcaption className={LABEL}>Diagram, not a render</figcaption>
-
       <div className="mt-6 sm:hidden">
         <SimpleSync />
       </div>
@@ -643,12 +646,19 @@ export function SyncDiagram() {
         <Block b={{ x0: 16.4, y0: 6.6, w: 1.8, d: 1.8, z0: 0, z1: 3.9 }} seed={21} />
         {wrap(<Block b={{ x0: 18.4, y0: 7.6, w: 1.6, d: 1.6, z0: 0, z1: 1.2 }} seed={22} />, 1.3)}
 
-        {EVENTS.map((_, i) => (
-          <EventChip key={`chip${i}`} x={chips[i][0]} y={chips[i][1]} n={i + 1} opacity={opacityFor(i)} />
-        ))}
-
         {hubs.map(([x, y], i) => (
           <Hub key={`hub${i}`} x={x} y={y} flash={[8.5, 0.5, 4.5][i]} reduce={reduce} />
+        ))}
+
+        {chips.map(([x, y], i) => (
+          <EventChip
+            key={`chip${i}`}
+            x={x}
+            y={y}
+            n={i + 1}
+            on={active === i}
+            onToggle={() => setActive(active === i ? null : i)}
+          />
         ))}
 
         <CityLabel hx={hubs[0][0]} hy={hubs[0][1]} text="Bengaluru" side="below" />
@@ -656,31 +666,17 @@ export function SyncDiagram() {
         <CityLabel hx={hubs[2][0]} hy={hubs[2][1]} text="Gurugram" side="below" />
       </svg>
 
-      <ol className="mt-8 space-y-2">
-        {EVENTS.map((ev, i) => (
-          <li key={ev.title}>
-            <button
-              type="button"
-              onMouseEnter={() => setActive(i)}
-              onFocus={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
-              onBlur={() => setActive(null)}
-              className="flex w-full items-start gap-4 rounded-xl px-3 py-2 text-left transition-colors hover:bg-white/[0.04] focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
-            >
-              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-amber-400 font-sans text-sm text-amber-300">
-                {i + 1}
-              </span>
-              <span className="font-sans text-base font-light leading-relaxed text-fg/90">
-                <span className="text-fg">{ev.title}.</span> {ev.text}
-              </span>
-            </button>
-          </li>
-        ))}
-      </ol>
-
-      <p className="mt-6 text-center font-sans text-sm font-light text-fg/75">
-        Three cities linked live: one city&apos;s actions affect another. Handoff order is illustrative.
+      <p className="mt-3 text-left font-sans text-xs font-light leading-snug text-fg/75">
+        Three cities linked live.
       </p>
+      <p className="mt-2 text-left font-sans text-xs font-medium leading-snug text-amber-200">Select 1, 2 or 3 on the loop to see each handoff.</p>
+
+      {active !== null && events[active] && (
+        <div className="mt-6 border-t border-white/10 pt-6">
+          <p className="font-sans text-sm uppercase tracking-[0.14em] text-amber-200/80">Handoff {active + 1}</p>
+          <p className="mt-3 font-sans text-base font-light leading-relaxed text-fg/90">{events[active]}</p>
+        </div>
+      )}
     </figure>
   );
 }
