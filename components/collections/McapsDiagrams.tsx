@@ -71,7 +71,7 @@ function summaryFor(tile: TileDef): { title: string; body: string } {
     return tile.label === "Event 1"
       ? {
           title: "Event, 30 July 2026",
-          body: "The conference opened with a Laughter Reset, and the three cities laughed together.",
+          body: "The conference opened with a Laughter Reset, and the three cities chuckled in unison.",
         }
       : {
           title: "Event, 31 July 2026",
