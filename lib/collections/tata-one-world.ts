@@ -36,7 +36,7 @@ export const tataOneWorld = {
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: you have to believe to become.",
+      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: believe, and you become excellence.",
     ],
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
