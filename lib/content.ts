@@ -1,9 +1,7 @@
 // Homepage copy.
 
 export const hero = {
-  line1: "Seeing differently.",
-  line2A: "Reframing deliberately.",
-  line2B: "Building deliberately.",
+  line2A: "Reframing with intent.",
   name: "Ipshita Rajkumari",
   role: "Brand Strategist & Experience Designer",
 };
@@ -23,16 +21,6 @@ export const featuredWork = {
   kicker: "Explorations",
   items: [
     {
-      client: "BMW",
-      title: "What survives when a brand changes medium?",
-      href: "/explorations/bmw-art-fair",
-    },
-    {
-      client: "International Airports",
-      title: "When architecture captures attention, what should the experience say next?",
-      href: "/explorations/airports",
-    },
-    {
       client: "JioHotstar",
       title: "How do you build anticipation for a story without giving the story away?",
       href: "/explorations/pritam-pedro",
@@ -48,15 +36,25 @@ export const featuredWork = {
       href: "/explorations/mcaps-start",
     },
     {
+      client: "International Airports",
+      title: "When architecture captures attention, what should the experience say next?",
+      href: "/explorations/airports",
+    },
+    {
       client: "Tata Motors",
       title: "When the theme changes, what stays?",
       href: "/explorations/tata-one-world",
+    },
+    {
+      client: "BMW",
+      title: "What survives when a brand changes medium?",
+      href: "/explorations/bmw-art-fair",
     },
   ],
 };
 
 export const contact = {
-  line: "Every good story needs a next chapter.",
+  line: "Every brief starts another chapter.",
   sub: "Send a brief, a problem or a room that needs building. I would love to hear it.",
   email: "ipshita.rajkumari06@gmail.com",
 };

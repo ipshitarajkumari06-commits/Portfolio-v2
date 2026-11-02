@@ -2,17 +2,13 @@
 
 import { useRef, useState } from "react";
 import { motion, MotionValue, motionValue, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { hero } from "@/lib/content";
+import { hero, intro } from "@/lib/content";
 
 const WINE = "#6B1E2E";
 const CREAM = "#F3EDE0";
 const QUESTION = "How do I strategise creatively?";
 
-const LINES = [
-  "Every brief arrives with different questions.",
-  "My work begins by finding the right one.",
-  "Everything else follows.",
-];
+const LINES = intro.body;
 
 const TOTAL = LINES.join("").length;
 const noProgress = motionValue(0);
@@ -26,7 +22,7 @@ function Name() {
         Rajkumari
       </h1>
       <p className="mt-6 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">{hero.role}</p>
-      <p className="mt-2 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">Events, brands and apps.</p>
+      <p className="mt-2 font-sans text-[12px] uppercase tracking-[0.18em] text-[#F3EDE0] sm:text-[13px]">Events, brands, stories and AI.</p>
     </div>
   );
 }

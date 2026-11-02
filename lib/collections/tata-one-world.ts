@@ -9,7 +9,7 @@ export const tataOneWorld = {
   discipline: "Brand Concept & Identity",
   title: "Tata Motors One World",
 
-  question: "The name changed. What stays?",
+  question: "The name changed. The programme had to hold.",
   answer: "The programme held, and the arch and the lotus came through the change. A new name, however, meant a rebuilt identity.",
 
   brief: {
