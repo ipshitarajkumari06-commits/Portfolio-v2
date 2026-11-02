@@ -57,6 +57,6 @@ export const featuredWork = {
 
 export const contact = {
   line: "Every good story needs a next chapter.",
-  sub: "If you have a brief, a problem, or a room that needs building, I would love to hear it.",
+  sub: "Send a brief, a problem or a room that needs building. I would love to hear it.",
   email: "ipshita.rajkumari06@gmail.com",
 };
