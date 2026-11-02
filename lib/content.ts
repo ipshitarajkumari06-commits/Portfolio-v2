@@ -1,9 +1,7 @@
 // Homepage copy.
 
 export const hero = {
-  line1: "Seeing differently.",
   line2A: "Reframing with intent.",
-  line2B: "Building with intent.",
   name: "Ipshita Rajkumari",
   role: "Brand Strategist & Experience Designer",
 };
@@ -23,16 +21,6 @@ export const featuredWork = {
   kicker: "Explorations",
   items: [
     {
-      client: "BMW",
-      title: "What survives when a brand changes medium?",
-      href: "/explorations/bmw-art-fair",
-    },
-    {
-      client: "International Airports",
-      title: "When architecture captures attention, what should the experience say next?",
-      href: "/explorations/airports",
-    },
-    {
       client: "JioHotstar",
       title: "How do you build anticipation for a story without giving the story away?",
       href: "/explorations/pritam-pedro",
@@ -48,9 +36,19 @@ export const featuredWork = {
       href: "/explorations/mcaps-start",
     },
     {
+      client: "International Airports",
+      title: "When architecture captures attention, what should the experience say next?",
+      href: "/explorations/airports",
+    },
+    {
       client: "Tata Motors",
       title: "When the theme changes, what stays?",
       href: "/explorations/tata-one-world",
+    },
+    {
+      client: "BMW",
+      title: "What survives when a brand changes medium?",
+      href: "/explorations/bmw-art-fair",
     },
   ],
 };

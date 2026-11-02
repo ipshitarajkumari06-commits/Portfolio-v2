@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto flex w-full max-w-container flex-col gap-6 px-gutter py-10 sm:flex-row sm:items-center sm:justify-between">
         <span className="font-sans text-[13px] uppercase tracking-[0.14em] text-muted">
-          Ipshita Rajkumari · Brand Strategist &amp; Experience Designer
+          Ipshita Rajkumari
         </span>
 
         <div className="flex items-center gap-6">
@@ -18,7 +18,7 @@ export default function Footer() {
           >
             {contact.email}
           </Link>
-          <span className="font-sans text-[13px] text-muted">&copy; {year}</span>
+          <span className="whitespace-nowrap font-sans text-[13px] text-muted">&copy; {year}</span>
         </div>
       </div>
     </footer>
