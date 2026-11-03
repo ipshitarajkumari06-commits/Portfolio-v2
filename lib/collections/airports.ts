@@ -8,7 +8,7 @@
 export const airports = {
   kicker: "International Airports",
   discipline: "Experience Strategy",
-  title: "When architecture captures attention, what should the experience say next?",
+  title: "How does an experience hold attention that architecture has already won?",
 
   hero: {
     imageLabel: "Guwahati airport terminal, bamboo-orchid ceiling",
@@ -40,15 +40,15 @@ export const airports = {
     ],
     modelImageLabel: "Prime Minister Narendra Modi reviewing the airport masterplan model, Guwahati",
     discipline: [
-      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song. Unity was never sameness: every part kept its own note and turned toward one horizon.",
+      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song. Unity meant many parts, each keeping its own note, all turning toward one horizon.",
       "Nothing repeated. That was the discipline. A performance never explained the wildlife wall, and the wall never explained the tea. Each intervention carried its own idea.",
-      "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: detail. A place introducing itself through its particulars.",
+      "There was a version of this brief that stopped at scale: a thousand performers, a vast crowd, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: detail. A place introducing itself through its particulars.",
     ],
     close: [
       "The building offered Assam its opening look.",
       "The experience handed it a proper introduction.",
       "A region was shown and celebrated at once.",
-      "An airport did not have to close a region's story. It only had to turn the page and invite the reader on.",
+      "An airport did not have to close a region's story. It only had to turn the page and invite the traveller on.",
     ],
   },
 

@@ -37,12 +37,12 @@ export const featuredWork = {
     },
     {
       client: "International Airports",
-      title: "When architecture captures attention, what should the experience say next?",
+      title: "How does an experience hold attention that architecture has already won?",
       href: "/explorations/airports",
     },
     {
       client: "Tata Motors",
-      title: "When the theme changes, what stays?",
+      title: "How does one name reach every generation?",
       href: "/explorations/tata-one-world",
     },
     {
