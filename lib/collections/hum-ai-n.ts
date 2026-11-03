@@ -39,11 +39,11 @@ export const humAiN = {
     label: "Insights",
     items: [
       {
-        text: "Tata Group had more than 100 GenAI projects under way.",
+        text: "Tata Group had more than 100 generative AI projects under way.",
         source: "N Chandrasekaran, Tata Group chairman, at the TCS annual general meeting",
       },
       {
-        text: "A technician asks ServiceSage a vehicle diagnostics question in plain language, and generative AI answers it.",
+        text: "A technician asks ServiceSage, an assistant for vehicle diagnostics, a question in plain language, and generative AI answers it.",
         source: "Tata Motors, as described in a MathWorks customer story",
       },
       {
@@ -73,7 +73,7 @@ export const humAiN = {
 
   answer: "The brief said what to make. The strategy said what to say.",
 
-  idea: "Tata Motors leads generative AI in India's automobile industry, with the principle that guided its work long before the current wave.",
+  idea: "Tata Motors is among the automobile makers in India working with generative AI, guided by a principle that shaped its work long before the current wave.",
 
   connector: "That intent lent the approach its name.",
 

@@ -21,7 +21,7 @@ export const mcapsStart = {
     label: "The choice",
     paragraphs: [
       "The call was an opening stage on three pillars: Mental Agility, Physical Energy and Consistency. It could be woven around workdays, so each day could move people towards the event.",
-      "Three alternatives were on the table, each tied to one moment, language or session. One option, titled Co-Start, The Sync or The Vibe, froze a shared scene across Gurugram, Mumbai and Bengaluru. Code the Next dropped the audience into Microsoft's own language. Start with Purpose, Passion and People cut the theme into sessions.",
+      "Three alternatives were on the table, each tied to one moment, language or session. One option froze a shared scene across Gurugram, Mumbai and Bengaluru under a working title: Co-Start, The Sync or The Vibe. Code the Next dropped the audience into Microsoft's own language. Start with Purpose, Passion and People cut the theme into sessions.",
       "The choice was between a moment and a run of ordinary days. A theme staged once would have existed only on the day. MCAPS Start happens once a year, but what it celebrates grows from everyday work. The seven-day build-up was meant to set the theme in motion before the first day.",
     ],
   },
