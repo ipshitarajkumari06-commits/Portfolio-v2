@@ -38,8 +38,8 @@ export const pritamPedro = {
       "Every step drew two guests closer, long before anyone sat down to watch.",
       "Guests slipped into the world around Pritam & Pedro without noticing how they got in. Once the trailer arrived, they already belonged inside.",
       "Each puzzle badge hid a shard of code. Only the right partner could make it whole.",
-      "Two guests with matching codes stepped up to an ATM modelled on the key art, and a cassette was waiting for them.",
-      "Along the way, faces could be redrawn at one of two speeds, old and new side by side: a live caricature in about five minutes, or an AI sketch bot in about one minute.",
+      "Matching codes led the way to an ATM modelled on the key art, where a cassette was waiting.",
+      "Along the way, guests could have their faces redrawn at one of two speeds, old and new side by side: a live caricature in about five minutes, or an AI sketch bot in about one minute.",
     ],
     demoText: "On stage, cybersecurity expert Amit Dubey hacked a journalist’s phone in full view, a live lesson in how quickly a scammer can do real damage. Rajkumar Hirani has said the series weaves real cybercrime cases into fiction, so the demo planted the premise before the story began.",
     demoSources: [
