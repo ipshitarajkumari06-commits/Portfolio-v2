@@ -9,13 +9,13 @@ export const pritamPedro = {
 
   challenge: {
     label: "The Lighthouse Case",
-    question: "How do you let guests live a story ahead of its reveal?",
+    question: "How do you build anticipation for a story without giving the story away?",
     paragraphs: [
       "The series is a case still open, and the launch had to celebrate it without spoiling the ending. Only the trailer stayed sealed. Everything else played out live, in front of media, creators and film industry guests.",
       "The aim was to let guests live the moments first, and only afterwards realise they were inside the show.",
       "Close-ups filled the frame: a lighthouse rising beside the stage, cassettes stacked like evidence, an ATM glowing in a dark corner. Every prop was a clue waiting to be read.",
     ],
-    summary: "A cop on the ground, a hacker online, one kidnapping across Goa.",
+    summary: "A cop on the ground, a hacker online, one cybercrime case across Goa.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
@@ -40,7 +40,7 @@ export const pritamPedro = {
       "Matching codes led the way to an ATM modelled on the key art, where a cassette was waiting.",
       "Along the way, guests could have their faces drawn at one of two speeds: a live artist in about five minutes, or an AI sketch bot in about one minute.",
     ],
-    demoText: "On stage, cybersecurity expert Amit Dubey hacked a journalist’s phone in full view, a live lesson in how quickly a scammer can do real damage. Rajkumar Hirani has said the series weaves real cybercrime cases into fiction, so the demo planted the premise before the story began.",
+    demoText: "On stage, cybersecurity expert Amit Dubey hacked a journalist’s phone in full view, a live lesson in how quickly a scammer can do real damage. Rajkumar Hirani has said the series draws on real cybercrime stories, so the demo planted the premise before the story began.",
     demoSources: [
       { label: "Bollywood Hungama", url: "https://www.bollywoodhungama.com/news/features/pritam-and-pedro-trailer-launch-arshad-warsi-recalls-shooting-with-rajkumar-hiranis-son-vir-for-lage-raho-munna-bhai-jab-tak-usko-paise-nahin-diye-usne-shot-nahin-diya/" },
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/rajkumar-hirani-and-arshad-warsi-lay-bare-the-world-of-pritam-and-pedro/2006066" },

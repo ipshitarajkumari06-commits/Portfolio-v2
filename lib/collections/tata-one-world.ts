@@ -35,7 +35,7 @@ export const tataOneWorld = {
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The BELIEVE wordmark made the first direction’s argument, before the identity was rebuilt. It set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: believe, and you become excellence.",
+      "The BELIEVE wordmark made the first direction’s argument, before the identity was rebuilt. It set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the B and E in the tagline were red too. Read together, the line says: believe, and you become excellence.",
     ],
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
@@ -56,7 +56,7 @@ export const tataOneWorld = {
       "As an abbreviation, the name could be read at both ends of that range: FIRE as LIT to younger audiences, and on fire to older ones. Spelled out as F.I.R.E., for Fearless Innovation and Resilient Execution, it carried both meanings.",
       "The arch and the lotus carried over from BELIEVE. The arch stood as a doorway, honouring Udaipur at the same time.",
       "The lotus, India’s national flower, stayed as an emblem of inner conviction that grows from within.",
-      "Elephants and waves, two further motifs, carried the shikara’s movement forward.",
+      "Elephants and waves, two further motifs, add the shikara’s sense of movement.",
     ],
     continuity: [
       {
@@ -106,11 +106,11 @@ export const tataOneWorld = {
       "Collaborate opened with team building. Kite flying is a sport India celebrates, and it demands skill, reading the wind and flying alongside others. Teams of 20 to 25 designed, named and flew their own kites, each carrying a note on what ignited them to be exceptional.",
       "The Royal Runway was a creative way to express oneself while connecting with others. Teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget, and the runway was where the creative fire was lit.",
       "The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
-      "Connect put Tata vehicles on the ground for display, and used technology for a deeper look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks beside e-Dukaan, so guests could explore beyond the first glance, and a display of Tata vehicles stood in the parking area.",
-      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. I wanted the fleet to be part of it, and it had never been done before. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet became the highlight, and it suited the target group.",
+      "Connect put Tata vehicles on the ground for display, and used technology for a deeper look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks, so guests could explore beyond the first glance, and a display of Tata vehicles stood in the parking area.",
+      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. The fleet was meant to be part of it, making this a first-ever gala night. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet became the highlight, and it suited the target group.",
       "The gala's purpose was for distributors to believe in their own fire and go beyond what they already had.",
       { text: "Every pillar had a moment on the ground.", emphasis: true },
-      "The belief reached the sky, too. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
+      "The same idea reached the sky. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
     ],
     formations: {
       src: "/images/tata-one-world/fire-drone-formations.webp",
