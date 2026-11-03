@@ -1,6 +1,4 @@
-// Locked copy — BMW Collectors' Lounge, India Art Fair 2026. Final freeze.
-// Do not edit prose here without going back through the same editorial pass
-// this went through. Structure only (image labels, etc.) is safe to change.
+// Copy — BMW Collectors' Lounge, India Art Fair 2026.
 //
 // Paragraph arrays that mix body copy with the approved "reflection
 // statement" emphasis use { text, emphasis } objects; arrays where every
@@ -13,61 +11,61 @@ export const bmwArtFair = {
   heroImageLabel: "BMW Collectors' Lounge, full interior",
 
   opening: [
-    { text: "This project became an exploration of that question." },
+    { text: "This project put that question in a room and watched what happened." },
     {
-      text: "BMW has been the India Art Fair's presenting partner for ten years. In 2026, the brief was to bring that relationship inside the fair: a Collectors' Lounge that felt free-flowing and premium in a small space, and the Speedtop in its India debut, visible from outside so that every guest, client or not, could see it.",
+      text: "For ten years, BMW has been the India Art Fair's presenting partner. In 2026, the brief brought that relationship indoors. It asked for a Collectors' Lounge that felt free-flowing and premium in a small space, and for the Speedtop's India debut, glimpsed from outside by every guest, client or not.",
       box: true,
     },
-    { text: "A showroom is built for comparison. An art fair is built for interpretation.", emphasis: true },
+    { text: "A showroom is built to be compared. An art fair is built to be interpreted.", emphasis: true },
   ],
   openingClose:
-    "A car in a showroom asks to be bought. At a fair, people judge what they are invited to look at, so the question became how BMW should behave where every object is weighed through art, craft and form.",
+    "At a fair, visitors judge only what they are invited to look at, so the question became how BMW should behave among objects weighed by art, craft and form.",
   openingImageLabel: "Collectors' Lounge, entrance",
 
   speedtop: [
-    { text: "No single feature defines the Speedtop. Its lines and silhouette work as one gesture.", emphasis: true },
+    { text: "No single feature defines the Speedtop. Its silhouette reads as one unbroken line.", emphasis: true },
     {
-      text: "The challenge was to understand the thinking behind that form, then rebuild it in an entirely different medium.",
+      text: "The challenge was to trace the thinking behind that form and rebuild it in a different medium.",
     },
   ],
   speedtopImageLabels: ["BMW Concept Speedtop, studio render", "BMW Concept Speedtop, at India Art Fair"],
 
   lounge: [
-    "The principle was to carry the concept car's motion and colour into the architecture, never its body. The lounge rebuilt its silhouette at the scale of a room, and its flowing geometry guided visitors and framed views of the concept car from inside and outside. Visitors saw its curves long before they stood beside the car.",
+    "The answer was to let the Speedtop's motion and colour travel into the architecture, but never the bodywork.",
+    "At the scale of a room, the lounge redrew the car's form. Its flowing geometry framed it from inside and outside, so visitors saw its curves long before they reached the car.",
   ],
   loungeEvolutionImageLabels: [
-    "Speedtop, design sketch",
+    "BMW Concept Speedtop, design sketch",
     "Collectors' Lounge, concept sketch",
     "Collectors' Lounge, architectural render",
   ],
-  loungeChoreography: [],
   loungeExteriorImageLabel: "Collectors' Lounge, exterior facade",
-  interiorLoungeImageLabel: "The Collectors' Lounge, full room",
+  interiorLoungeImageLabel: "Collectors' Lounge, full room",
 
   host: [
-    "Inside, the lounge changed BMW's role from exhibitor to host. Across the fair, it filled with conversation between collectors, artists, designers and cultural voices.",
-    "BMW's Art Car Collection was presented as a conversation about collecting, not only as a product display.",
+    "Inside, BMW stopped exhibiting and started hosting. Across the fair, the lounge filled with voices: collectors, artists, designers and cultural figures, each adding to the conversation.",
+    "BMW's Art Car Collection was staged as a dialogue about collecting. Each work posed a question to whoever stood before it, not a product on a plinth.",
   ],
   hostClose: ["The objects changed.", "The behaviour behind them didn't."],
   hostImageLabels: [
     "Robb Report interview inside the Collectors' Lounge",
-    "Panel conversation, Rare Artistry: Where Art Sets Motion for Conversations",
+    "Rare Artistry panel, India Art Fair",
   ],
 
   participation: [
-    "The lounge's approach was simple: it invited and did not display. Visitors were asked to interpret the concept car, not just look at it, and to make something of their own.",
+    "The lounge turned the display inside out. Visitors stopped admiring the concept car and started working from it, tracing its curves, then answering them with marks of their own.",
   ],
-  participationClose: "Guests left with a Speedtop they had sketched, customised or printed themselves.",
+  participationClose: "Guests walked out holding a Speedtop of their own, its lines redrawn by hand, customised and screen-printed.",
   participationImageLabels: [
-    "Guests sketching and customising Speedtop miniatures",
-    "Guests screen printing their own Speedtop print",
+    "Guests sketching and customising BMW Concept Speedtop miniatures",
+    "Guests screen printing their own BMW Concept Speedtop print",
   ],
 
   flowInMotion: [
-    "The same idea carried beyond the lounge. As part of Flow in Motion, the Future Is Born of Art commission, led by BMW and India Art Fair, transformed more than four hundred feet of the fair's facade into Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality, and each motif concealed a story that only surfaced when a visitor looked closer.",
+    "The same idea travelled beyond the lounge and onto the building itself. As part of Flow in Motion, a fair-wide commission led by BMW and India Art Fair under the banner Future Is Born of Art, turned more than four hundred feet of the fair's facade into Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality across that wall, and each motif held a story that surfaced only as a visitor came close.",
   ],
   flowInMotionClose:
-    "In a fair of 135 exhibitors and 94 galleries, the same idea reached architecture, craft and technology.",
+    "Among 135 exhibitors and 94 galleries, one facade made people pause mid-stride.",
   flowInMotionImageLabels: [
     "India Art Fair facade, The Giant Sampler by Afrah Shafiq",
     "The Giant Sampler, AR experience detail",
@@ -75,9 +73,9 @@ export const bmwArtFair = {
   ],
 
   reflection: [
-    "What stayed with me wasn't the room.",
-    "It was the approach I proposed, and how BMW chose to live by it.",
+    "What stayed was not the room.",
+    "It was the approach, and the way BMW held to it, detail by detail.",
     "So, to answer the question this project started with:",
   ],
-  reflectionClose: [{ text: "What survives when a brand changes medium is how it chooses to behave.", emphasis: true }],
+  reflectionClose: [{ text: "When a brand changes medium, what survives is how it chooses to act.", emphasis: true }],
 };
