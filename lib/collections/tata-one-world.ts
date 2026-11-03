@@ -9,7 +9,7 @@ export const tataOneWorld = {
   title: "Tata Motors One World",
 
   question: "How does one name reach every generation?",
-  answer: "The programme held, and the arch and the lotus came through the change. A new name, however, meant a rebuilt identity.",
+  answer: "F.I.R.E. reached every generation: LIT to the young, on fire to the senior.",
 
   brief: {
     label: "The brief",
@@ -107,8 +107,8 @@ export const tataOneWorld = {
       "The Royal Runway was a creative way to express oneself while connecting with others. Teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget, and the runway was where the creative fire was lit.",
       "The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
       "Connect put Tata vehicles on the ground for display, and used technology for a deeper look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks beside e-Dukaan, so guests could explore beyond the first glance, and a display of Tata vehicles stood in the parking area.",
-      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. I wanted the fleet to be part of it, and it had never been done before. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet stole the show, and it worked well with the target group.",
-      "The gala's purpose was for distributors to believe in their own fire and exceed more than what they have.",
+      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. I wanted the fleet to be part of it, and it had never been done before. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet became the highlight, and it suited the target group.",
+      "The gala's purpose was for distributors to believe in their own fire and go beyond what they already had.",
       { text: "Every pillar had a moment on the ground.", emphasis: true },
       "The belief reached the sky, too. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
     ],

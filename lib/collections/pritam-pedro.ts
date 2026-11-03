@@ -57,7 +57,7 @@ export const pritamPedro = {
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Trailer on the main-stage LED",
     summary: "Puzzles paired two strangers before the screen lit up.",
-    tradeOff: "Keeping the trailer sealed meant the launch had to be lived before it was watched.",
+    tradeOff: "Keeping the trailer back meant the launch had to be lived before it was watched.",
     close: "By the time the trailer lit the main-stage LED, guests had already lived part of the story, and the reveal felt earned. They met the show as players first and viewers second.",
     guestBackdropImageLabel: "Visitors at the series backdrop",
     guestLobbyImageLabel: "Visitors arriving at the launch",

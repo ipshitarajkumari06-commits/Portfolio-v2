@@ -63,7 +63,7 @@ export const bmwArtFair = {
   ],
 
   flowInMotion: [
-    "The lounge let the Speedtop's motion and colour travel into its architecture. Flow in Motion, a fair-wide commission led by BMW and India Art Fair under the banner Future Is Born of Art, carried that idea onto the fair's facade, where more than four hundred feet became Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality across that wall, and each motif held a story that surfaced only as a visitor came close.",
+    "Flow in Motion took the lounge's idea onto the building itself. As a fair-wide commission led by BMW and India Art Fair under the banner Future Is Born of Art, it turned more than four hundred feet of the facade into Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality across that wall, and each motif held a story that surfaced only as a visitor came close.",
   ],
   flowInMotionClose:
     "Among 135 exhibitors and 94 galleries, one facade made people pause mid-stride.",
