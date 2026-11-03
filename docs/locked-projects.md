@@ -7,7 +7,7 @@ imagery change only when the user explicitly reopens it.
 | --- | --- | --- |
 | Homepage | `/` | Locked |
 | BMW — Brand Strategy | `/explorations/bmw-art-fair` | Reopened for copy edits (stress-test pass); re-lock when approved |
-| International Airports — Experience Strategy | `/explorations/airports` | Locked |
+| International Airports — Experience Strategy | `/explorations/airports` | Reopened for copy edits (stress-test pass); re-lock when approved |
 | HUM.AI.N — Tata Motors, Narrative Strategy | `/explorations/hum-ai-n` | Locked (see `docs/hum-ai-n-freeze-log.md`) |
 | MCAPS Start FY27 — Microsoft, Participation Design | `/explorations/mcaps-start` | Locked |
 

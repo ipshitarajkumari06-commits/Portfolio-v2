@@ -1,9 +1,9 @@
-// Locked copy — International Airports (Guwahati T2, Navi Mumbai International Airport).
+// International Airports (Guwahati T2, Navi Mumbai International Airport).
 // Two case studies, not one interleaved essay. Each carries its own
 // governing idea and its own closing line. The shared hero question is the
 // only thread that runs through both, and it is never repeated verbatim
-// inside either chapter. Do not copy structure or sentences between the
-// two chapters when editing; they earn their conclusions differently.
+// inside either chapter. Keep the two chapters' structure and sentences
+// distinct; they earn their conclusions differently.
 
 export const airports = {
   kicker: "International Airports",
@@ -17,37 +17,38 @@ export const airports = {
   assam: {
     label: "Guwahati International Airport",
     paragraphs: [
-      "The terminal at Lokpriya Gopinath Bordoloi International Airport, Guwahati, Assam, has a ceiling shaped like a bamboo orchid. It is the kind of detail people photograph before they have found their gate.",
-      "The brief was a first international airport launch. The position was that it should be more than a cultural showcase of regional performances. Modern technology would work alongside the culture it honoured, showing the place and celebrating it in the same moment.",
-      "A building can only make one kind of impression.",
-      { text: "Assam is not one story.", emphasis: true },
-      "It spans over two hundred languages and more than two hundred tribes, and no single gesture could introduce all of it.",
+      "Above Guwahati's Lokpriya Gopinath Bordoloi International Airport, a ceiling unfolds like a bamboo orchid. It is the kind of detail travellers photograph before they find their gate.",
+      "The brief was an international launch, and it had to be more than a parade of regional performances. Modern technology would walk beside the culture it honoured.",
+      "A building can only make one first impression.",
+      { text: "Assam is not one story. It is a chorus of many voices.", emphasis: true },
+      "Its languages and tribes spill past the edges of any single gesture.",
     ],
     ceremonyImageLabel: "Prime Minister Narendra Modi and officials at the ceremonial welcome, Guwahati",
     ceremony: [
-      "So the opening did not begin with a ribbon. It began with a Xorai, the vessel Assam offers to honour a guest, and a Gamusa, the woven cloth it drapes over a guest to welcome them. When the button was pressed, tradition moved first. Technology answered only after.",
-      "The same day, an 80-foot statue of Gopinath Bordoloi was unveiled outside the terminal.",
+      "Instead of a ribbon-cutting, the occasion began with a Xorai, a ceremonial vessel, and a Gamusa, the woven cloth Assam drapes over its guests of honour. Tradition took the spotlight first. Technology followed with a single press of a button.",
+      "That same day, an 80-foot statue of Gopinath Bordoloi rose outside the terminal, carrying the ceremony's respect into the open air.",
     ],
     systemsImageLabel: "Guwahati inauguration, documentary record: ceremony, systems and scale in sequence",
-    facetsIntro: ["What followed was more than a line-up of acts. Technology and tradition ran through it like threads in a single weave."],
+    facetsIntro: ["What followed was more than a line-up of acts. Technology and tradition wove through it as a continuous thread."],
     showcaseImageLabel: "The seven tableaus of the Northeast Showcase, framed like aircraft windows along the arrival route, Guwahati",
     facets: [
-      "Kaziranga's rhinos and elephants answered a visitor's own movement on a living wall, because in Assam nature takes part. Lachit Barphukan stands in bronze as the reason the region measures its courage against its own history. Tea arrived by the hands that grow it.",
-      "Seven tableaus, framed like aircraft windows, unfolded one by one along the travellers' route.",
-      "Leadership, sport, wellness, nature, tourism, culture and ambition. Each one is true on its own.",
+      "On a living wall, Kaziranga National Park's rhinos and elephants came alive at the lightest step of a visitor.",
+      "Lachit Barphukan, the 17th-century Ahom general, stood in bronze: the courage the region still looks back to.",
+      "Tea came from the hands that grow it.",
+      "Seven tableaus unrolled Assam's story along the travellers' route, one scene at a time.",
+      "Leadership, sport, wellness, nature, tourism, culture, ambition. Each stood true alone.",
     ],
     modelImageLabel: "Prime Minister Narendra Modi reviewing the airport masterplan model, Guwahati",
     discipline: [
-      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song: unity is never sameness, but many voices agree to sing toward the same point.",
-      "Nothing repeated. That was the discipline. A performance did not explain the wildlife wall, and the wildlife wall did not explain the tea. Each intervention carried one idea.",
-      "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: specificity, a place introducing itself through its own details.",
-      "The terminal that followed is designed to handle 13.1 million passengers a year, up from about 3.4 million.",
+      "The whole sequence borrowed its spirit from Mile Sur Mera Tumhara, the national unity song. Unity was never sameness: every part kept its own note and turned toward one horizon.",
+      "Nothing repeated. That was the discipline. A performance never explained the wildlife wall, and the wall never explained the tea. Each intervention carried its own idea.",
+      "There was a version of this brief that stopped at scale: a thousand performers, forty-five thousand guests, the Prime Minister's address. The version built here used that scale to carry something smaller and harder to fake: detail. A place introducing itself through its particulars.",
     ],
     close: [
-      "The building gave Assam its first impression.",
-      "The experience offered it an introduction.",
-      "What should come next was answered here: a region, shown and celebrated in the same moment.",
-      "An airport does not need to conclude a region's story. It only needs to open the first chapter.",
+      "The building offered Assam its opening look.",
+      "The experience handed it a proper introduction.",
+      "A region was shown and celebrated at once.",
+      "An airport did not have to close a region's story. It only had to turn the page and invite the reader on.",
     ],
   },
 
@@ -55,30 +56,27 @@ export const airports = {
     label: "Navi Mumbai International Airport",
     exteriorImageLabel: "Navi Mumbai International Airport, lotus-shaped terminal exterior",
     paragraphs: [
-      "The same discipline surfaced again, on a different coast, around an entirely different shape. The terminal at Navi Mumbai International Airport is shaped like a lotus. It was also reported as India's first fully digital and paperless airport, and the two facts do not sit naturally together.",
-      { text: "A lotus is old. A twenty-first-century transit hub is not.", emphasis: true },
-      "The brief was the same as Guwahati's, a first international airport launch, but the answer was different. The inauguration had to hold both at once, and it chose an order rather than a compromise.",
+      "Here the discipline began from the form itself. Navi Mumbai International Airport's terminal is built in the shape of a lotus.",
+      { text: "A lotus has been sacred for thousands of years. A twenty-first-century transit hub has not.", emphasis: true },
+      "The brief mirrored Guwahati's, but the answer grew from a different source. The inauguration had to hold past and future in one breath, and it kept them in order, heritage before technology.",
     ],
     heritage: [
-      "A blessing invoking Chhatrapati Shivaji Maharaj, the seventeenth-century Maratha ruler, opened the ceremony before any figure was shown. Heritage went first, so everything technological would read as an extension of history.",
-      "The stakes were higher than the ceremony let on: the terminal was still weeks from finished.",
+      "The ceremony began with a blessing, the way auspicious occasions in India traditionally begin, invoking Chhatrapati Shivaji Maharaj, the seventeenth-century Maratha ruler, before any figure appeared. Heritage led the way, so everything technological would read as a continuation.",
     ],
     techImageLabel: "Prime Minister Narendra Modi walking past the terminal's digital art installation, Navi Mumbai",
     tech: [
-      "Then the building's own language took over. A Digital Toran, the doorway ornament every Indian household recognises, was triggered by the palm of the Prime Minister rather than being hung by hand: an old gesture re-staged as a new one.",
-      "A construction wall built from shifting light told the story of the terminal's own becoming, not as a promotional reel but as a private history made public.",
+      "Then the building found its own language. A Digital Toran, the doorway ornament familiar across India, was triggered by the Prime Minister's palm instead of being hung by hand: an old gesture, staged anew.",
+      "A wall of shifting light traced the terminal's own becoming, a private history made public rather than a promotional reel. The Digital Toran and the light wall, side by side, marked both the occasion and the place.",
     ],
     systemsImageLabel: "Navi Mumbai inauguration, documentary record: ceremony, systems and scale in sequence",
     systems: [
-      "None of this showed the strain behind it. A five-tier routing plan moved thousands of vehicles across the site without a single seam visible to the thirty-five thousand guests who attended.",
-      "Nineteen days after opening, the airport had handled 109,917 passengers.",
-      "Visitors were never asked to choose between old and new. Every device, ritual and screen made the same argument in a different material: the future grows from where you began. It is what you build once you have honoured it.",
+      "None of this showed the strain behind it. A five-tier routing plan moved thousands of vehicles across the site, and no seam was visible to the thirty-five thousand guests who attended.",
+      "Visitors were never asked to choose between past and present. Ritual and screen shared the same stage, and neither had to step aside.",
     ],
     close: [
-      "The lotus gave the terminal its form.",
-      "The ceremony lent that form a lineage.",
-      "The building looked toward the future, and kept faith with where it came from.",
-      "Asked what should come next, Navi Mumbai's answer was the past, built forward.",
+      "The lotus shaped the terminal.",
+      "The ceremony placed it in a longer story.",
+      "Navi Mumbai carried that history forward.",
     ],
   },
 };

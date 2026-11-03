@@ -8,8 +8,8 @@ import { airports as c } from "@/lib/collections/airports";
 import BackPrompt from "@/components/collections/BackPrompt";
 
 const IMG = "/images/airports";
-const BODY = "font-sans text-left sm:text-justify text-lg font-light leading-relaxed text-fg/90 md:text-xl";
-const EMPHASIS = "font-serif text-left sm:text-justify text-2xl font-light text-fg md:text-3xl";
+const BODY = "font-sans text-justify hyphens-auto text-lg font-light leading-relaxed text-fg/90 md:text-xl";
+const EMPHASIS = "font-serif text-justify hyphens-auto text-2xl font-light text-fg md:text-3xl";
 
 export const metadata: Metadata = {
   title: `${c.title} — International Airports, Ipshita Rajkumari`,
@@ -147,17 +147,27 @@ function Beat({ lines, emphasis = false }: { lines: CopyLine[]; emphasis?: boole
 
 // A photograph that stays pinned to the left on wide screens while the copy
 // steps past it on the right. On phones it stacks: photograph, then copy.
-function PinnedChapter({ src, label, contain = false, children }: { src: string; label: string; contain?: boolean; children: React.ReactNode }) {
+// A photograph given its ratio is shown whole, with its caption beneath it.
+function PinnedChapter({ src, label, ratio, children }: { src: string; label: string; ratio?: number; children: React.ReactNode }) {
   return (
-    <section className="mx-auto grid w-full max-w-container gap-10 px-gutter sm:grid-cols-[1.4fr_1fr] sm:gap-12">
-      <div className="sm:sticky sm:top-0 sm:h-screen sm:py-12">
-        <div className="relative h-[55vh] w-full overflow-hidden sm:h-full">
-          <Image src={src} alt={label} fill sizes="(min-width: 640px) 58vw, 100vw" className={contain ? "object-contain" : "object-cover"} />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 to-transparent" />
-          <Caption label={label} className="absolute bottom-5 left-5 right-5" />
-        </div>
+    <section className="mx-auto grid w-full max-w-container gap-10 px-gutter sm:grid-cols-[1fr_1.4fr] sm:gap-12">
+      <div className="sm:sticky sm:top-0 sm:flex sm:h-screen sm:flex-col sm:justify-center sm:py-12">
+        {ratio ? (
+          <figure>
+            <div className="relative w-full overflow-hidden" style={{ aspectRatio: ratio }}>
+              <Image src={src} alt={label} fill sizes="(min-width: 640px) 42vw, 100vw" className="object-cover" />
+            </div>
+            <Caption label={label} className="mt-4" />
+          </figure>
+        ) : (
+          <div className="relative h-[55vh] w-full overflow-hidden sm:h-full">
+            <Image src={src} alt={label} fill sizes="(min-width: 640px) 42vw, 100vw" className="object-cover" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 to-transparent" />
+            <Caption label={label} className="absolute bottom-5 left-5 right-5" />
+          </div>
+        )}
       </div>
-      <div className="flex flex-col py-[12vh]">{children}</div>
+      <div className="flex flex-col py-[12vh] sm:justify-center">{children}</div>
     </section>
   );
 }
@@ -188,7 +198,7 @@ export default function InternationalAirportsPage() {
         <Beat lines={c.assam.paragraphs} />
         <Beat lines={c.assam.ceremony} />
       </PinnedChapter>
-      <PinnedChapter src={`${IMG}/ghy-performance.png`} label={c.assam.ceremonyImageLabel}>
+      <PinnedChapter src={`${IMG}/ghy-performance.png`} label={c.assam.ceremonyImageLabel} ratio={1465 / 1074}>
         <Beat lines={c.assam.facetsIntro} />
       </PinnedChapter>
       <DocumentaryFrame src={`${IMG}/ghy-collage.png`} label={c.assam.systemsImageLabel} ratio={2167 / 726} />
@@ -207,10 +217,10 @@ export default function InternationalAirportsPage() {
         <Beat lines={c.navimumbai.paragraphs} />
         <Beat lines={c.navimumbai.heritage} />
       </PinnedChapter>
-      <PinnedChapter src={`${IMG}/nmial-led-screen.png`} label={c.navimumbai.techImageLabel}>
+      <PinnedChapter src={`${IMG}/nmial-led-screen.png`} label={c.navimumbai.techImageLabel} ratio={1538 / 1023}>
         <Beat lines={c.navimumbai.tech} />
       </PinnedChapter>
-      <PinnedChapter src={`${IMG}/nmial-collage.png`} label={c.navimumbai.systemsImageLabel} contain>
+      <PinnedChapter src={`${IMG}/nmial-collage.png`} label={c.navimumbai.systemsImageLabel} ratio={1561 / 1007}>
         <Beat lines={c.navimumbai.systems} />
         <Beat lines={c.navimumbai.close} emphasis />
       </PinnedChapter>
