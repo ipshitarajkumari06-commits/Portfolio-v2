@@ -152,7 +152,7 @@ export default function PritamPedroPage() {
             {c.experience.launchNoteSources.map((s, i) => (
               <span key={s.url}>
                 {i > 0 ? ", " : null}
-                <a href={s.url} className="-my-3 inline-block py-3 underline underline-offset-4 hover:text-fg">{s.label}</a>
+                <a href={s.url} className="-my-[13px] inline-block py-[13px] underline underline-offset-4 hover:text-fg">{s.label}</a>
               </span>
             ))}
           </p>
@@ -192,7 +192,7 @@ export default function PritamPedroPage() {
                   {c.experience.demoSources.map((src, i) => (
                     <span key={src.url}>
                       {i > 0 ? ", " : null}
-                      <a href={src.url} className="-my-3 inline-block py-3 underline underline-offset-4 hover:text-fg">{src.label}</a>
+                      <a href={src.url} className="-my-[13px] inline-block py-[13px] underline underline-offset-4 hover:text-fg">{src.label}</a>
                     </span>
                   ))}
                 </p>
