@@ -1,7 +1,5 @@
 // Copy — Pritam & Pedro, JioHotstar Trailer Launch.
-// Revised against the project deck. Edit only with explicit approval.
-// The execution note is a required qualification: it stays visible until
-// execution evidence exists.
+// Revised against the project deck.
 
 export const pritamPedro = {
   kicker: "JioHotstar",
@@ -10,42 +8,47 @@ export const pritamPedro = {
   title: "Pritam & Pedro",
 
   challenge: {
-    label: "Two Worlds, One Goa",
-    question: "How do you build anticipation for a story without giving the story away?",
+    label: "The Lighthouse Case",
+    question: "How do you let guests live a story ahead of its reveal?",
     paragraphs: [
-      "The objective was to celebrate the show and hold back its reveal until the trailer launch. The guests were mainly media, creators and Bollywood, for whom a series launch matters as much as a film's: it drives press and marketing momentum.",
-      "The show is set in Goa, but the launch drew on it through detail rather than the postcard view: the lighthouse, the cassettes and the ATM. The answer was to let guests into that setting first.",
+      "The series is a case still open, and the launch had to celebrate it without spoiling the ending. Only the trailer stayed sealed. Everything else played out live, in front of media, creators and film industry guests.",
+      "The aim was to let guests live the moments first, and only afterwards realise they were inside the show.",
+      "Close-ups filled the frame: a lighthouse rising beside the stage, cassettes stacked like evidence, an ATM glowing in a dark corner. Every prop was a clue waiting to be read.",
     ],
-    summary: "A relationship-led launch experience.",
+    summary: "A cop on the ground, a hacker online, one kidnapping across Goa.",
     seriesPosterImageLabel: "Official key art, JioHotstar",
   },
 
   idea: {
     label: "The idea",
-    pullQuote: "Find Your Bro.",
-    display: "Guests experienced segments of the story before they saw it, so anticipation grew from their connection to Pritam & Pedro.",
+    pullQuote: "The Other Half",
+    display: "A badge and a keyboard, one story split two ways.",
     paragraphs: [
-      "The series pairs an old-school cop with a young hacker, two people who would never normally share a room.",
-      "Rather than treating the launch as a showcase for the trailer, the series' central relationship became the organising idea. It gave guests a way to approach strangers, and asked them to act on what the series is actually about.",
+      "An old-school cop and a young hacker, each holding a piece the other needs.",
+      "Their chemistry was “bro coded”: a dialect most of the room already speaks. For strangers, it became a password into conversation.",
+      "Guests were invited to step into the show’s world, a story built on that pairing, while the trailer waited in the wings.",
+      { text: "Anticipation came from connection first, well before the trailer.", emphasis: true },
     ],
-    imageLabel: "Find Your Bro badge pair",
+    imageLabel: "Badge pair for the journey",
   },
 
   experience: {
-    label: "Lights, Camera, Case.",
+    label: "The Reveal",
     paragraphs: [
-      "Each puzzle badge held a hidden code, and the only way to crack it was to find the person whose piece completed it. Two guests took their combined code to an ATM modelled on the key art, where the cassette waited as one of the rewards.",
-      "Along the way, portraits came in two speeds: a live caricature in about five minutes, or an AI sketch bot in about a minute.",
-      "The badges sent guests hunting for clues, and finishing a code meant finding a stranger to pair with.",
-      "The media, creators and Bollywood guests took part at every stage: registering, cracking the code, claiming the reward and reaching the main stage.",
+      "Every step drew two guests closer, long before anyone sat down to watch.",
+      "Guests slipped into the world around Pritam & Pedro without noticing how they got in. Once the trailer arrived, they already belonged inside.",
+      "Each puzzle badge hid a shard of code. Only the right partner could make it whole.",
+      "Two guests with matching codes stepped up to an ATM modelled on the key art, and a cassette was waiting for them.",
+      "Along the way, faces could be redrawn at one of two speeds, old and new side by side: a live caricature in about five minutes, or an AI sketch bot in about one minute.",
     ],
-    demoText: "Cybersecurity expert Amit Dubey hacked a journalist's phone live to show how easily scammers can cause harm, and the room watched. The series grew from the cybercrime stories he shared with its makers. It gave guests the show's premise before the story itself.",
+    demoText: "On stage, cybersecurity expert Amit Dubey hacked a journalist’s phone in full view, a live lesson in how quickly a scammer can do real damage. Rajkumar Hirani has said the series weaves real cybercrime cases into fiction, so the demo planted the premise before the story began.",
     demoSources: [
       { label: "Bollywood Hungama", url: "https://www.bollywoodhungama.com/news/features/pritam-and-pedro-trailer-launch-arshad-warsi-recalls-shooting-with-rajkumar-hiranis-son-vir-for-lage-raho-munna-bhai-jab-tak-usko-paise-nahin-diye-usne-shot-nahin-diya/" },
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/rajkumar-hirani-and-arshad-warsi-lay-bare-the-world-of-pritam-and-pedro/2006066" },
     ],
     afterDemo: [
-      "Late in the evening, Shreya Ghoshal stepped out and sang. The series led the night rather than serving as its backdrop, and the marketing was built around the show.",
+      "Late in the evening, Shreya Ghoshal stepped onto the stage and sang ‘Piya Piya Piya’, a Hindi film song. Just for that night, the series was the headline, not the backdrop.",
+      "Her voice wrapped the night in its softest light.",
     ],
     liveCaricatureImageLabel: "Live caricature",
     caricatureImageLabel: "AI caricature portrait",
@@ -54,20 +57,20 @@ export const pritamPedro = {
     launchScooterImageLabel: "The scooter entry at the launch",
     seriesAtmImageLabel: "Official key art: the ATM",
     crackImageLabel: "Crack the Code station",
-    trailerImageLabel: "Teaser on the main-stage LED",
-    summary: "The idea ran through the guest journey, which opened at registration and became a game.",
-    close: "The journey ended with guests who had already lived part of the story before the teaser played on the main stage.",
-    guestBackdropImageLabel: "Guests at the series backdrop",
-    guestLobbyImageLabel: "Guests arriving at the launch",
-    guestMediaImageLabel: "Media bytes",
-    launchNote: "The trailer launch took place on June 15, 2026, at Taj Lands End in Mumbai, ahead of the series' premiere on JioHotstar. The series marked the grand OTT debut of filmmaker Rajkumar Hirani, who created, wrote and produced it, and the acting debut of his son, Vir Hirani.",
+    trailerImageLabel: "Trailer on the main-stage LED",
+    summary: "Puzzles paired two strangers before the screen lit up.",
+    close: "By the time the trailer lit the main-stage LED, guests had already lived part of the story, and the reveal felt earned. They met the show as players first and viewers second.",
+    guestBackdropImageLabel: "Visitors at the series backdrop",
+    guestLobbyImageLabel: "Visitors arriving at the launch",
+    guestMediaImageLabel: "Media at the launch",
+    launchNote: "A trailer night at Taj Lands End, a hotel in Mumbai, eighteen days before the series lands on JioHotstar. Rajkumar Hirani steps into OTT, and his son Vir steps in front of the camera.",
     launchNoteSources: [
       { label: "T2 Online", url: "https://t2online.in/screen/streaming/the-trailer-launch-of-pritam-and-pedro-was-peppered-with-stars--laughs-and-the-promise-of-a-fun-watch-/2005674" },
       { label: "IANS", url: "https://ianslive.in/aamir-khan-calls-vir-hiranis-debut-with-pritam-and-pedro-an-emotional-day-he-is-like-my-son--20260704142715" },
     ],
     guestWallImageLabel: "At the launch, in front of the series wall",
     guestStageImageLabel: "On stage at the launch",
-    guestConversationImageLabel: "A guest in conversation at the launch",
+    guestConversationImageLabel: "A visitor in conversation at the launch",
     stepLabels: ["Register", "Crack the Code", "Reward", "Stage"],
     rewardText: "A cassette, one of the rewards",
   },

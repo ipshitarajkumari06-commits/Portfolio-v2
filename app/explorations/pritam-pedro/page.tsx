@@ -8,8 +8,8 @@ import { pritamPedro as c } from "@/lib/collections/pritam-pedro";
 const IMG = "/images/pritam-pedro";
 const LARGE = "mx-auto w-full max-w-container px-gutter";
 const STANDARD = "flex w-full max-w-2xl flex-col gap-8";
-const BODY = "font-sans text-left sm:text-justify text-xl font-light leading-relaxed text-fg/90 md:text-2xl";
-const EMPHASIS = "font-serif text-left sm:text-justify text-3xl font-light leading-snug text-fg md:text-4xl";
+const BODY = "font-sans text-justify hyphens-auto text-xl font-light leading-relaxed text-fg/90 md:text-2xl";
+const EMPHASIS = "font-serif text-justify hyphens-auto text-3xl font-light leading-snug text-fg md:text-4xl";
 const LABEL = "font-sans text-[12px] uppercase tracking-[0.16em] text-fg/70";
 
 export const metadata: Metadata = {
@@ -141,8 +141,22 @@ export default function PritamPedroPage() {
         </div>
 
         <p style={{ textWrap: "balance" }} className="mx-auto mt-6 max-w-2xl text-center font-sans text-[14px] uppercase tracking-[0.12em] text-fg/70">
-          Experiential · OTT · Entertainment · Launch
+          Launch · Comedy · Thriller · Cybercrime
         </p>
+
+        {/* The launch in one paragraph, with the reports it rests on. */}
+        <div className="mx-auto mt-10 max-w-2xl text-center">
+          <p className="font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl">{c.experience.launchNote}</p>
+          <p className={`mt-4 ${LABEL}`}>
+            Sources:{" "}
+            {c.experience.launchNoteSources.map((s, i) => (
+              <span key={s.url}>
+                {i > 0 ? ", " : null}
+                <a href={s.url} className="underline underline-offset-4 hover:text-fg">{s.label}</a>
+              </span>
+            ))}
+          </p>
+        </div>
       </section>
 
       {/* The episodes, in order, each with its thumbnail. */}
@@ -183,58 +197,45 @@ export default function PritamPedroPage() {
                   ))}
                 </p>
               </div>
-              <Beat lines={c.experience.afterDemo} />
-              <div>
-                <h3 className="mb-6 font-serif text-3xl font-light text-fg">Scenes</h3>
+              <div className="flex flex-col gap-16">
+                <div>
+                  <h3 className="mb-6 font-serif text-3xl font-light text-fg">Scenes</h3>
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                    <Scene label={c.experience.stepLabels[1]} src={`${IMG}/crack-the-code.jpg`} alt={c.experience.crackImageLabel} />
+                    <Scene label="Official key art" src={`${IMG}/series-atm-keyart.jpg`} alt={c.experience.seriesAtmImageLabel} />
+                    <Scene label={c.experience.stepLabels[2]} src={`${IMG}/reward-cassette-wall.jpg`} alt={c.experience.rewardText} />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="mb-6 font-serif text-3xl font-light text-fg">More from this episode</h3>
+                  <div className="grid w-full max-w-xl grid-cols-2 gap-6">
+                    <Card src={`${IMG}/live-caricature.jpg`} label={c.experience.liveCaricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
+                    <Card src={`${IMG}/caricature-portrait.jpg`} label={c.experience.caricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
+                  </div>
+                  <p className="mt-6 font-sans text-[13px] leading-snug text-fg/70">{c.experience.referenceNote}</p>
+                </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                  <Scene label={c.experience.stepLabels[1]} src={`${IMG}/crack-the-code.jpg`} alt={c.experience.crackImageLabel} />
-                  <Scene label="Official key art" src={`${IMG}/series-atm-keyart.jpg`} alt={c.experience.seriesAtmImageLabel} />
-                  <Scene label={c.experience.stepLabels[2]} src={`${IMG}/reward-cassette-wall.jpg`} alt={c.experience.rewardText} />
-                  <Card src={`${IMG}/series-poster.jpg`} label="Official key art, JioHotstar" ratio="aspect-video" fit="contain" />
+                  <Card src={`${IMG}/launch-cast.jpg`} label={c.experience.launchCastImageLabel} track={c.tracks.launch} />
+                  <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} />
+                </div>
+                <div>
+                  <h3 className="mb-6 font-serif text-3xl font-light text-fg">At the launch</h3>
+                  <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                    <Card src={`${IMG}/guest-media.jpg`} label={c.experience.guestMediaImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                    <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                    <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                    <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                    <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
+                  </div>
                 </div>
               </div>
-              <div>
-                <h3 className="mb-6 font-serif text-3xl font-light text-fg">More from this episode</h3>
-                <div className="grid w-full max-w-xl grid-cols-2 gap-6">
-                  <Card src={`${IMG}/live-caricature.jpg`} label={c.experience.liveCaricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
-                  <Card src={`${IMG}/caricature-portrait.jpg`} label={c.experience.caricatureImageLabel} track={c.tracks.concept} ratio="aspect-[4/5]" />
-                </div>
-                <p className="mt-6 font-sans text-[13px] leading-snug text-fg/70">{c.experience.referenceNote}</p>
-              </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <Card src={`${IMG}/launch-cast.jpg`} label={c.experience.launchCastImageLabel} track={c.tracks.launch} />
-                <Card src={`${IMG}/launch-scooter-entry.jpg`} label={c.experience.launchScooterImageLabel} track={c.tracks.launch} />
-              </div>
-              <div>
-                <h3 className="mb-6 font-serif text-3xl font-light text-fg">At the launch</h3>
-                <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-                  <Card src={`${IMG}/guest-backdrop.jpg`} label={c.experience.guestBackdropImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                  <Card src={`${IMG}/guest-media.jpg`} label={c.experience.guestMediaImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                  <Card src={`${IMG}/guest-wall.webp`} label={c.experience.guestWallImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                  <Card src={`${IMG}/guest-stage.webp`} label={c.experience.guestStageImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                  <Card src={`${IMG}/guest-conversation.webp`} label={c.experience.guestConversationImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                  <Card src={`${IMG}/guest-lobby.jpg`} label={c.experience.guestLobbyImageLabel} ratio="aspect-[4/5]" sizes="(min-width: 768px) 33vw, 50vw" />
-                </div>
-              </div>
+              <Beat lines={c.experience.afterDemo} />
               <PullQuote text={c.experience.close} />
             </div>
           </Episode>
         </div>
       </section>
-
-      {/* The launch in one paragraph, with the reports it rests on. */}
-      <div className={`mt-[clamp(3rem,8vh,4rem)] ${LARGE}`}>
-        <p className="max-w-3xl text-left sm:text-justify font-sans text-lg font-light leading-relaxed text-fg/90 md:text-xl">{c.experience.launchNote}</p>
-        <p className={`mt-4 ${LABEL}`}>
-          Sources:{" "}
-          {c.experience.launchNoteSources.map((s, i) => (
-            <span key={s.url}>
-              {i > 0 ? ", " : null}
-              <a href={s.url} className="underline underline-offset-4 hover:text-fg">{s.label}</a>
-            </span>
-          ))}
-        </p>
-      </div>
 
       {/* The way back to the selected work, as in the other case studies. */}
       <div className={LARGE}>
