@@ -9,7 +9,7 @@ export const tataOneWorld = {
   title: "Tata Motors One World",
 
   question: "How does one name reach every generation?",
-  answer: "F.I.R.E. reached every generation: LIT to the young, on fire to the senior.",
+  answer: "F.I.R.E. worked across every generation. Why? Let's see.",
 
   brief: {
     label: "The brief",
@@ -27,15 +27,15 @@ export const tataOneWorld = {
   choice: {
     label: "The first direction",
     paragraphs: [
-      "The first direction was “Believe to become.” It drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city’s craft, and a shikara for forward movement.",
-      "The belief line became the mark, and the BELIEVE identity won the project. The client liked the work but wanted a name flexible enough to reach every generation, which meant rebuilding the identity.",
+      "The first direction was “Believe to become.” It drew on Udaipur itself: a peacock for pride and growth, a lotus for inner belief and purity of intent, architectural motifs for the city’s craft, and a shikara gliding forward across the lake.",
+      "The belief line became the mark, and the BELIEVE identity won the project. The client loved the work but wanted a name that could reach each age group, which meant rebuilding the identity.",
     ],
   },
 
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The BELIEVE wordmark made the first direction’s argument, before the identity was rebuilt. It set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the B and E in the tagline were red too. Read together, the line says: believe, and you become excellence.",
+      "The BELIEVE wordmark made the argument before the identity was rebuilt. BE burned in red and LIEVE sat in navy. BE stood for BECOME EXCELLENCE, and the B and E in the tagline glowed red too. Read together, the line says: believe, become excellence.",
     ],
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
@@ -49,14 +49,15 @@ export const tataOneWorld = {
   decisionTwo: {
     label: "Why F.I.R.E. worked for both ends",
     paragraphs: [
-      "Everything after the rebuild had to be read by the whole distributor network, not only by the people who briefed it.",
-      "The distributor network stretched across every generation, from new joiners in the market to its most senior members. One name had to work for all of them, and F.I.R.E. did.",
-      "Guests first met the name on the microsite, where they shook, tilted and dragged their phones to uncover the theme.",
+      "After the rebuild, the whole distributor network had to read the new identity, not just the people who briefed it.",
+      "Guests first met F.I.R.E. on the microsite, where they shook, tilted and dragged their phones until the theme sparked into view.",
+      "The network stretched across every generation, from new joiners in the market to its most senior members. One name had to work for all of them, and F.I.R.E. did.",
+      "But plain “fire” carried a hazard for a motor company, where it could read as an automobile fire. Extending it to F.I.R.E. turned that hazard into a fuller, safer meaning.",
       { text: "One name, two readings.", emphasis: true },
-      "As an abbreviation, the name could be read at both ends of that range: FIRE as LIT to younger audiences, and on fire to older ones. Spelled out as F.I.R.E., for Fearless Innovation and Resilient Execution, it carried both meanings.",
-      "The arch and the lotus carried over from BELIEVE. The arch stood as a doorway, honouring Udaipur at the same time.",
-      "The lotus, India’s national flower, stayed as an emblem of inner conviction that grows from within.",
-      "Elephants and waves, two further motifs, add the shikara’s sense of movement.",
+      "As an abbreviation, the name ran across generations because it was lit for the young and on fire for the seniors. Spelled out, F.I.R.E. stood for Fearless Innovation and Resilient Execution, and it carried both meanings.",
+      "The arch and the lotus carried over from BELIEVE. The arch became a doorway that frames Udaipur.",
+      "The lotus, India’s national flower, stayed as a symbol of inner conviction, blooming from within.",
+      "Elephants and waves, two further motifs, carry the shikara’s sense of movement.",
     ],
     continuity: [
       {
@@ -101,16 +102,16 @@ export const tataOneWorld = {
   decisionThree: {
     label: "The programme, on the ground",
     paragraphs: [
-      "The welcome began at the airport, with royal guards escorting guests to Tata cars. At the palace, Ghoomar dancers swirled and dhol beats filled the entrance.",
-      "The three days ran under three sub-themes, Collaborate, Connect and Celebrate. Each sat inside One World, and each took on the F.I.R.E. theme, so every activity was planned to the same idea.",
-      "Collaborate opened with team building. Kite flying is a sport India celebrates, and it demands skill, reading the wind and flying alongside others. Teams of 20 to 25 designed, named and flew their own kites, each carrying a note on what ignited them to be exceptional.",
-      "The Royal Runway was a creative way to express oneself while connecting with others. Teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget, and the runway was where the creative fire was lit.",
-      "The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
-      "Connect put Tata vehicles on the ground for display, and used technology for a deeper look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks, so guests could explore beyond the first glance, and a display of Tata vehicles stood in the parking area.",
-      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. The fleet was meant to be part of it, making this a first-ever gala night. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet became the highlight, and it suited the target group.",
-      "The gala's purpose was for distributors to believe in their own fire and go beyond what they already had.",
-      { text: "Every pillar had a moment on the ground.", emphasis: true },
-      "The same idea reached the sky. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
+      "The welcome began at the airport, with royal guards leading guests to Tata cars. At the palace, Ghoomar dancers swirled while dhol beats rolled through the entrance.",
+      "Three days, three sub-themes: Collaborate, Connect and Celebrate. Each sat inside One World and took on the F.I.R.E. theme, so every activity followed the same idea.",
+      "Collaborate opened with team building. Kite flying, a sport India celebrates, rewards skill: reading the wind and flying alongside others. Teams of 20 to 25 designed, named and flew their own kites, each carrying a note on what ignited them to be exceptional.",
+      "All 350 guests also took on The Last Sword of Maharana Pratap: they set out through five challenge zones to recover a lost sword.",
+      "Under Connect, The Royal Runway gave people room to express their creative selves while connecting with others. For a day, teams became stylists, models and designers, haggling at a bazaar on a fictitious budget.",
+      "Connect brought Tata vehicles out for display, and used technology for a closer look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks, letting guests look beyond the first glance, while more vehicles stood in the parking area.",
+      "Celebrate closed the programme with a first-ever gala night, one that put the fleet at its centre. Gala nights tend to run on fun, food, drinks and music. This one added a decorated commercial vehicle that led a baraat up to the Fairmont entry, and the awards followed. The fleet became the highlight and suited the distributor audience.",
+      "The gala was built to help distributors find their own voice and go further than before.",
+      { text: "Every sub-theme had a moment on the ground.", emphasis: true },
+      "The theme then took to the sky. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
     ],
     formations: {
       src: "/images/tata-one-world/fire-drone-formations.webp",
@@ -156,7 +157,7 @@ export const tataOneWorld = {
     { label: "Watch: The countdown begins", url: "https://www.youtube.com/shorts/lC2jfSss-rA" },
   ],
 
-  tradeOff: "Rebuilding a finished identity cost time, but it bought one name for every generation.",
+  tradeOff: "Rebuilding a finished identity cost time, but it gave the whole network one name to share.",
 
   thesis: "Change the name, and the work has to show what it still means.",
 

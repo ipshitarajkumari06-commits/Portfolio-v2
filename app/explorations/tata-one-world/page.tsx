@@ -283,19 +283,6 @@ export default function TataOneWorldPage() {
           </Reveal>
         </section>
 
-        {/* The answer, after the setup it depends on. */}
-        <CursorGlow className="mx-auto mt-32 max-w-5xl rounded-[32px] py-6 md:mt-48">
-          <GlowPanels />
-          <div className="relative">
-            <Reveal delay={0.1}>
-              <p className={`${BODY} mt-10 max-w-2xl`}>{c.answer}</p>
-            </Reveal>
-          </div>
-        </CursorGlow>
-
-
-
-
         <Decision
           label={c.decisionOne.label}
         >
@@ -318,6 +305,16 @@ export default function TataOneWorldPage() {
             </figure>
           </Reveal>
         </section>
+
+        {/* The answer, after the setup it depends on. */}
+        <CursorGlow className="mx-auto mt-32 max-w-5xl rounded-[32px] py-6 md:mt-48">
+          <GlowPanels />
+          <div className="relative">
+            <Reveal delay={0.1}>
+              <p className={`${BODY} mt-10 max-w-2xl`}>{c.answer}</p>
+            </Reveal>
+          </div>
+        </CursorGlow>
 
         <Decision
           id="theme"
