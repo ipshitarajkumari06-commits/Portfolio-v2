@@ -25,8 +25,8 @@ export const pritamPedro = {
     display: "A badge and a keyboard, one story split two ways.",
     paragraphs: [
       "An old-school cop and a young hacker, each holding a piece the other needs.",
-      "Their chemistry was “bro coded”: a dialect most of the room already speaks. For strangers, it became a password into conversation.",
-      "Guests were invited to step into the show’s world, a story built on that pairing, while the trailer waited in the wings.",
+      "Their chemistry was “bro coded”: a dialect most of the room already speaks. For strangers, it became a shortcut into conversation.",
+      "Guests were invited to step into the show’s world, a story built on that pairing.",
       { text: "Anticipation came from connection first, well before the trailer.", emphasis: true },
     ],
     imageLabel: "Badge pair for the journey",
@@ -38,7 +38,7 @@ export const pritamPedro = {
       "Guests slipped into the world around Pritam & Pedro without noticing how they got in.",
       "Each puzzle badge hid a shard of code. Only the right partner could make it whole.",
       "Matching codes led the way to an ATM modelled on the key art, where a cassette was waiting.",
-      "Along the way, guests could have their faces redrawn at one of two speeds, old and new side by side: a live caricature in about five minutes, or an AI sketch bot in about one minute.",
+      "Along the way, guests could have their faces drawn at one of two speeds: a live artist in about five minutes, or an AI sketch bot in about one minute.",
     ],
     demoText: "On stage, cybersecurity expert Amit Dubey hacked a journalist’s phone in full view, a live lesson in how quickly a scammer can do real damage. Rajkumar Hirani has said the series weaves real cybercrime cases into fiction, so the demo planted the premise before the story began.",
     demoSources: [
