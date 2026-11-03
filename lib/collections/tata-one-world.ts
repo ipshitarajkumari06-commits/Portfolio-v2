@@ -1,15 +1,14 @@
 // Case copy — Tata Motors One World (Commercial Vehicles International Business, distributor meet).
-// Approved narrative. Documented facts only, from the project deck and the author's confirmations.
+// Documented facts only, from the project deck and the author's confirmations.
 // No dates or months, per the portfolio rule. Renders are from the proposal deck unless captioned as the final direction.
-// Deck note: the proposal deck gives 350 PAX for the guest count (p2), but 400 participants in the Last Sword challenge (p49).
-// The page keeps 350 and says all guests took part, per the author's confirmation. Public searches did not confirm either figure.
+// Guest count confirmed by the author: 350 guests took part in every challenge, including the Last Sword.
 
 export const tataOneWorld = {
   kicker: "Commercial Vehicles International Business",
   discipline: "Brand Concept & Identity",
   title: "Tata Motors One World",
 
-  question: "The name changed. The programme had to hold.",
+  question: "When the theme changes, what stays?",
   answer: "The programme held, and the arch and the lotus came through the change. A new name, however, meant a rebuilt identity.",
 
   brief: {
@@ -36,7 +35,7 @@ export const tataOneWorld = {
   decisionOne: {
     label: "The logo as an argument",
     paragraphs: [
-      "The wordmark set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: believe, and you become excellence.",
+      "The BELIEVE wordmark made the first direction’s argument, before the identity was rebuilt. It set BE in red and LIEVE in navy. BE stood for BECOME EXCELLENCE, and the tagline’s B and E were red too. Read together, the line says: believe, and you become excellence.",
     ],
     rationale: {
       src: "/images/tata-one-world/logo-rationale.webp",
@@ -50,11 +49,14 @@ export const tataOneWorld = {
   decisionTwo: {
     label: "Why F.I.R.E. worked for both ends",
     paragraphs: [
-      "The network stretched across every generation, from new joiners in the market to its most senior members. One name had to reach all of them, and F.I.R.E. did.",
+      "Everything after the rebuild had to be read by the whole distributor network, not only by the people who briefed it.",
+      "The distributor network stretched across every generation, from new joiners in the market to its most senior members. One name had to work for all of them, and F.I.R.E. did.",
       "Guests first met the name on the microsite, where they shook, tilted and dragged their phones to uncover the theme.",
       { text: "One name, two readings.", emphasis: true },
-      "As an abbreviation, the name reached both ends of that range: FIRE meant LIT to younger audiences and on fire to older ones. Spelled out as F.I.R.E., for Fearless Innovation and Resilient Execution, it carried both meanings.",
-      "The arch and the lotus carried over from BELIEVE. The arch stood as a gateway to greater things, honouring Udaipur at the same time. The lotus, India’s national flower, blossomed as an emblem of inner conviction and of excellence that grows from within. The elephants symbolised the shikara’s movement into a journey, while the waves showed everyone advancing as one world. Together, these distinctly Indian motifs opened the way to greatness for everyone.",
+      "As an abbreviation, the name could be read at both ends of that range: FIRE as LIT to younger audiences, and on fire to older ones. Spelled out as F.I.R.E., for Fearless Innovation and Resilient Execution, it carried both meanings.",
+      "The arch and the lotus carried over from BELIEVE. The arch stood as a doorway, honouring Udaipur at the same time.",
+      "The lotus, India’s national flower, stayed as an emblem of inner conviction that grows from within.",
+      "Elephants and waves, two further motifs, carried the shikara’s movement forward.",
     ],
     continuity: [
       {
@@ -100,10 +102,13 @@ export const tataOneWorld = {
     label: "The programme, on the ground",
     paragraphs: [
       "The welcome began at the airport, with royal guards escorting guests to Tata cars. At the palace, Ghoomar dancers swirled and dhol beats filled the entrance.",
-      "The programme kept its three pillars, Collaborate, Connect and Celebrate, and each one took on the F.I.R.E. theme.",
-      "Collaborate opened with team building. Teams of 20 to 25 designed, named and flew their own kites, each carrying a belief statement of what ignited them to be excellent. In the Royal Runway, teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget. The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
-      "Connect rolled Tata vehicles onto the ground. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks beside e-Dukaan, and a display of Tata vehicles stood in the parking area.",
-      "Celebrate closed the week with a gala night. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed.",
+      "The three days ran under three sub-themes, Collaborate, Connect and Celebrate. Each sat inside One World, and each took on the F.I.R.E. theme, so every activity was planned to the same idea.",
+      "Collaborate opened with team building. Kite flying is a sport India celebrates, and it demands skill, reading the wind and flying alongside others. Teams of 20 to 25 designed, named and flew their own kites, each carrying a note on what ignited them to be exceptional.",
+      "The Royal Runway was a creative way to express oneself while connecting with others. Teams turned into stylists, models and designers for a day, haggling at a bazaar on a fictitious budget, and the runway was where the creative fire was lit.",
+      "The Last Sword of Maharana Pratap then sent all 350 guests through five challenge zones to restore a lost sword.",
+      "Connect put Tata vehicles on the ground for display, and used technology for a deeper look. Fleet Verse, Fleet Edge and FleetCare ran as touch-screen kiosks beside e-Dukaan, so guests could explore beyond the first glance, and a display of Tata vehicles stood in the parking area.",
+      "Celebrate closed the programme with a gala night. Gala nights are always the same: fun, food, drinks and music. I wanted the fleet to be part of it, and it had never been done before. A decorated commercial vehicle led a baraat up to the forecourt, and the awards followed. The fleet stole the show, and it worked well with the target group.",
+      "The gala's purpose was for distributors to believe in their own fire and exceed more than what they have.",
       { text: "Every pillar had a moment on the ground.", emphasis: true },
       "The belief reached the sky, too. Over the palace, drones lit up in turn, spelling out ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
     ],
@@ -151,12 +156,12 @@ export const tataOneWorld = {
     { label: "Watch: The countdown begins", url: "https://www.youtube.com/shorts/lC2jfSss-rA" },
   ],
 
-  tradeOff: "Rebuilding a finished identity cost time, but the reworked programme still held 350 guests together.",
+  tradeOff: "Rebuilding a finished identity cost time, but it bought one name for every generation.",
 
-  thesis: "A new look needed a programme strong enough to carry it.",
+  thesis: "Change the name, and the work has to show what it still means.",
 
   closing: {
     lead: "The name was new. The job was not.",
-    accent: "The same 350 guests from 45 countries still had to be held together.",
+    accent: "All 350 guests still had to be held together.",
   },
 };

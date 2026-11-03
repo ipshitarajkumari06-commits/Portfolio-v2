@@ -154,16 +154,6 @@ export default function BMWArtFairPage() {
           nothing is cropped out. */}
       <div className={SECTION}>
         <div className={CONTAINER}>
-          <div className="mx-auto max-w-2xl">
-            <div className="mt-1">
-              {c.loungeChoreography.map((line, i) => (
-                <Reveal key={i} delay={0.2 + i * 0.08}>
-                  <p className={BODY}>{line}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
           <div className={`mt-8 md:mt-10 ${LARGE}`}>
             <RevealImage>
               <ImagePlaceholder
