@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <Link
             href={`mailto:${contact.email}`}
-            className="font-sans text-[13px] text-fg/70 transition-colors hover:text-fg"
+            className="-my-3 inline-block py-3 font-sans text-[13px] text-fg/70 transition-colors hover:text-fg"
           >
             {contact.email}
           </Link>

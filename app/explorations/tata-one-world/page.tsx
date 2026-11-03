@@ -219,6 +219,7 @@ export default function TataOneWorldPage() {
           title={c.title}
           heroImageLabel="The F.I.R.E. key visual for Tata Motors One World"
           heroImageSrc="/images/tata-one-world/fire-key-visual.webp"
+          inset
         />
       </div>
 
@@ -232,7 +233,7 @@ export default function TataOneWorldPage() {
             <li key={ch.id}>
               <a
                 href={`#${ch.id}`}
-                className="group flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.2em] text-fg/70 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-300"
+                className="group flex items-center gap-3 font-sans text-[12px] uppercase tracking-[0.2em] text-fg/70 transition-colors hover:text-fg focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-300"
               >
                 <span
                   aria-hidden="true"
@@ -402,7 +403,7 @@ export default function TataOneWorldPage() {
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-fuchsia-300/0 via-sky-300/20 to-amber-200/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                       />
-                      <span className="block font-sans text-[11px] uppercase tracking-[0.22em] text-fg/50">
+                      <span className="block font-sans text-[12px] uppercase tracking-[0.22em] text-fg/65">
                         0{i + 1}
                       </span>
                       <span className="mt-6 flex items-end justify-between font-serif text-3xl font-light leading-tight text-fg">

@@ -11,9 +11,11 @@ type CollectionHeroProps = {
   title: string;
   heroImageLabel: string;
   heroImageSrc?: string;
+  // Keeps the hero inside the page gutter on phones; it stays full-bleed from md up.
+  inset?: boolean;
 };
 
-export default function CollectionHero({ kicker, discipline, title, heroImageLabel, heroImageSrc }: CollectionHeroProps) {
+export default function CollectionHero({ kicker, discipline, title, heroImageLabel, heroImageSrc, inset = false }: CollectionHeroProps) {
   const image = (
     <ImagePlaceholder
       label={heroImageLabel}
@@ -40,7 +42,7 @@ export default function CollectionHero({ kicker, discipline, title, heroImageLab
         </Reveal>
       </Container>
 
-      <div className="mt-16 md:mt-20">
+      <div className={`mt-16 md:mt-20 ${inset ? "px-gutter md:px-0" : ""}`}>
         {heroImageSrc ? <RevealImage>{image}</RevealImage> : <Reveal delay={0.16}>{image}</Reveal>}
       </div>
     </header>

@@ -127,7 +127,7 @@ export default function AssembleLogo({
         <button
           type="button"
           onClick={() => setZoomed(true)}
-          className="font-sans text-sm font-light text-fg/85 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-300"
+          className="-my-3 inline-block py-3 font-sans text-sm font-light text-fg/85 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fuchsia-300"
         >
           View larger
         </button>

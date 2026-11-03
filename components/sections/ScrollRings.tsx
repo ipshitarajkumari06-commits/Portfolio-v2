@@ -127,7 +127,7 @@ function Card({
               <span className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#F3EDE0]/80">Season One</span>
             </div>
           )}
-          <span className="mt-3 font-sans text-[11px] uppercase tracking-[0.12em] text-[#6B6860] sm:text-[12px]">{project.label}</span>
+          <span className="mt-3 font-sans text-[11px] uppercase tracking-[0.12em] text-[#5F5C55] sm:text-[12px]">{project.label}</span>
           <span className="mt-1 font-serif text-[15px] font-light leading-snug text-[#1A1A1A] sm:text-[13px]">{project.title}</span>
         </Link>
       </motion.div>

@@ -22,7 +22,7 @@ export default function ContinuityCompare({
 
   return (
     <figure>
-      <div className="flex justify-between px-6 pt-5 font-sans text-[11px] uppercase tracking-[0.14em] text-fg/60">
+      <div className="flex justify-between px-6 pt-5 font-sans text-[12px] uppercase tracking-[0.14em] text-fg/70">
         <span>BELIEVE</span>
         <span>F.I.R.E.</span>
       </div>

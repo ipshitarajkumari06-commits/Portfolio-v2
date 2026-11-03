@@ -42,7 +42,7 @@ body {
 html.home-theme {
   --bg: 237 230 214;
   --fg: 31 31 28;
-  --fg-muted: 107 104 96;
+  --fg-muted: 100 97 89;
   --line: 200 191 172;
   --accent: 36 70 184;
   color-scheme: light;
