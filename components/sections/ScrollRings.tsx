@@ -21,7 +21,7 @@ const RINGS = [16, 24, 32, 40, 50];
 const DISK_FILL = 12;
 // Progress at which the circle has resolved and the first card (BMW) is centred.
 // The gallery travels from here to the end, so the first card holds focus first.
-const FOCUS_HOLD = 0.9;
+const FOCUS_HOLD = 0.76;
 
 const PROJECTS: { label: string; title: string; href: string; image: string | null; channels?: Channel[] }[] = [
   { label: "Experience Concept & Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },
@@ -64,9 +64,21 @@ const STEP = CARD_W + GAP;
 
 // Maps scroll progress to a card position. Holds at 0 until FOCUS_HOLD, then
 // eases in and out (smoothstep) so the gallery starts and settles gently.
+// Snap-hold: the ring rests on each card for REST of every step, then glides to the next.
+const REST = 0.5;
 function travelPos(p: number) {
   const t = Math.min(Math.max((p - FOCUS_HOLD) / (1 - FOCUS_HOLD), 0), 1);
-  return (t * t * (3 - 2 * t)) * (N - 1);
+  const s = Math.min(t * N, N - 1e-9);
+  const k = Math.floor(s);
+  const u = Math.max((s - k - REST) / (1 - REST), 0);
+  return k + u * u * (3 - 2 * u);
+}
+
+// Distance from a card to the centre, wrapped onto the ring so the sequence
+// runs first to last and then back to the first, with no gap or jump.
+function ringOffset(p: number, index: number) {
+  const d = travelPos(p) - index;
+  return d - N * Math.round(d / N);
 }
 
 
@@ -80,10 +92,8 @@ function Card({
   index: number;
   progress: MotionValue<number>;
 }) {
-  const signed = useTransform(progress, (p) => {
-    const pos = travelPos(p);
-    return Math.max(-1.5, Math.min(1.5, pos - index));
-  });
+  const signed = useTransform(progress, (p) => Math.max(-1.5, Math.min(1.5, ringOffset(p, index))));
+  const x = useTransform(progress, (p) => `${ringOffset(p, index) * STEP}vw`);
   const dist = useTransform(signed, (v) => Math.abs(v));
   const rotateY = useTransform(signed, (v) => -v * 14);
   const z = useTransform(dist, (d) => -Math.min(d, 1) * 60);
@@ -95,11 +105,12 @@ function Card({
   useMotionValueEvent(progress, "change", (p) => setVisible(p > 0.76));
 
   return (
+    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
     <motion.div
-      className="flex shrink-0 flex-col items-center"
-      style={{ width: `${CARD_W}vw`, marginRight: `${GAP}vw`, scale, opacity, y: arch, rotateY, z, transformStyle: "preserve-3d" }}
+      className="pointer-events-auto flex shrink-0 flex-col items-center"
+      style={{ width: `${CARD_W}vw`, x, scale, opacity, y: arch, rotateY, z, transformStyle: "preserve-3d" }}
     >
-      <span className="mb-2 font-sans text-[10px] uppercase tracking-[0.16em] text-[#F3EDE0]">{String(index + 1).padStart(2, "0")}</span>
+      <span className="mb-2 font-sans text-[10px] uppercase tracking-[0.16em] text-[#F3EDE0]">{String((index % N) + 1).padStart(2, "0")}</span>
       <div className="h-[8vh] w-px bg-[#F3EDE0]/60" />
       <motion.div className="w-full" style={{ boxShadow: shadow, borderRadius: "18px" }}>
         <Link
@@ -132,6 +143,7 @@ function Card({
         </Link>
       </motion.div>
     </motion.div>
+    </div>
   );
 }
 
@@ -139,21 +151,17 @@ function Gallery({ progress }: { progress: MotionValue<number> }) {
   const labelOpacity = useTransform(progress, [0.76, 0.84], [0, 1], { clamp: true });
   // Fades in as the wine disc finishes filling the stage (it completes at 0.74), so there is no blank wine stretch.
   const galleryOpacity = useTransform(progress, [0.68, 0.76], [0, 1], { clamp: true });
-  const x = useTransform(progress, (p) => {
-    const pos = travelPos(p);
-    return `${(N * STEP) / 2 - CARD_W / 2 - pos * STEP}vw`;
-  });
   return (
     <motion.div className="absolute inset-0 flex flex-col items-center justify-center" style={{ opacity: galleryOpacity }}>
       <motion.h2 className="absolute bottom-[8vh] left-6 font-sans text-[11px] font-normal uppercase tracking-[0.16em] text-[#F3EDE0] sm:left-12" style={{ opacity: labelOpacity }}>
         Selected work
         <span className="mt-2 block font-normal normal-case tracking-[0.08em] text-[#F3EDE0]/70">Led as Creative Director</span>
       </motion.h2>
-      <motion.div className="flex items-start" style={{ x, perspective: 1200 }}>
+      <div className="absolute inset-x-0 top-0 bottom-[14vh]" style={{ perspective: 1200 }}>
         {PROJECTS.map((project, i) => (
           <Card key={project.label} project={project} index={i} progress={progress} />
         ))}
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
@@ -285,7 +293,7 @@ export default function ScrollRings() {
   if (reduced) return <StaticRings />;
 
   return (
-    <div id="selected-work" ref={ref} className="relative h-[320vh] bg-[#F3EDE0] text-[#1A1A1A]">
+    <div id="selected-work" ref={ref} className="relative h-[500vh] bg-[#F3EDE0] text-[#1A1A1A]">
       <div ref={stageRef} className="sticky top-0 h-screen overflow-hidden">
         <motion.div
           className="absolute inset-x-0 top-[22vh] px-6 text-center font-serif font-light leading-[1] text-[clamp(2.75rem,7vw,7rem)]"
