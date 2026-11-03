@@ -16,6 +16,6 @@ imagery change only when the user explicitly reopens it.
 - **Tata chatbot:** requested, not built. Adding it reopens the Tata page for
   that one addition only. Everything else on the Tata page stays locked.
 
-## Reopened
+## Relocked
 
-- Homepage selected work: one project added on the user's request (MCAPS Start FY27, `/explorations/mcaps-start`, card image is a concept render from the proposal deck). Nothing else on the homepage changed.
+- Homepage selected work: reopened for the MCAPS Start FY27 card (`/explorations/mcaps-start`, concept render from the proposal deck), the creative-director label, and the circular gallery. Relocked. More projects to be added later, so reopen when those are ready.
