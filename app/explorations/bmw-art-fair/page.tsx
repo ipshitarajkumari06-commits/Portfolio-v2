@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import Image from "next/image";
 import type { Metadata } from "next";
 import BackPrompt from "@/components/collections/BackPrompt";
 import Reveal from "@/components/motion/Reveal";
@@ -267,10 +268,15 @@ export default function BMWArtFairPage() {
         </div>
       </div>
 
-      {/* Ending — typography only. Full bottom padding here since nothing
-          follows but the footer. */}
-      <div className="pt-section pb-section">
-        <div className={CONTAINER}>
+      {/* Ending. The opening lounge photograph returns behind the reflection,
+          dimmed, so the close answers the first image. Full bottom padding here
+          since nothing follows but the footer. */}
+      <div className="relative overflow-hidden pt-section pb-section">
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image src={`${IMG}/lounge-interior.jpg`} alt="" fill sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-black/80" />
+        </div>
+        <div className={`relative ${CONTAINER}`}>
           <div className={`mx-auto max-w-2xl ${BRIEF_BOX} motion-safe:animate-[brief-spin_8s_linear_infinite]`} style={BRIEF_STYLE}>
             {c.reflection.map((line, i) => (
               <Reveal key={i} delay={i * 0.12}>
