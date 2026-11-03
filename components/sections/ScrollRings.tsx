@@ -66,9 +66,10 @@ const STEP = CARD_W + GAP;
 // eases in and out (smoothstep) so the gallery starts and settles gently.
 // Snap-hold: the ring rests on each card for REST of every step, then glides to the next.
 const REST = 0.5;
+const LAPS = 2;
 function travelPos(p: number) {
   const t = Math.min(Math.max((p - FOCUS_HOLD) / (1 - FOCUS_HOLD), 0), 1);
-  const s = Math.min(t * N, N - 1e-9);
+  const s = Math.min(t * N * LAPS, N * LAPS - 1e-9);
   const k = Math.floor(s);
   const u = Math.max((s - k - REST) / (1 - REST), 0);
   return k + u * u * (3 - 2 * u);
@@ -293,7 +294,7 @@ export default function ScrollRings() {
   if (reduced) return <StaticRings />;
 
   return (
-    <div id="selected-work" ref={ref} className="relative h-[500vh] bg-[#F3EDE0] text-[#1A1A1A]">
+    <div id="selected-work" ref={ref} className="relative h-[700vh] bg-[#F3EDE0] text-[#1A1A1A]">
       <div ref={stageRef} className="sticky top-0 h-screen overflow-hidden">
         <motion.div
           className="absolute inset-x-0 top-[22vh] px-6 text-center font-serif font-light leading-[1] text-[clamp(2.75rem,7vw,7rem)]"
