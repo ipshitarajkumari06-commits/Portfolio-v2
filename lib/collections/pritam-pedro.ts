@@ -35,8 +35,7 @@ export const pritamPedro = {
   experience: {
     label: "The Reveal",
     paragraphs: [
-      "Every step drew two guests closer, long before anyone sat down to watch.",
-      "Guests slipped into the world around Pritam & Pedro without noticing how they got in. Once the trailer arrived, they already belonged inside.",
+      "Guests slipped into the world around Pritam & Pedro without noticing how they got in.",
       "Each puzzle badge hid a shard of code. Only the right partner could make it whole.",
       "Matching codes led the way to an ATM modelled on the key art, where a cassette was waiting.",
       "Along the way, guests could have their faces redrawn at one of two speeds, old and new side by side: a live caricature in about five minutes, or an AI sketch bot in about one minute.",
@@ -48,7 +47,6 @@ export const pritamPedro = {
     ],
     afterDemo: [
       "Late in the evening, Shreya Ghoshal stepped onto the stage and sang ‘Piya Piya Piya’, a Hindi film song. Just for that night, the series was the headline, not the backdrop.",
-      "Her voice wrapped the night in its softest light.",
     ],
     liveCaricatureImageLabel: "Live caricature",
     caricatureImageLabel: "AI caricature portrait",
@@ -59,6 +57,7 @@ export const pritamPedro = {
     crackImageLabel: "Crack the Code station",
     trailerImageLabel: "Trailer on the main-stage LED",
     summary: "Puzzles paired two strangers before the screen lit up.",
+    tradeOff: "Keeping the trailer sealed meant the launch had to be lived before it was watched.",
     close: "By the time the trailer lit the main-stage LED, guests had already lived part of the story, and the reveal felt earned. They met the show as players first and viewers second.",
     guestBackdropImageLabel: "Visitors at the series backdrop",
     guestLobbyImageLabel: "Visitors arriving at the launch",

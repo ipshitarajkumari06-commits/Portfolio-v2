@@ -131,6 +131,7 @@ export default function BMWArtFairPage() {
         <div className={CONTAINER}>
           <div className="mx-auto max-w-2xl">
             <Paragraphs lines={c.lounge} />
+            <p className={`${BODY} mt-8`}>{c.tradeOff}</p>
           </div>
 
           <div className={`mt-8 md:mt-10 ${SUPPORTING}`}>

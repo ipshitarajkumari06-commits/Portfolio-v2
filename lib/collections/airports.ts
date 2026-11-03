@@ -9,6 +9,8 @@ export const airports = {
   kicker: "International Airports",
   discipline: "Experience Strategy",
   title: "How does an experience hold attention that architecture has already won?",
+  answer: "Architecture earned the first look. The experience had to earn the second.",
+  tradeOff: "Keeping every intervention distinct meant no single moment could carry the whole brief, so the story lived in the sequence.",
 
   hero: {
     imageLabel: "Guwahati airport terminal, bamboo-orchid ceiling",

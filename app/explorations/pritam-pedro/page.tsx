@@ -231,6 +231,7 @@ export default function PritamPedroPage() {
                 </div>
               </div>
               <Beat lines={c.experience.afterDemo} />
+              <Beat lines={[c.experience.tradeOff]} />
               <PullQuote text={c.experience.close} />
             </div>
           </Episode>

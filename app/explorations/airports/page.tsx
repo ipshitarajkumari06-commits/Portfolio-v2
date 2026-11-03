@@ -225,6 +225,9 @@ export default function InternationalAirportsPage() {
         <Beat lines={c.navimumbai.close} emphasis />
       </PinnedChapter>
 
+      {/* The trade-off, then the answer that lands the case. */}
+      <CopyFrame lines={[c.tradeOff, { text: c.answer, emphasis: true }]} />
+
       {/* The way back to the selected work, as in the BMW case study. */}
       <div className="relative mx-auto flex min-h-screen w-full max-w-container items-center overflow-hidden px-gutter py-section">
         <BambooStrands />

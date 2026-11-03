@@ -34,6 +34,7 @@ export const bmwArtFair = {
     "The answer was to let the Speedtop's motion and colour travel into the architecture, but never the bodywork.",
     "At the scale of a room, the lounge redrew the car's form. Its flowing geometry framed it from inside and outside, so visitors saw its curves long before they reached the car.",
   ],
+  tradeOff: "Keeping the bodywork out of the design meant the lounge had to carry the car's character alone.",
   loungeEvolutionImageLabels: [
     "BMW Concept Speedtop, design sketch",
     "Collectors' Lounge, concept sketch",
@@ -62,7 +63,7 @@ export const bmwArtFair = {
   ],
 
   flowInMotion: [
-    "The same idea travelled beyond the lounge and onto the building itself. As part of Flow in Motion, a fair-wide commission led by BMW and India Art Fair under the banner Future Is Born of Art, turned more than four hundred feet of the fair's facade into Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality across that wall, and each motif held a story that surfaced only as a visitor came close.",
+    "The lounge let the Speedtop's motion and colour travel into its architecture. Flow in Motion, a fair-wide commission led by BMW and India Art Fair under the banner Future Is Born of Art, carried that idea onto the fair's facade, where more than four hundred feet became Afrah Shafiq's The Giant Sampler. Traditional embroidery met augmented reality across that wall, and each motif held a story that surfaced only as a visitor came close.",
   ],
   flowInMotionClose:
     "Among 135 exhibitors and 94 galleries, one facade made people pause mid-stride.",
