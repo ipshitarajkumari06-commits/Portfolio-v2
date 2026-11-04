@@ -116,7 +116,7 @@ export const tataOneWorld = {
     formations: {
       src: "/images/tata-one-world/fire-drone-formations.webp",
       alt: "A Tata Motors drone-show poster with four formations over the palace: ONE WORLD, TATA MOTORS, Better Always and F.I.R.E.",
-      caption: "The four drone formations, as shared by Tata Motors.",
+      caption: "The four drone formations.",
       width: 1226,
       height: 1568,
     },
@@ -144,7 +144,7 @@ export const tataOneWorld = {
       { src: "/images/tata-one-world/scene-rewarding-champions.jpg", alt: "The awards stage, with winners on stage and guests in the audience", caption: "Winners take the awards stage." },
     ],
     [
-      { src: "/images/tata-one-world/scene-truck-one-world.jpg", alt: "ONE WORLD lettering in front of a Tata Motors truck", caption: "ONE WORLD, in front of a truck." },
+      { src: "/images/tata-one-world/scene-truck-one-world.jpg", alt: "ONE WORLD lettering at the Tata Motors vehicle display area", caption: "The ONE WORLD lettering at the Tata Motors vehicle display area." },
       { src: "/images/tata-one-world/scene-truck-cab.jpg", alt: "The cab and dashboard of a Tata Motors truck", caption: "The cab and dashboard, up close." },
     ],
   ],
