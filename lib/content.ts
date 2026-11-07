@@ -36,6 +36,11 @@ export const featuredWork = {
       href: "/explorations/mcaps-start",
     },
     {
+      client: "Collins Aerospace",
+      title: "How do you open a building and host a supplier base in one event?",
+      href: "/explorations/collins-aerospace",
+    },
+    {
       client: "International Airports",
       title: "How does an experience hold attention that architecture has already won?",
       href: "/explorations/airports",

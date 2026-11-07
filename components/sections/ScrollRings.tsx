@@ -27,6 +27,7 @@ const PROJECTS: { label: string; title: string; href: string; image: string | nu
   { label: "Experience Concept & Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },
   { label: "Narrative Strategy", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: null, channels: CHANNELS },
   { label: "Participation Design", title: "How do you make a once-a-year event work across three cities, and matter on the days between editions?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/title-hero-card-v2.jpg" },
+  { label: "Event Design & Experience", title: "How do you open a building and host a supplier base in one event?", href: "/explorations/collins-aerospace", image: "/images/collins-aerospace/building-unveil.jpg" },
   { label: "Experience Strategy", title: "How does an experience hold attention that architecture has already won?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
   { label: "Brand Concept & Identity", title: "How does one name reach every generation?", href: "/explorations/tata-one-world", image: "/images/tata-one-world/fire-key-visual.webp" },
   { label: "Brand Strategy", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.jpg" },
