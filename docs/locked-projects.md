@@ -19,3 +19,4 @@ imagery change only when the user explicitly reopens it.
 ## Relocked
 
 - Homepage selected work: reopened for the MCAPS Start FY27 card (`/explorations/mcaps-start`, concept render from the proposal deck), the creative-director label, and the circular gallery. Relocked. More projects to be added later, so reopen when those are ready.
+- Homepage selected work: reopened to add the Collins Aerospace card (`/explorations/collins-aerospace`, built from the event deck). Relocked.
