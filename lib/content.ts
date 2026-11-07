@@ -37,7 +37,7 @@ export const featuredWork = {
     },
     {
       client: "Collins Aerospace",
-      title: "How do you open a building and host a supplier base in one event?",
+      title: "How do you unveil a building and host a supplier base in one event?",
       href: "/explorations/collins-aerospace",
     },
     {

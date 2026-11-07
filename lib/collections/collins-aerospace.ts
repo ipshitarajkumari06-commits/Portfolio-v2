@@ -4,11 +4,11 @@
 // Attendance confirmed by the author: 2,500 across the event; 1,500–2,000 at the inauguration.
 
 export const collinsAerospace = {
-  discipline: "Event Design",
+  discipline: "Event Design & Experience",
   kicker: "Collins Aerospace",
-  title: "Opening the B2 Building",
+  title: "Inaugurating the B2 Building",
 
-  question: "How do you open a building and host a supplier base in one event?",
+  question: "How do you unveil a building and host a supplier base in one event?",
   answer: "Four audiences. Four doors. One building in the middle.",
 
   brief: {
