@@ -23,14 +23,14 @@ const DISK_FILL = 12;
 // The gallery travels from here to the end, so the first card holds focus first.
 const FOCUS_HOLD = 0.76;
 
-const PROJECTS: { label: string; title: string; href: string; image: string | null; channels?: Channel[] }[] = [
-  { label: "Experience Concept & Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg" },
-  { label: "Narrative Strategy", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: null, channels: CHANNELS },
-  { label: "Participation Design", title: "How do you make a once-a-year event work across three cities, and matter on the days between editions?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/title-hero-card-v2.jpg" },
-  { label: "Event Design & Experience", title: "How do you unveil a building and host a supplier base in one event?", href: "/explorations/collins-aerospace", image: "/images/collins-aerospace/aircraft-timeline.jpg" },
-  { label: "Experience Strategy", title: "How does an experience hold attention that architecture has already won?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
-  { label: "Brand Concept & Identity", title: "How does one name reach every generation?", href: "/explorations/tata-one-world", image: "/images/tata-one-world/fire-key-visual.webp" },
-  { label: "Brand Strategy", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.jpg" },
+const PROJECTS: { client: string; label: string; title: string; href: string; image: string | null; channels?: Channel[]; lead?: boolean; fact?: string }[] = [
+  { client: "JioHotstar", label: "Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg", lead: true },
+  { client: "Collins Aerospace", label: "Event", title: "How do you unveil a building and host a supplier base in one event?", href: "/explorations/collins-aerospace", image: "/images/collins-aerospace/aircraft-timeline.jpg", lead: true, fact: "2,500 attendees" },
+  { client: "Tata Motors", label: "Brand", title: "How does one name reach every generation?", href: "/explorations/tata-one-world", image: "/images/tata-one-world/fire-key-visual.webp", lead: true, fact: "350 guests in the challenge" },
+  { client: "Tata Motors", label: "Narrative", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: "/images/tata/ep03-still.jpg", channels: CHANNELS },
+  { client: "Microsoft", label: "Event", title: "How do you make a once-a-year event work across three cities, and matter on the days between editions?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/title-hero-card-v2.jpg" },
+  { client: "International Airports", label: "Experience", title: "How does an experience hold attention that architecture has already won?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
+  { client: "BMW", label: "Brand", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.jpg" },
 ];
 
 function polar(angle: number, r: number) {
@@ -140,8 +140,12 @@ function Card({
               <span className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#F3EDE0]/80">Season One</span>
             </div>
           )}
-          <span className="mt-3 font-sans text-[11px] uppercase tracking-[0.12em] text-[#5F5C55] sm:text-[12px]">{project.label}</span>
+          <span className="mt-3 font-sans text-[11px] uppercase tracking-[0.12em] text-[#1A1A1A] sm:text-[12px]">
+            {project.client}
+          </span>
+          <span className="mt-1 font-sans text-[11px] uppercase tracking-[0.12em] text-[#5F5C55] sm:text-[12px]">{project.label}</span>
           <span className="mt-1 font-serif text-[15px] font-light leading-snug text-[#1A1A1A] sm:text-[13px]">{project.title}</span>
+          {project.fact && <span className="mt-2 font-sans text-[11px] uppercase tracking-[0.12em] text-[#1A1A1A] sm:text-[12px]">{project.fact}</span>}
         </Link>
       </motion.div>
     </motion.div>
@@ -157,7 +161,7 @@ function Gallery({ progress }: { progress: MotionValue<number> }) {
     <motion.div className="absolute inset-0 flex flex-col items-center justify-center" style={{ opacity: galleryOpacity }}>
       <motion.h2 className="absolute bottom-[8vh] left-6 font-sans text-[11px] font-normal uppercase tracking-[0.16em] text-[#F3EDE0] sm:left-12" style={{ opacity: labelOpacity }}>
         Selected work
-        <span className="mt-2 block font-normal normal-case tracking-[0.08em] text-[#F3EDE0]/70">Led as Creative Director</span>
+        <span className="mt-2 block font-normal normal-case tracking-[0.08em] text-[#F3EDE0]/70">Creative Director</span>
       </motion.h2>
       <div className="absolute inset-x-0 top-0 bottom-[14vh]" style={{ perspective: 1200 }}>
         {PROJECTS.map((project, i) => (
