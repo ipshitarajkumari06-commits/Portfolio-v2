@@ -24,7 +24,7 @@ const DISK_FILL = 12;
 const FOCUS_HOLD = 0.76;
 
 const PROJECTS: { client: string; label: string; title: string; href: string; image: string | null; channels?: Channel[]; lead?: boolean; fact?: string }[] = [
-  { client: "JioHotstar", label: "Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg", lead: true, fact: "3 episodes" },
+  { client: "JioHotstar", label: "Narrative", title: "How do you build anticipation for a story without giving the story away?", href: "/explorations/pritam-pedro", image: "/images/pritam-pedro/series-poster.jpg", lead: true },
   { client: "Collins Aerospace", label: "Event", title: "How do you unveil a building and host a supplier base in one event?", href: "/explorations/collins-aerospace", image: "/images/collins-aerospace/aircraft-timeline.jpg", lead: true, fact: "2,500 attendees" },
   { client: "Tata Motors", label: "Brand", title: "How does one name reach every generation?", href: "/explorations/tata-one-world", image: "/images/tata-one-world/fire-key-visual.webp", lead: true, fact: "350 guests in the challenge" },
   { client: "Tata Motors", label: "Narrative", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: "/images/tata/ep03-still.jpg", channels: CHANNELS },
