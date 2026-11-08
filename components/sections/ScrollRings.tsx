@@ -30,6 +30,7 @@ const PROJECTS: { client: string; label: string; title: string; href: string; im
   { client: "Microsoft", label: "Event", title: "How do you make a once-a-year event work across three cities, and matter on the days between editions?", href: "/explorations/mcaps-start", image: "/images/mcaps-start/title-hero-card-v2.jpg" },
   { client: "Tata Motors", label: "Narrative", title: "What makes this Tata Motors?", href: "/explorations/hum-ai-n", image: "/images/tata/ep03-still.jpg", channels: CHANNELS },
   { client: "International Airports", label: "Experience", title: "How does an experience hold attention that architecture has already won?", href: "/explorations/airports", image: "/images/airports/ghy-ceiling.png" },
+  { client: "Tata AIG", label: "Experience", title: "How do you make eight days of travel feel like one story?", href: "/explorations/tata-aig-canada", image: "/images/tata-aig-canada/hero-backdrop.webp" },
   { client: "BMW", label: "Brand", title: "What survives when a brand changes medium?", href: "/explorations/bmw-art-fair", image: "/images/bmw/lounge-interior.jpg" },
 ];
 

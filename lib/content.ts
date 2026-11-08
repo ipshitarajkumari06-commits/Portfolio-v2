@@ -51,6 +51,11 @@ export const featuredWork = {
       href: "/explorations/tata-one-world",
     },
     {
+      client: "Tata AIG",
+      title: "How do you make eight days of travel feel like one story?",
+      href: "/explorations/tata-aig-canada",
+    },
+    {
       client: "BMW",
       title: "What survives when a brand changes medium?",
       href: "/explorations/bmw-art-fair",
